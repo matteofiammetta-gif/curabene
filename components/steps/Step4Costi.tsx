@@ -2,23 +2,65 @@
 
 import { useState, useMemo } from "react";
 import { AppState } from "@/lib/types";
-import tariffeSSNRaw from "@/data/tariffe_ssn.json";
-import costiPrivatoRaw from "@/data/costi_privato.json";
 
-interface TariffeSSN {
-  meta: { fonte: string; url: string; nota: string };
-  prestazioni: Record<string, { descrizione: string; prima_visita: { codice: string; tariffa: number; ticket_max: number } }>;
+// ── Dati statici confronto privato (no import JSON — tutto inline) ──────────
+function getAreaGeografica(regione: string): "Nord" | "Centro" | "Sud" {
+  const nord = ["Lombardia","Piemonte","Veneto","Emilia-Romagna",
+    "Trentino-Alto Adige","Friuli-Venezia Giulia","Liguria","Valle d'Aosta"];
+  const centro = ["Lazio","Toscana","Marche","Umbria","Abruzzo"];
+  if (nord.includes(regione)) return "Nord";
+  if (centro.includes(regione)) return "Centro";
+  return "Sud";
 }
 
-interface CostoRange { min: number; medio: number; max: number }
-interface CostiPrivato {
-  meta: { fonte: string; url: string; nota: string };
-  per_area: Record<string, Record<string, CostoRange>>;
-  mapping_regioni: Array<{ regione: string; area: string }>;
-}
+const TARIFFE_SSN: Record<string, number> = {
+  oncologia: 36.15, cardiologia: 36.15, neurologia: 36.15,
+  ortopedia: 36.15, nefrologia: 36.15, gastroenterologia: 36.15,
+  pneumologia: 36.15, endocrinologia: 36.15, urologia: 36.15,
+  ginecologia: 36.15, malattie_infettive: 36.15,
+};
 
-const tariffeSSN = tariffeSSNRaw as TariffeSSN;
-const costiPrivato = costiPrivatoRaw as CostiPrivato;
+const COSTI_PRIVATO: Record<string, Record<string, { min: number; medio: number; max: number }>> = {
+  Nord: {
+    oncologia:         { min: 90,  medio: 145, max: 280 },
+    cardiologia:       { min: 80,  medio: 130, max: 250 },
+    neurologia:        { min: 85,  medio: 140, max: 260 },
+    ortopedia:         { min: 75,  medio: 120, max: 220 },
+    nefrologia:        { min: 85,  medio: 135, max: 240 },
+    gastroenterologia: { min: 80,  medio: 125, max: 230 },
+    pneumologia:       { min: 80,  medio: 125, max: 220 },
+    endocrinologia:    { min: 75,  medio: 120, max: 210 },
+    urologia:          { min: 80,  medio: 130, max: 240 },
+    ginecologia:       { min: 70,  medio: 115, max: 200 },
+    malattie_infettive:{ min: 85,  medio: 140, max: 260 },
+  },
+  Centro: {
+    oncologia:         { min: 85,  medio: 135, max: 260 },
+    cardiologia:       { min: 75,  medio: 120, max: 230 },
+    neurologia:        { min: 80,  medio: 130, max: 245 },
+    ortopedia:         { min: 70,  medio: 110, max: 200 },
+    nefrologia:        { min: 80,  medio: 125, max: 220 },
+    gastroenterologia: { min: 75,  medio: 118, max: 215 },
+    pneumologia:       { min: 75,  medio: 118, max: 210 },
+    endocrinologia:    { min: 70,  medio: 110, max: 195 },
+    urologia:          { min: 75,  medio: 120, max: 220 },
+    ginecologia:       { min: 65,  medio: 105, max: 185 },
+    malattie_infettive:{ min: 80,  medio: 130, max: 240 },
+  },
+  Sud: {
+    oncologia:         { min: 70,  medio: 115, max: 220 },
+    cardiologia:       { min: 60,  medio: 100, max: 190 },
+    neurologia:        { min: 65,  medio: 108, max: 200 },
+    ortopedia:         { min: 55,  medio: 90,  max: 165 },
+    nefrologia:        { min: 65,  medio: 105, max: 190 },
+    gastroenterologia: { min: 60,  medio: 98,  max: 175 },
+    pneumologia:       { min: 60,  medio: 95,  max: 170 },
+    endocrinologia:    { min: 55,  medio: 90,  max: 160 },
+    urologia:          { min: 60,  medio: 100, max: 180 },
+    ginecologia:       { min: 50,  medio: 85,  max: 155 },
+    malattie_infettive:{ min: 65,  medio: 105, max: 190 },
+  },
+};
 
 interface Step4Props {
   state: AppState;
@@ -124,106 +166,12 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
 
   const mezzoIcon = MEZZO_OPTS.find((m) => m.value === mezzo)?.icon ?? "";
 
-  // --- Alternativa privata ---
-  const privatoSection = useMemo(() => {
-    const specId = state.specialitaSelezionata?.id;
-    const regione = state.regione;
-    if (!ospedale || !specId || !regione) return null;
-
-    const tariffa = tariffeSSN.prestazioni[specId];
-    if (!tariffa) return null;
-
-    const areaEntry = costiPrivato.mapping_regioni.find(
-      (m) => m.regione.toLowerCase() === regione.toLowerCase()
-    );
-    const area = areaEntry?.area ?? "Centro";
-    const costiArea = costiPrivato.per_area[area]?.[specId];
-    if (!costiArea) return null;
-
-    const ticketSSN = tariffa.prima_visita.ticket_max;
-    const costoSpostamento = costi?.totale ?? 0;
-    const costoSSNEccellenza = ticketSSN + costoSpostamento;
-    const costoPrivatoLocale = costiArea.medio;
-
-    let insightText: string;
-    if (costoPrivatoLocale < costoSSNEccellenza * 0.7) {
-      insightText = `Il privato locale (€ ${costoPrivatoLocale}) costa meno del viaggio verso il centro di eccellenza${costoSpostamento > 0 ? ` (€ ${costoSSNEccellenza.toFixed(0)} totale con spostamento)` : ""}. Valuta una visita privata nella tua regione come prima opzione.`;
-    } else if (costoPrivatoLocale > costoSSNEccellenza * 1.3 || costoSpostamento === 0) {
-      insightText = costoSpostamento > 0
-        ? `Il viaggio verso il centro PNE di eccellenza (€ ${costoSSNEccellenza.toFixed(0)} totale) costa meno del privato locale (€ ${costoPrivatoLocale}). L'eccellenza pubblica è conveniente.`
-        : `Il privato nella tua zona costa mediamente € ${costoPrivatoLocale}. Con il SSN paghi solo € ${ticketSSN.toFixed(2)} di ticket per la stessa visita.`;
-    } else {
-      insightText = `I costi sono comparabili: privato locale € ${costoPrivatoLocale} vs SSN con spostamento € ${costoSSNEccellenza.toFixed(0)}. Il centro PNE offre qualità superiore certificata AGENAS.`;
-    }
-
-    return (
-      <div className="privato-section">
-        <div className="privato-title">🏥 Alternativa privata</div>
-
-        <div className="cost-table" style={{ marginBottom: 8 }}>
-          <div className="cost-table-row">
-            <span className="cost-key">🏛️ Ticket SSN prima visita</span>
-            <span className="cost-val">€ {ticketSSN.toFixed(2)}</span>
-          </div>
-          <div className="cost-table-row">
-            <span className="cost-key">🏥 Visita privata — {area} Italia (stima Cup24)</span>
-            <span className="cost-val">
-              <span style={{ fontSize: 11, color: "var(--text3)", marginRight: 4 }}>
-                € {costiArea.min}–{costiArea.max}
-              </span>
-              <strong>€ {costiArea.medio}</strong>
-            </span>
-          </div>
-        </div>
-
-        <div className="confronto-box">
-          <div className="confronto-label">Confronto</div>
-          <div className="confronto-vs">
-            <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: 18, fontWeight: 700, color: "#1A1814" }}>
-                € {ticketSSN.toFixed(0)}
-                {costoSpostamento > 0 && (
-                  <span style={{ fontSize: 12, color: "var(--text3)", fontWeight: 400 }}>
-                    {" "}+ € {costoSpostamento.toFixed(0)} viaggio
-                  </span>
-                )}
-              </div>
-              <div style={{ fontSize: 11, color: "var(--text3)", marginTop: 2 }}>SSN + spostamento</div>
-            </div>
-            <div style={{ fontSize: 20, color: "var(--text3)", fontWeight: 300 }}>vs</div>
-            <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: 18, fontWeight: 700, color: "#1A1814" }}>
-                € {costiArea.medio}
-              </div>
-              <div style={{ fontSize: 11, color: "var(--text3)", marginTop: 2 }}>Privato locale</div>
-            </div>
-          </div>
-          <div className="confronto-insight">{insightText}</div>
-        </div>
-
-        <div className="privato-fonte">
-          Fonte tariffe SSN:{" "}
-          <a href="https://www.gazzettaufficiale.it/eli/gu/2025/01/22/18/so/4/sg/pdf"
-             target="_blank" rel="noopener noreferrer">
-            DM 25/11/2024
-          </a>{" "}
-          · Costi privato:{" "}
-          <a href="https://www.cup24.it" target="_blank" rel="noopener noreferrer">
-            Cup24.it
-          </a>{" "}
-          · Liste attesa:{" "}
-          <a href="https://www.portaletrasparenzaservizisanitari.it/pnla"
-             target="_blank" rel="noopener noreferrer">
-            PNLA AGENAS
-          </a>
-        </div>
-        <p className="cost-note">
-          ⚠️ Dati indicativi. I costi privati variano per struttura e città. Ticket SSN escluso per categorie esenti (reddito, patologie croniche, invalidità).
-        </p>
-      </div>
-    );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.specialitaSelezionata, state.regione, ospedale, costi]);
+  // ── Confronto privato — dati inline, no API ──────────────────
+  const specId   = state.specialitaSelezionata?.id ?? "";
+  const regione  = state.regione ?? "";
+  const area     = getAreaGeografica(regione || "Lombardia");
+  const ticketSSN  = TARIFFE_SSN[specId] ?? 36.15;
+  const costiPriv  = COSTI_PRIVATO[area]?.[specId] ?? { min: 70, medio: 120, max: 250 };
 
   return (
     <div className="step-body">
@@ -316,8 +264,85 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
         Chiedi al medico di base il modulo per la mobilità sanitaria interregionale.
       </div>
 
-      {/* Sezione Alternativa privata */}
-      {privatoSection}
+      {/* Alternativa privata — dati statici inline */}
+      <div style={{
+        marginTop: "1.25rem",
+        paddingTop: "1.25rem",
+        borderTop: "1px solid rgba(0,0,0,0.08)",
+      }}>
+        <div style={{ fontSize: "14px", fontWeight: 500, color: "var(--text)", marginBottom: "12px" }}>
+          Alternativa: visita privata locale
+        </div>
+
+        <div style={{
+          border: "1px solid rgba(0,0,0,0.08)",
+          borderRadius: "10px",
+          overflow: "hidden",
+          marginBottom: "10px",
+        }}>
+          <div style={{
+            padding: "9px 14px",
+            background: "var(--surface2)",
+            borderBottom: "1px solid rgba(0,0,0,0.08)",
+            fontSize: "13px",
+            fontWeight: 500,
+          }}>
+            Confronto costi — area {area} Italia
+          </div>
+
+          <div style={{
+            display: "flex", justifyContent: "space-between",
+            padding: "8px 14px",
+            borderBottom: "1px solid rgba(0,0,0,0.06)",
+            fontSize: "13px",
+          }}>
+            <span style={{ color: "var(--text3)" }}>Ticket SSN prima visita</span>
+            <span style={{ color: "var(--acm)", fontWeight: 500 }}>
+              fino a €{ticketSSN.toFixed(2)}
+            </span>
+          </div>
+
+          <div style={{
+            display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+            padding: "8px 14px",
+            borderBottom: "1px solid rgba(0,0,0,0.06)",
+            fontSize: "13px",
+          }}>
+            <span style={{ color: "var(--text3)" }}>Visita privata locale</span>
+            <div style={{ textAlign: "right" }}>
+              <span style={{ fontWeight: 500, color: "var(--text)" }}>
+                €{costiPriv.min} – €{costiPriv.max}
+              </span>
+              <div style={{ fontSize: "11px", color: "var(--text3)" }}>
+                media €{costiPriv.medio}
+              </div>
+            </div>
+          </div>
+
+          <div style={{ padding: "10px 14px" }}>
+            <div style={{ fontSize: "12px", color: "var(--text2)", lineHeight: 1.6, fontStyle: "italic" }}>
+              {costiPriv.medio < ticketSSN + 50
+                ? "Il privato locale ha costi comparabili al SSN. Valuta i tempi di attesa."
+                : costiPriv.medio > 180
+                ? "Il centro di eccellenza SSN può valere lo spostamento rispetto al privato locale."
+                : "Confronta i tempi di attesa SSN con il costo del privato per decidere."}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ fontSize: "11px", color: "var(--text3)", marginTop: "6px" }}>
+          Prezzi privato: Osservatorio Cup24.it (apr. 2026) ·{" "}
+          Ticket SSN: DM Ministero Salute 25/11/2024 ·{" "}
+          <a
+            href="https://www.cupsolidale.it/prezzi.html"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "var(--acm)" }}
+          >
+            Verifica prezzi aggiornati →
+          </a>
+        </div>
+      </div>
 
       <div className="step-nav">
         <button onClick={onBack} className="btn-secondary">← Indietro</button>
