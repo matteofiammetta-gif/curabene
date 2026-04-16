@@ -1,0 +1,58 @@
+[
+  {
+    "id": "oncologia",
+    "nome": "Oncologia",
+    "descrizione": "Tumori e chemioterapia",
+    "icona": "🎗️",
+    "mediaNazionaleMortalita": 2.8
+  },
+  {
+    "id": "cardiologia",
+    "nome": "Cardiologia",
+    "descrizione": "Cuore e vasi sanguigni",
+    "icona": "❤️",
+    "mediaNazionaleMortalita": 1.5
+  },
+  {
+    "id": "neurologia",
+    "nome": "Neurologia",
+    "descrizione": "Cervello e sistema nervoso",
+    "icona": "🧠",
+    "mediaNazionaleMortalita": 8.0
+  },
+  {
+    "id": "ortopedia",
+    "nome": "Ortopedia",
+    "descrizione": "Ossa, articolazioni e muscoli",
+    "icona": "🦴",
+    "mediaNazionaleMortalita": 0.4
+  },
+  {
+    "id": "nefrologia",
+    "nome": "Nefrologia",
+    "descrizione": "Reni e dialisi",
+    "icona": "🫘",
+    "mediaNazionaleMortalita": 2.1
+  },
+  {
+    "id": "gastroenterologia",
+    "nome": "Gastroenterologia",
+    "descrizione": "Stomaco, intestino e fegato",
+    "icona": "🫁",
+    "mediaNazionaleMortalita": 2.0
+  },
+  {
+    "id": "pneumologia",
+    "nome": "Pneumologia",
+    "descrizione": "Polmoni e vie respiratorie",
+    "icona": "🌬️",
+    "mediaNazionaleMortalita": 4.0
+  },
+  {
+    "id": "endocrinologia",
+    "nome": "Endocrinologia",
+    "descrizione": "Ormoni, diabete e tiroide",
+    "icona": "⚗️",
+    "mediaNazionaleMortalita": 0.1
+  }
+]

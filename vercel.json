@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "regions": ["cdg1"],
+  "env": {
+    "ANTHROPIC_API_KEY": "@anthropic-api-key",
+    "ADMIN_PASSWORD": "@admin-password"
+  }
+}
