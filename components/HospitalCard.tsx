@@ -6,6 +6,7 @@ interface HospitalCardProps {
   mediaNazionale: number;
   selected: boolean;
   onSelect: () => void;
+  attesaContent?: React.ReactNode;
 }
 
 function mortalitaBadge(valore: number, media: number) {
@@ -15,7 +16,7 @@ function mortalitaBadge(valore: number, media: number) {
   return               { cls: "badge-b", label: `${valore.toFixed(1)}% ≈ media` };
 }
 
-export default function HospitalCard({ ospedale, spec, mediaNazionale, selected, onSelect }: HospitalCardProps) {
+export default function HospitalCard({ ospedale, spec, mediaNazionale, selected, onSelect, attesaContent }: HospitalCardProps) {
   const mb = mortalitaBadge(spec.mortalita30gg, mediaNazionale);
 
   return (
@@ -48,6 +49,9 @@ export default function HospitalCard({ ospedale, spec, mediaNazionale, selected,
           <div className="stat-lbl" style={{ marginTop: 6 }}>Mortalità 30gg</div>
         </div>
       </div>
+
+      {/* Box tempi attesa SSN — solo card selezionata */}
+      {attesaContent}
 
       {/* Badges */}
       {spec.badges.length > 0 && (

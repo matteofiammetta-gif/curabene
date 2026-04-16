@@ -1,7 +1,24 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { Ospedale, OspedaleSpecialita, AppState, Specialita } from "@/lib/types";
 import HospitalCard from "@/components/HospitalCard";
+
+interface AttesaResult {
+  classe: string;
+  classeLabel: string;
+  giorniAttesa: number;
+  motivazione: string;
+  fonte: string;
+  avvertenza: string;
+}
+
+const ATTESA_BADGE_STYLE: Record<string, { background: string; color: string }> = {
+  U: { background: "#FEE2E2", color: "#7F1D1D" },
+  B: { background: "#FEF3C7", color: "#78350F" },
+  D: { background: "#FEF9C3", color: "#713F12" },
+  P: { background: "#DCFCE7", color: "#14532D" },
+};
 
 interface Step2Props {
   ospedali: Ospedale[];
@@ -84,10 +101,105 @@ function filterOspedali(ospedali: Ospedale[], state: AppState): FilterResult {
   return { items: locali, usedFallback: false };
 }
 
+function LoadingDots() {
+  return (
+    <span className="ai-dots" style={{ marginLeft: 4 }}>
+      <span className="ai-dot" />
+      <span className="ai-dot" />
+      <span className="ai-dot" />
+    </span>
+  );
+}
+
 export default function Step2Centri({ ospedali, specialita, state, onChange, onNext, onBack }: Step2Props) {
   const { items: filtered, usedFallback } = filterOspedali(ospedali, state);
   const mediaNazionale =
     specialita.find((s) => s.id === state.specialitaSelezionata?.id)?.mediaNazionaleMortalita ?? 2.0;
+
+  const [attesaResult, setAttesaResult] = useState<AttesaResult | null>(null);
+  const [attesaLoading, setAttesaLoading] = useState(false);
+
+  const hasDiagnosi = state.diagnosi.trim().length > 3;
+
+  const handleSelect = useCallback(
+    async (ospedale: Ospedale) => {
+      const isAlreadySelected = state.ospedaleSelezionato?.id === ospedale.id;
+      const newSelected = isAlreadySelected ? null : ospedale;
+      onChange({ ospedaleSelezionato: newSelected });
+
+      if (!newSelected || !hasDiagnosi || !state.specialitaSelezionata) {
+        setAttesaResult(null);
+        setAttesaLoading(false);
+        return;
+      }
+
+      setAttesaLoading(true);
+      setAttesaResult(null);
+      try {
+        const res = await fetch("/api/triage-attesa", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            diagnosi: state.diagnosi,
+            specialita: state.specialitaSelezionata.id,
+          }),
+        });
+        if (res.ok) {
+          const data: AttesaResult = await res.json();
+          setAttesaResult(data);
+        }
+      } catch {
+        // silent fail — box semplicemente non appare
+      } finally {
+        setAttesaLoading(false);
+      }
+    },
+    [state.ospedaleSelezionato, state.diagnosi, state.specialitaSelezionata, hasDiagnosi, onChange]
+  );
+
+  // Box tempi attesa da passare alla card selezionata
+  const attesaBox = (() => {
+    if (!hasDiagnosi) return null;
+    if (attesaLoading) {
+      return (
+        <div className="attesa-box">
+          <div className="attesa-label">Tempi di attesa SSN stimati</div>
+          <div className="attesa-content" style={{ fontSize: 13, color: "var(--text2)" }}>
+            Stimo i tempi di attesa SSN…
+            <LoadingDots />
+          </div>
+        </div>
+      );
+    }
+    if (!attesaResult) return null;
+    const badgeStyle = ATTESA_BADGE_STYLE[attesaResult.classe] ?? ATTESA_BADGE_STYLE["D"];
+    return (
+      <div className="attesa-box">
+        <div className="attesa-label">Tempi di attesa SSN stimati</div>
+        <div className="attesa-content">
+          <span style={{
+            fontSize: 12, fontWeight: 600, padding: "3px 8px",
+            borderRadius: 6, ...badgeStyle,
+          }}>
+            {attesaResult.classeLabel}
+          </span>
+          <span className="attesa-giorni">~{attesaResult.giorniAttesa} giorni (media nazionale)</span>
+        </div>
+        <div className="attesa-motivazione">{attesaResult.motivazione}</div>
+        <div className="attesa-fonte">
+          Fonte: {attesaResult.fonte} ·{" "}
+          <a
+            href="https://www.portaletrasparenzaservizisanitari.it/pnla"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Verifica nella tua regione →
+          </a>
+        </div>
+      </div>
+    );
+  })();
 
   return (
     <div className="step-body">
@@ -118,21 +230,20 @@ export default function Step2Centri({ ospedali, specialita, state, onChange, onN
         </div>
       )}
 
-      {filtered.map(({ ospedale, spec }) => (
-        <HospitalCard
-          key={`${ospedale.id}-${spec.specialitaId}`}
-          ospedale={ospedale}
-          spec={spec}
-          mediaNazionale={mediaNazionale}
-          selected={state.ospedaleSelezionato?.id === ospedale.id}
-          onSelect={() =>
-            onChange({
-              ospedaleSelezionato:
-                state.ospedaleSelezionato?.id === ospedale.id ? null : ospedale,
-            })
-          }
-        />
-      ))}
+      {filtered.map(({ ospedale, spec }) => {
+        const isSelected = state.ospedaleSelezionato?.id === ospedale.id;
+        return (
+          <HospitalCard
+            key={`${ospedale.id}-${spec.specialitaId}`}
+            ospedale={ospedale}
+            spec={spec}
+            mediaNazionale={mediaNazionale}
+            selected={isSelected}
+            onSelect={() => handleSelect(ospedale)}
+            attesaContent={isSelected ? attesaBox : undefined}
+          />
+        );
+      })}
 
       {usedFallback && (
         <p style={{
