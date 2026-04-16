@@ -1171,3 +1171,63 @@ select.field-input {
   .admin-sidebar { width: 100%; }
   .admin-chat { height: 70vh; }
 }
+
+/* ── Alternativa privata (Step 4) ─────────────────────── */
+.privato-section {
+  background: #F8F7FF;
+  border: 1.5px solid rgba(74,37,128,0.15);
+  border-radius: 12px;
+  padding: 1rem 1.125rem;
+  margin-bottom: 1rem;
+}
+.privato-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1814;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.confronto-box {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.confronto-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text3);
+  margin-bottom: 0.75rem;
+}
+.confronto-vs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.confronto-insight {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.privato-fonte {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 0.5rem;
+}
+.privato-fonte a {
+  color: var(--acm);
+  text-decoration: underline;
+}
+.cost-note {
+  font-size: 11px;
+  color: var(--text3);
+  font-style: italic;
+  line-height: 1.5;
+}

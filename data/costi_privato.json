@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "fonte": "Cup24.it — Analisi prezzi visite private 2024",
+    "url": "https://www.cup24.it",
+    "nota": "Costi medi per prima visita specialistica privata (studio o clinica privata convenzionata). Valori in €. Escluse strutture intramoenia SSN."
+  },
+  "per_area": {
+    "Nord": {
+      "oncologia":         { "min": 120, "medio": 180, "max": 280 },
+      "cardiologia":       { "min": 80,  "medio": 130, "max": 220 },
+      "neurologia":        { "min": 90,  "medio": 140, "max": 230 },
+      "ortopedia":         { "min": 70,  "medio": 110, "max": 180 },
+      "nefrologia":        { "min": 90,  "medio": 140, "max": 220 },
+      "gastroenterologia": { "min": 80,  "medio": 120, "max": 200 },
+      "pneumologia":       { "min": 75,  "medio": 115, "max": 185 },
+      "endocrinologia":    { "min": 80,  "medio": 120, "max": 200 },
+      "urologia":          { "min": 75,  "medio": 115, "max": 180 },
+      "ginecologia":       { "min": 80,  "medio": 120, "max": 195 },
+      "malattie_infettive":{ "min": 90,  "medio": 140, "max": 220 }
+    },
+    "Centro": {
+      "oncologia":         { "min": 100, "medio": 160, "max": 260 },
+      "cardiologia":       { "min": 70,  "medio": 115, "max": 200 },
+      "neurologia":        { "min": 80,  "medio": 125, "max": 210 },
+      "ortopedia":         { "min": 60,  "medio": 95,  "max": 160 },
+      "nefrologia":        { "min": 80,  "medio": 125, "max": 200 },
+      "gastroenterologia": { "min": 70,  "medio": 108, "max": 180 },
+      "pneumologia":       { "min": 65,  "medio": 100, "max": 165 },
+      "endocrinologia":    { "min": 70,  "medio": 108, "max": 180 },
+      "urologia":          { "min": 65,  "medio": 100, "max": 160 },
+      "ginecologia":       { "min": 70,  "medio": 108, "max": 175 },
+      "malattie_infettive":{ "min": 80,  "medio": 125, "max": 200 }
+    },
+    "Sud": {
+      "oncologia":         { "min": 80,  "medio": 130, "max": 220 },
+      "cardiologia":       { "min": 55,  "medio": 90,  "max": 160 },
+      "neurologia":        { "min": 60,  "medio": 100, "max": 170 },
+      "ortopedia":         { "min": 45,  "medio": 75,  "max": 130 },
+      "nefrologia":        { "min": 60,  "medio": 100, "max": 160 },
+      "gastroenterologia": { "min": 55,  "medio": 85,  "max": 145 },
+      "pneumologia":       { "min": 50,  "medio": 80,  "max": 135 },
+      "endocrinologia":    { "min": 55,  "medio": 85,  "max": 145 },
+      "urologia":          { "min": 50,  "medio": 80,  "max": 130 },
+      "ginecologia":       { "min": 55,  "medio": 85,  "max": 140 },
+      "malattie_infettive":{ "min": 60,  "medio": 100, "max": 165 }
+    }
+  },
+  "mapping_regioni": [
+    { "regione": "Valle d'Aosta",          "area": "Nord" },
+    { "regione": "Piemonte",               "area": "Nord" },
+    { "regione": "Liguria",                "area": "Nord" },
+    { "regione": "Lombardia",              "area": "Nord" },
+    { "regione": "Trentino-Alto Adige",    "area": "Nord" },
+    { "regione": "Veneto",                 "area": "Nord" },
+    { "regione": "Friuli-Venezia Giulia",  "area": "Nord" },
+    { "regione": "Emilia-Romagna",         "area": "Nord" },
+    { "regione": "Toscana",                "area": "Centro" },
+    { "regione": "Umbria",                 "area": "Centro" },
+    { "regione": "Marche",                 "area": "Centro" },
+    { "regione": "Lazio",                  "area": "Centro" },
+    { "regione": "Abruzzo",                "area": "Sud" },
+    { "regione": "Molise",                 "area": "Sud" },
+    { "regione": "Campania",               "area": "Sud" },
+    { "regione": "Puglia",                 "area": "Sud" },
+    { "regione": "Basilicata",             "area": "Sud" },
+    { "regione": "Calabria",               "area": "Sud" },
+    { "regione": "Sicilia",                "area": "Sud" },
+    { "regione": "Sardegna",               "area": "Sud" }
+  ]
+}

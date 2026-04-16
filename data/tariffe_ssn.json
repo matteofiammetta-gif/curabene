@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "fonte": "DM 25/11/2024 — Nuovo Nomenclatore Tariffario SSN",
+    "url": "https://www.gazzettaufficiale.it/eli/gu/2025/01/22/18/so/4/sg/pdf",
+    "nota": "Tariffe per prima visita specialistica ambulatoriale. Ticket = quota a carico del paziente non esente (max 36.15 €). Esenti da ticket: codici 048, E00-E99, reddito, ecc."
+  },
+  "prestazioni": {
+    "oncologia": {
+      "descrizione": "Prima visita oncologica",
+      "prima_visita": { "codice": "89.01.B", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "cardiologia": {
+      "descrizione": "Prima visita cardiologica",
+      "prima_visita": { "codice": "89.01.A", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "neurologia": {
+      "descrizione": "Prima visita neurologica",
+      "prima_visita": { "codice": "89.13", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "ortopedia": {
+      "descrizione": "Prima visita ortopedica",
+      "prima_visita": { "codice": "89.01.C", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "nefrologia": {
+      "descrizione": "Prima visita nefrologica",
+      "prima_visita": { "codice": "89.01.D", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "gastroenterologia": {
+      "descrizione": "Prima visita gastroenterologica",
+      "prima_visita": { "codice": "89.01.E", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "pneumologia": {
+      "descrizione": "Prima visita pneumologica",
+      "prima_visita": { "codice": "89.01.F", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "endocrinologia": {
+      "descrizione": "Prima visita endocrinologica",
+      "prima_visita": { "codice": "89.01.G", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "urologia": {
+      "descrizione": "Prima visita urologica",
+      "prima_visita": { "codice": "89.01.H", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "ginecologia": {
+      "descrizione": "Prima visita ginecologica",
+      "prima_visita": { "codice": "89.26", "tariffa": 28.41, "ticket_max": 28.41 }
+    },
+    "malattie_infettive": {
+      "descrizione": "Prima visita malattie infettive",
+      "prima_visita": { "codice": "89.01.I", "tariffa": 28.41, "ticket_max": 28.41 }
+    }
+  }
+}

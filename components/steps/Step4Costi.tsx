@@ -2,6 +2,23 @@
 
 import { useState, useMemo } from "react";
 import { AppState } from "@/lib/types";
+import tariffeSSNRaw from "@/data/tariffe_ssn.json";
+import costiPrivatoRaw from "@/data/costi_privato.json";
+
+interface TariffeSSN {
+  meta: { fonte: string; url: string; nota: string };
+  prestazioni: Record<string, { descrizione: string; prima_visita: { codice: string; tariffa: number; ticket_max: number } }>;
+}
+
+interface CostoRange { min: number; medio: number; max: number }
+interface CostiPrivato {
+  meta: { fonte: string; url: string; nota: string };
+  per_area: Record<string, Record<string, CostoRange>>;
+  mapping_regioni: Array<{ regione: string; area: string }>;
+}
+
+const tariffeSSN = tariffeSSNRaw as TariffeSSN;
+const costiPrivato = costiPrivatoRaw as CostiPrivato;
 
 interface Step4Props {
   state: AppState;
@@ -107,6 +124,107 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
 
   const mezzoIcon = MEZZO_OPTS.find((m) => m.value === mezzo)?.icon ?? "";
 
+  // --- Alternativa privata ---
+  const privatoSection = useMemo(() => {
+    const specId = state.specialitaSelezionata?.id;
+    const regione = state.regione;
+    if (!ospedale || !specId || !regione) return null;
+
+    const tariffa = tariffeSSN.prestazioni[specId];
+    if (!tariffa) return null;
+
+    const areaEntry = costiPrivato.mapping_regioni.find(
+      (m) => m.regione.toLowerCase() === regione.toLowerCase()
+    );
+    const area = areaEntry?.area ?? "Centro";
+    const costiArea = costiPrivato.per_area[area]?.[specId];
+    if (!costiArea) return null;
+
+    const ticketSSN = tariffa.prima_visita.ticket_max;
+    const costoSpostamento = costi?.totale ?? 0;
+    const costoSSNEccellenza = ticketSSN + costoSpostamento;
+    const costoPrivatoLocale = costiArea.medio;
+
+    let insightText: string;
+    if (costoPrivatoLocale < costoSSNEccellenza * 0.7) {
+      insightText = `Il privato locale (€ ${costoPrivatoLocale}) costa meno del viaggio verso il centro di eccellenza${costoSpostamento > 0 ? ` (€ ${costoSSNEccellenza.toFixed(0)} totale con spostamento)` : ""}. Valuta una visita privata nella tua regione come prima opzione.`;
+    } else if (costoPrivatoLocale > costoSSNEccellenza * 1.3 || costoSpostamento === 0) {
+      insightText = costoSpostamento > 0
+        ? `Il viaggio verso il centro PNE di eccellenza (€ ${costoSSNEccellenza.toFixed(0)} totale) costa meno del privato locale (€ ${costoPrivatoLocale}). L'eccellenza pubblica è conveniente.`
+        : `Il privato nella tua zona costa mediamente € ${costoPrivatoLocale}. Con il SSN paghi solo € ${ticketSSN.toFixed(2)} di ticket per la stessa visita.`;
+    } else {
+      insightText = `I costi sono comparabili: privato locale € ${costoPrivatoLocale} vs SSN con spostamento € ${costoSSNEccellenza.toFixed(0)}. Il centro PNE offre qualità superiore certificata AGENAS.`;
+    }
+
+    return (
+      <div className="privato-section">
+        <div className="privato-title">🏥 Alternativa privata</div>
+
+        <div className="cost-table" style={{ marginBottom: 8 }}>
+          <div className="cost-table-row">
+            <span className="cost-key">🏛️ Ticket SSN prima visita</span>
+            <span className="cost-val">€ {ticketSSN.toFixed(2)}</span>
+          </div>
+          <div className="cost-table-row">
+            <span className="cost-key">🏥 Visita privata — {area} Italia (stima Cup24)</span>
+            <span className="cost-val">
+              <span style={{ fontSize: 11, color: "var(--text3)", marginRight: 4 }}>
+                € {costiArea.min}–{costiArea.max}
+              </span>
+              <strong>€ {costiArea.medio}</strong>
+            </span>
+          </div>
+        </div>
+
+        <div className="confronto-box">
+          <div className="confronto-label">Confronto</div>
+          <div className="confronto-vs">
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 18, fontWeight: 700, color: "#1A1814" }}>
+                € {ticketSSN.toFixed(0)}
+                {costoSpostamento > 0 && (
+                  <span style={{ fontSize: 12, color: "var(--text3)", fontWeight: 400 }}>
+                    {" "}+ € {costoSpostamento.toFixed(0)} viaggio
+                  </span>
+                )}
+              </div>
+              <div style={{ fontSize: 11, color: "var(--text3)", marginTop: 2 }}>SSN + spostamento</div>
+            </div>
+            <div style={{ fontSize: 20, color: "var(--text3)", fontWeight: 300 }}>vs</div>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 18, fontWeight: 700, color: "#1A1814" }}>
+                € {costiArea.medio}
+              </div>
+              <div style={{ fontSize: 11, color: "var(--text3)", marginTop: 2 }}>Privato locale</div>
+            </div>
+          </div>
+          <div className="confronto-insight">{insightText}</div>
+        </div>
+
+        <div className="privato-fonte">
+          Fonte tariffe SSN:{" "}
+          <a href="https://www.gazzettaufficiale.it/eli/gu/2025/01/22/18/so/4/sg/pdf"
+             target="_blank" rel="noopener noreferrer">
+            DM 25/11/2024
+          </a>{" "}
+          · Costi privato:{" "}
+          <a href="https://www.cup24.it" target="_blank" rel="noopener noreferrer">
+            Cup24.it
+          </a>{" "}
+          · Liste attesa:{" "}
+          <a href="https://www.portaletrasparenzaservizisanitari.it/pnla"
+             target="_blank" rel="noopener noreferrer">
+            PNLA AGENAS
+          </a>
+        </div>
+        <p className="cost-note">
+          ⚠️ Dati indicativi. I costi privati variano per struttura e città. Ticket SSN escluso per categorie esenti (reddito, patologie croniche, invalidità).
+        </p>
+      </div>
+    );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.specialitaSelezionata, state.regione, ospedale, costi]);
+
   return (
     <div className="step-body">
       <p className="section-note">
@@ -197,6 +315,9 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
         potresti avere diritto al rimborso delle spese di viaggio (L. 833/1978).
         Chiedi al medico di base il modulo per la mobilità sanitaria interregionale.
       </div>
+
+      {/* Sezione Alternativa privata */}
+      {privatoSection}
 
       <div className="step-nav">
         <button onClick={onBack} className="btn-secondary">← Indietro</button>
