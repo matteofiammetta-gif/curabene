@@ -47,10 +47,13 @@ export interface OspedaleSpecialita {
   volumeLabel: string;                 // es. "Centro di riferimento nazionale"
   badges: string[];                    // es. ["IRCCS", "Trial Clinici"]
   spiegazione: string;
+  spiegazione_pne?: string;           // testo valutazione AGENAS PNE 2025
   fonteVolume: string;
   fonteMortalita: string;
   annoRiferimentoDati: number;
   avvertenza: string;
+  fonte?: string;                     // "pne_2025_agenas_ufficiale" | "ministero_volumi_2022"
+  url_pne?: string;
   medico: Medico;
   contatti: Contatti;
 }
@@ -63,6 +66,28 @@ export interface Ospedale {
   citta: string;
   regione: string;
   specialita: OspedaleSpecialita[];
+  // ── campi PNE 2025 ────────────────────────────────────────────────────────
+  aree_pne_molto_alto?: string[];
+  indicatori_valutati?: Record<string, number>;
+  valutazione_globale?: string;
+  fonte?: string;
+  url_pne?: string;
+  nota_copertura?: string;
+}
+
+// ─── Metadati ospedali ─────────────────────────────────────────────────────────
+
+export interface OspedaliMeta {
+  fonte: string;
+  url_fonte: string;
+  data_pubblicazione: string;
+  metodologia: string;
+  nota: string;
+}
+
+export interface OspedaliDB {
+  meta: OspedaliMeta;
+  ospedali: Ospedale[];
 }
 
 // ─── Regioni italiane ──────────────────────────────────────────────────────────

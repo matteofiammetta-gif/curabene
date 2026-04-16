@@ -91,11 +91,22 @@ export default function Step2Centri({ ospedali, specialita, state, onChange, onN
 
   return (
     <div className="step-body">
-      <p className="section-note">
-        {filtered.length === 0
-          ? "Nessun centro trovato con i filtri selezionati — prova a espandere il raggio."
-          : `${filtered.length} ${filtered.length === 1 ? "centro trovato" : "centri trovati"} · ordinati per volume`}
-      </p>
+      <div style={{ marginBottom: "0.75rem" }}>
+        <p className="section-note" style={{ marginBottom: 4 }}>
+          {filtered.length === 0
+            ? "Nessun centro trovato con i filtri selezionati — prova a espandere il raggio."
+            : `${filtered.length} ${filtered.length === 1 ? "centro trovato" : "centri trovati"} · ordinati per volume`}
+        </p>
+        {filtered.length > 0 && (
+          <p style={{ fontSize: 12, color: "var(--text3)", margin: 0 }}>
+            Centri con valutazione AGENAS PNE 2025 &ldquo;molto alto&rdquo; nell&apos;area clinica selezionata.{" "}
+            <a href="https://pne.agenas.it" target="_blank" rel="noopener noreferrer"
+               style={{ color: "var(--accent)", textDecoration: "underline" }}>
+              pne.agenas.it
+            </a>
+          </p>
+        )}
+      </div>
 
       {filtered.length === 0 && (
         <div style={{
