@@ -182,7 +182,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
 
           {/* ProgressBar + ricomincia */}
           <div className="flex items-center gap-4 flex-1 justify-end">
-            <div className="flex-1 max-w-xs hidden sm:block">
+            <div className="hidden sm:block" style={{ width: 220 }}>
               <ProgressBar stepCorrente={step} />
             </div>
             <button

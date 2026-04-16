@@ -49,7 +49,7 @@ export default function Step3Medico({ state, onNext, onBack }: Step3Props) {
         <ul className="space-y-2 mt-3">
           {PREP_TIPS.map((tip, i) => (
             <li key={i} className="flex items-start gap-2.5 text-sm" style={{ color: "var(--cb-text1)" }}>
-              <span className="check-circle mt-0.5" style={{ width: 16, height: 16, minWidth: 16 }}>
+              <span className="check-circle flex-shrink-0 mt-0.5">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path d="M1 4l2 2 4-4" stroke="var(--cb-green)" strokeWidth="1.5"
                         strokeLinecap="round" strokeLinejoin="round"/>

@@ -66,8 +66,8 @@ export default function HospitalCard({
         </span>
       </div>
 
-      {/* Stat grid 4 colonne */}
-      <div className="grid grid-cols-4 gap-2 mb-3">
+      {/* Stat grid — 2 col mobile, 4 col desktop */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
         <div className="stat-box">
           <div className="stat-value">{spec.volumeAnnuo.toLocaleString("it-IT")}</div>
           <div className="stat-label">Dimessi/anno</div>
