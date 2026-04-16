@@ -37,6 +37,38 @@ const STEP_CONFIG = {
 
 type StepNum = 1 | 2 | 3 | 4 | 5;
 
+// ──────────────────────────────────────────────────────────────────────────────
+// StepBlock DEVE essere definito FUORI da CuraBeneApp.
+// Se fosse dentro, React lo vedrebbe come tipo nuovo a ogni re-render (es. ogni
+// keystroke nella textarea) e smonterebbe/remonterebbe l'intero albero figli,
+// facendo perdere il focus a ogni tasto digitato.
+// ──────────────────────────────────────────────────────────────────────────────
+interface StepBlockProps {
+  n: StepNum;
+  currentStep: StepNum;
+  setRef: (el: HTMLDivElement | null) => void;
+  children: React.ReactNode;
+}
+
+function StepBlock({ n, currentStep, setRef, children }: StepBlockProps) {
+  const st  = n === currentStep ? "active" : n < currentStep ? "done" : "locked";
+  const cfg = STEP_CONFIG[n];
+  return (
+    <div className={`step-block ${st}`} ref={setRef}>
+      <div className="step-head">
+        <div className={`step-num step-num-${n}`}>
+          {st === "done" ? "✓" : n}
+        </div>
+        <div className="step-head-text">
+          <span className={`step-eyebrow step-eyebrow-${n}`}>{cfg.eyebrow}</span>
+          <span className="step-title">{cfg.title}</span>
+        </div>
+      </div>
+      {st !== "locked" && children}
+    </div>
+  );
+}
+
 export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) {
   const [appState, setAppState] = useState<AppState>(INITIAL_STATE);
   const stepRefs = useRef<Partial<Record<StepNum, HTMLDivElement | null>>>({});
@@ -64,34 +96,6 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
 
   const step = appState.stepCorrente;
 
-  function stepState(n: StepNum): "active" | "done" | "locked" {
-    if (n === step) return "active";
-    if (n < step)  return "done";
-    return "locked";
-  }
-
-  function StepBlock({ n, children }: { n: StepNum; children: React.ReactNode }) {
-    const st = stepState(n);
-    const cfg = STEP_CONFIG[n];
-    return (
-      <div
-        className={`step-block ${st}`}
-        ref={(el) => { stepRefs.current[n] = el; }}
-      >
-        <div className="step-head">
-          <div className={`step-num step-num-${n}`}>
-            {st === "done" ? "✓" : n}
-          </div>
-          <div className="step-head-text">
-            <span className={`step-eyebrow step-eyebrow-${n}`}>{cfg.eyebrow}</span>
-            <span className="step-title">{cfg.title}</span>
-          </div>
-        </div>
-        {st !== "locked" && children}
-      </div>
-    );
-  }
-
   return (
     <>
       {/* Header */}
@@ -114,7 +118,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
       {/* Contenuto principale */}
       <main className="main">
 
-        <StepBlock n={1}>
+        <StepBlock n={1} currentStep={step} setRef={(el) => { stepRefs.current[1] = el; }}>
           <Step1Diagnosi
             specialita={specialita}
             state={appState}
@@ -124,7 +128,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
         </StepBlock>
 
         {step >= 2 && (
-          <StepBlock n={2}>
+          <StepBlock n={2} currentStep={step} setRef={(el) => { stepRefs.current[2] = el; }}>
             <Step2Centri
               ospedali={ospedali}
               specialita={specialita}
@@ -137,7 +141,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
         )}
 
         {step >= 3 && (
-          <StepBlock n={3}>
+          <StepBlock n={3} currentStep={step} setRef={(el) => { stepRefs.current[3] = el; }}>
             <Step3Medico
               state={appState}
               onNext={() => goTo(4)}
@@ -147,7 +151,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
         )}
 
         {step >= 4 && (
-          <StepBlock n={4}>
+          <StepBlock n={4} currentStep={step} setRef={(el) => { stepRefs.current[4] = el; }}>
             <Step4Costi
               state={appState}
               onNext={() => goTo(5)}
@@ -157,7 +161,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
         )}
 
         {step >= 5 && (
-          <StepBlock n={5}>
+          <StepBlock n={5} currentStep={step} setRef={(el) => { stepRefs.current[5] = el; }}>
             <Step5Azioni
               state={appState}
               onRicomincia={ricomincia}
