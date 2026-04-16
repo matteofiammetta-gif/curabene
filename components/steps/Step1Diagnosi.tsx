@@ -46,8 +46,11 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
   const [streamingText, setStreaming] = useState<string>("");
   const [errore, setErrore]           = useState<string | null>(null);
 
-  const canAnalyze  = state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
-  const canContinue = canAnalyze && state.analisiAI !== null;
+  const isPSSelected = state.specialitaSelezionata?.id === "pronto_soccorso";
+  const canAnalyze  = !isPSSelected && state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
+  const canContinue = isPSSelected
+    ? state.specialitaSelezionata !== null
+    : canAnalyze && state.analisiAI !== null;
 
   // True while we have streaming content but haven't committed to appState yet
   const isStreaming = streamingText !== "" && state.analisiAI === null;
@@ -128,35 +131,50 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
         <div className="specialty-grid">
           {specialita.map((s) => {
             const isSelected = state.specialitaSelezionata?.id === s.id;
+            const isPS = s.id === "pronto_soccorso";
+            const cardStyle = isPS ? {
+              borderColor: isSelected ? "#DC2626" : "rgba(220,38,38,0.3)",
+              background: isSelected ? "#FFF5F5" : undefined,
+              boxShadow: isSelected ? "0 0 0 2px rgba(220,38,38,0.15)" : undefined,
+            } : {};
+            const iconStyle = isPS ? { background: "#FEE2E2" } : {};
             return (
               <button
                 key={s.id}
                 onClick={() => onChange({ specialitaSelezionata: isSelected ? null : s, analisiAI: null })}
                 className={`spec-card${isSelected ? " selected" : ""}`}
                 aria-pressed={isSelected}
+                style={cardStyle}
               >
-                <div className="spec-icon">{s.icona}</div>
+                <div className="spec-icon" style={iconStyle}>{s.icona}</div>
                 <span className="spec-name">{s.nome}</span>
+                {isPS && (
+                  <span className="spec-desc" style={{ color: "#DC2626", fontSize: 11 }}>
+                    Trova il PS meno affollato
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Diagnosi */}
-      <div className="field-group">
-        <label htmlFor="diagnosi" className="field-label">
-          Descrivi la tua condizione
-        </label>
-        <textarea
-          id="diagnosi"
-          rows={3}
-          placeholder="Es. tumore al colon stadio II, fibrillazione atriale persistente, ernia del disco L4-L5…"
-          value={state.diagnosi}
-          onChange={(e) => onChange({ diagnosi: e.target.value, analisiAI: null })}
-          className="field-input"
-        />
-      </div>
+      {/* Diagnosi — hide for PS */}
+      {!isPSSelected && (
+        <div className="field-group">
+          <label htmlFor="diagnosi" className="field-label">
+            Descrivi la tua condizione
+          </label>
+          <textarea
+            id="diagnosi"
+            rows={3}
+            placeholder="Es. tumore al colon stadio II, fibrillazione atriale persistente, ernia del disco L4-L5…"
+            value={state.diagnosi}
+            onChange={(e) => onChange({ diagnosi: e.target.value, analisiAI: null })}
+            className="field-input"
+          />
+        </div>
+      )}
 
       {/* Raggio */}
       <div className="field-group">
@@ -189,20 +207,22 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
         </select>
       </div>
 
-      {/* Bottone AI */}
-      <div style={{ marginBottom: "1rem" }}>
-        <button onClick={handleAnalyze} disabled={!canAnalyze || loading || isStreaming} className="btn-primary">
-          {loading
-            ? <><LoadingDots /><span style={{ marginLeft: 6 }}>Analisi in corso…</span></>
-            : "✨ Analizza con AI"}
-        </button>
-        {errore && (
-          <p style={{ fontSize: 13, color: "#B91C1C", marginTop: 8 }}>{errore}</p>
-        )}
-      </div>
+      {/* Bottone AI — hide for PS */}
+      {!isPSSelected && (
+        <div style={{ marginBottom: "1rem" }}>
+          <button onClick={handleAnalyze} disabled={!canAnalyze || loading || isStreaming} className="btn-primary">
+            {loading
+              ? <><LoadingDots /><span style={{ marginLeft: 6 }}>Analisi in corso…</span></>
+              : "✨ Analizza con AI"}
+          </button>
+          {errore && (
+            <p style={{ fontSize: 13, color: "#B91C1C", marginTop: 8 }}>{errore}</p>
+          )}
+        </div>
+      )}
 
-      {/* Box AI result — visibile sia durante lo streaming che a fine */}
-      {showBox && (
+      {/* Box AI result — visibile sia durante lo streaming che a fine — hide for PS */}
+      {!isPSSelected && showBox && (
         <div className="ai-box">
           <span className="ai-label">
             ✨ Analisi AI
@@ -233,7 +253,7 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
       <div className="step-nav">
         <span />
         <button onClick={onNext} disabled={!canContinue} className="btn-primary">
-          Avanti → Trova centri
+          {isPSSelected ? "Avanti → Pronto Soccorso" : "Avanti → Trova centri"}
         </button>
       </div>
     </div>

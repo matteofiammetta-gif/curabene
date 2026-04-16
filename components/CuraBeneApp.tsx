@@ -8,6 +8,7 @@ import Step2Centri from "@/components/steps/Step2Centri";
 import Step3Medico from "@/components/steps/Step3Medico";
 import Step4Costi from "@/components/steps/Step4Costi";
 import Step5Azioni from "@/components/steps/Step5Azioni";
+import StepPS from "@/components/steps/StepPS";
 import DataDisclaimer from "@/components/DataDisclaimer";
 import Link from "next/link";
 
@@ -95,6 +96,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
   }, [appState.stepCorrente]);
 
   const step = appState.stepCorrente;
+  const isPS = appState.specialitaSelezionata?.id === "pronto_soccorso";
 
   return (
     <>
@@ -129,18 +131,22 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
 
         {step >= 2 && (
           <StepBlock n={2} currentStep={step} setRef={(el) => { stepRefs.current[2] = el; }}>
-            <Step2Centri
-              ospedali={ospedali}
-              specialita={specialita}
-              state={appState}
-              onChange={patch}
-              onNext={() => goTo(3)}
-              onBack={() => goTo(1)}
-            />
+            {isPS ? (
+              <StepPS regione={appState.regione} />
+            ) : (
+              <Step2Centri
+                ospedali={ospedali}
+                specialita={specialita}
+                state={appState}
+                onChange={patch}
+                onNext={() => goTo(3)}
+                onBack={() => goTo(1)}
+              />
+            )}
           </StepBlock>
         )}
 
-        {step >= 3 && (
+        {!isPS && step >= 3 && (
           <StepBlock n={3} currentStep={step} setRef={(el) => { stepRefs.current[3] = el; }}>
             <Step3Medico
               state={appState}
@@ -150,7 +156,7 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
           </StepBlock>
         )}
 
-        {step >= 4 && (
+        {!isPS && step >= 4 && (
           <StepBlock n={4} currentStep={step} setRef={(el) => { stepRefs.current[4] = el; }}>
             <Step4Costi
               state={appState}

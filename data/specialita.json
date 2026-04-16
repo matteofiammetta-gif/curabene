@@ -1,5 +1,12 @@
 [
   {
+    "id": "pronto_soccorso",
+    "nome": "Pronto Soccorso",
+    "descrizione": "Urgenze e codici colore",
+    "icona": "🚨",
+    "mediaNazionaleMortalita": 0
+  },
+  {
     "id": "oncologia",
     "nome": "Oncologia",
     "descrizione": "Tumori e chemioterapia",

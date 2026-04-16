@@ -12,51 +12,80 @@ interface Step2Props {
   onBack: () => void;
 }
 
+const MIN_RISULTATI = 4;
+
 function getSpec(ospedale: Ospedale, specialitaId: string): OspedaleSpecialita | null {
   return ospedale.specialita.find((s) => s.specialitaId === specialitaId) ?? null;
 }
 
-function filterOspedali(ospedali: Ospedale[], state: AppState): Array<{ ospedale: Ospedale; spec: OspedaleSpecialita }> {
-  if (!state.specialitaSelezionata) return [];
+function volumeDesc(a: { spec: OspedaleSpecialita }, b: { spec: OspedaleSpecialita }): number {
+  return b.spec.volumeAnnuo - a.spec.volumeAnnuo;
+}
 
+interface FilterResult {
+  items: Array<{ ospedale: Ospedale; spec: OspedaleSpecialita }>;
+  usedFallback: boolean;
+}
+
+function filterOspedali(ospedali: Ospedale[], state: AppState): FilterResult {
+  if (!state.specialitaSelezionata) return { items: [], usedFallback: false };
+
+  const specId = state.specialitaSelezionata.id;
+
+  // All hospitals matching the selected specialty, sorted by volume desc
   const allMatching = ospedali
     .flatMap((o) => {
-      const spec = getSpec(o, state.specialitaSelezionata!.id);
+      const spec = getSpec(o, specId);
       if (!spec) return [];
       return [{ ospedale: o, spec }];
     })
-    .sort((a, b) => b.spec.volumeAnnuo - a.spec.volumeAnnuo);
+    .sort(volumeDesc);
+
+  if (state.raggio === "italia") {
+    return { items: allMatching, usedFallback: false };
+  }
+
+  const regioneUtente = (state.regione ?? "").toLowerCase();
+
+  const locali = allMatching.filter(({ ospedale }) =>
+    ospedale.regione.toLowerCase() === regioneUtente
+  );
 
   if (state.raggio === "regione") {
-    // Solo centri nella regione selezionata
-    return allMatching.filter(({ ospedale }) =>
-      ospedale.regione.toLowerCase() === (state.regione ?? "").toLowerCase()
-    );
+    if (locali.length >= MIN_RISULTATI) {
+      return { items: locali, usedFallback: false };
+    }
+
+    // Fallback: fill up to MIN_RISULTATI with best national hospitals not already in locali
+    const idLocali = new Set(locali.map(({ ospedale }) => ospedale.id));
+    const nazionali = allMatching
+      .filter(({ ospedale }) => !idLocali.has(ospedale.id))
+      .slice(0, MIN_RISULTATI - locali.length);
+
+    return {
+      items: [...locali, ...nazionali],
+      usedFallback: nazionali.length > 0,
+    };
   }
 
   if (state.raggio === "fuori") {
-    // Centri nella propria regione + top 5 nazionali fuori regione
-    const regioneUtente = (state.regione ?? "").toLowerCase();
-    const inRegione = allMatching.filter(({ ospedale }) =>
-      ospedale.regione.toLowerCase() === regioneUtente
+    const fuori = allMatching.filter(({ ospedale }) =>
+      ospedale.regione.toLowerCase() !== regioneUtente
     );
-    const fuoriRegione = allMatching
-      .filter(({ ospedale }) => ospedale.regione.toLowerCase() !== regioneUtente)
-      .slice(0, 5);
     const seen = new Set<string>();
-    return [...inRegione, ...fuoriRegione].filter(({ ospedale }) => {
+    const combinati = [...locali, ...fuori].filter(({ ospedale }) => {
       if (seen.has(ospedale.id)) return false;
       seen.add(ospedale.id);
       return true;
     });
+    return { items: combinati, usedFallback: false };
   }
 
-  // "italia" – tutti ordinati per volume
-  return allMatching;
+  return { items: locali, usedFallback: false };
 }
 
 export default function Step2Centri({ ospedali, specialita, state, onChange, onNext, onBack }: Step2Props) {
-  const filtered = filterOspedali(ospedali, state);
+  const { items: filtered, usedFallback } = filterOspedali(ospedali, state);
   const mediaNazionale =
     specialita.find((s) => s.id === state.specialitaSelezionata?.id)?.mediaNazionaleMortalita ?? 2.0;
 
@@ -93,6 +122,17 @@ export default function Step2Centri({ ospedali, specialita, state, onChange, onN
           }
         />
       ))}
+
+      {usedFallback && (
+        <p style={{
+          fontSize: 12,
+          color: "var(--text3)",
+          fontStyle: "italic",
+          marginTop: 8,
+        }}>
+          Non ci sono abbastanza centri nella tua regione per questa specialità — completato con i migliori centri nazionali.
+        </p>
+      )}
 
       <div className="step-nav">
         <button onClick={onBack} className="btn-secondary">← Indietro</button>
