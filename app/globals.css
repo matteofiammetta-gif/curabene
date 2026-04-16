@@ -245,9 +245,10 @@ html, body {
 /* GRIGLIA SPECIALITÀ */
 .specialty-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 8px;
   margin-bottom: 1.25rem;
+  align-items: stretch;
 }
 @media (max-width: 700px) {
   .specialty-grid { grid-template-columns: repeat(2, 1fr); }
@@ -261,7 +262,9 @@ html, body {
   text-align: left;
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .spec-card:hover {
   border-color: #2E86C1;
@@ -297,6 +300,8 @@ html, body {
   margin-top: 2px;
   display: block;
   font-family: 'DM Sans', sans-serif;
+  flex: 1;
+  min-height: 2.4em;
 }
 
 /* CAMPI FORM */

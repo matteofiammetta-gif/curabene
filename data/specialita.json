@@ -1,12 +1,5 @@
 [
   {
-    "id": "pronto_soccorso",
-    "nome": "Pronto Soccorso",
-    "descrizione": "Urgenze e codici colore",
-    "icona": "🚨",
-    "mediaNazionaleMortalita": 0
-  },
-  {
     "id": "oncologia",
     "nome": "Oncologia",
     "descrizione": "Tumori e chemioterapia",
@@ -61,5 +54,33 @@
     "descrizione": "Ormoni, diabete e tiroide",
     "icona": "⚗️",
     "mediaNazionaleMortalita": 0.1
+  },
+  {
+    "id": "urologia",
+    "nome": "Urologia",
+    "descrizione": "Reni e vie urinarie",
+    "icona": "⚕",
+    "mediaNazionaleMortalita": 0.8
+  },
+  {
+    "id": "ginecologia",
+    "nome": "Ginecologia",
+    "descrizione": "Salute femminile",
+    "icona": "♀",
+    "mediaNazionaleMortalita": 0.2
+  },
+  {
+    "id": "malattie_infettive",
+    "nome": "Mal. Infettive",
+    "descrizione": "Infezioni e immunologia",
+    "icona": "🔬",
+    "mediaNazionaleMortalita": 4.1
+  },
+  {
+    "id": "pronto_soccorso",
+    "nome": "Pronto Soccorso",
+    "descrizione": "Urgenze e codici colore",
+    "icona": "🚨",
+    "mediaNazionaleMortalita": 0
   }
 ]

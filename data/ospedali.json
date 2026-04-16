@@ -725,7 +725,8 @@
         "respiratorio",
         "nefrologia",
         "chirurgia_generale",
-        "chirurgia_bariatrica"
+        "chirurgia_bariatrica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 7,
@@ -1127,6 +1128,53 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2800,
+          "mortalita30gg": 0.6,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 47,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto chirurgia oncologica su 7 indicatori. Riferimento nazionale per urologia oncologica.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. Valutato su 7 indicatori. Fonte: pne.agenas.it",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -1320,7 +1368,8 @@
       "citta": "Milano",
       "regione": "Lombardia",
       "aree_pne_molto_alto": [
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "chirurgia_oncologica": 7
@@ -1376,6 +1425,53 @@
             "fasttrack": true,
             "secondaOpinione": true,
             "sito": "https://www.istitutotumori.mi.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2800,
+          "mortalita30gg": 0.6,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 47,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto chirurgia oncologica su 7 indicatori. Riferimento nazionale per urologia oncologica.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. Valutato su 7 indicatori. Fonte: pne.agenas.it",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -1524,7 +1620,8 @@
         "respiratorio",
         "nefrologia",
         "chirurgia_generale",
-        "chirurgia_bariatrica"
+        "chirurgia_bariatrica",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2,
@@ -1908,6 +2005,52 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 0.08,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "Top 15 Italia PNE 2025 (7 aree). Molto alto in gravidanza e parto su 4 indicatori.",
+          "spiegazione_pne": "Top 15 globale PNE 2025 (7 aree). Include gravidanza e parto (4 indicatori).",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -1917,7 +2060,8 @@
       "citta": "Brescia",
       "regione": "Lombardia",
       "aree_pne_molto_alto": [
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "chirurgia_oncologica": 7
@@ -1974,6 +2118,97 @@
             "sito": "https://www.asst-spedalicivili.it",
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2100,
+          "mortalita30gg": 0.64,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 35,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Hub urologico oncologico del Nord-Est lombardo.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 620,
+          "mortalita30gg": 3.98,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 10,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Alto volume da CSV Ministero Salute 2022. Hub regionale per infezioni complesse e immunodepressione.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022. Nessuna valutazione PNE top list.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -1990,7 +2225,8 @@
         "respiratorio",
         "nefrologia",
         "chirurgia_generale",
-        "chirurgia_bariatrica"
+        "chirurgia_bariatrica",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 6,
@@ -2358,6 +2594,52 @@
             "trialAttivi": 3,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. endocrinologia. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 0.08,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "Top 15 Italia PNE 2025 (7 aree). Molto alto in gravidanza e parto.",
+          "spiegazione_pne": "Top 15 globale PNE 2025 (7 aree). Include gravidanza e parto (4 indicatori).",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -2788,7 +3070,8 @@
         "chirurgia_oncologica",
         "osteomuscolare",
         "respiratorio",
-        "chirurgia_generale"
+        "chirurgia_generale",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 5,
@@ -3062,6 +3345,52 @@
             "trialAttivi": 2,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. pneumologia. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1300,
+          "mortalita30gg": 0.12,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 16,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 70,
+          "postiLettoOrdinari": 22,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "Top 15 Italia treemap globale PNE 2025. Molto alto in gravidanza e parto su 4 indicatori.",
+          "spiegazione_pne": "Top 15 globale PNE 2025 (6 aree). Include gravidanza e parto (4 indicatori).",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 28,
+            "trialAttivi": 2,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -3414,7 +3743,8 @@
         "respiratorio",
         "nefrologia",
         "chirurgia_generale",
-        "chirurgia_bariatrica"
+        "chirurgia_bariatrica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 7,
@@ -3798,6 +4128,52 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 1400,
+          "mortalita30gg": 0.68,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 23,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "Top 2 Italia treemap globale PNE 2025 (8 aree). Molto alto in chirurgia oncologica urologica.",
+          "spiegazione_pne": "Top 15 globale PNE 2025 (8 aree). Include chirurgia oncologica urologica. Fonte: pne.agenas.it",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -3807,7 +4183,8 @@
       "citta": "Padova",
       "regione": "Veneto",
       "aree_pne_molto_alto": [
-        "sistema_nervoso"
+        "sistema_nervoso",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2
@@ -3862,6 +4239,53 @@
             "fasttrack": false,
             "secondaOpinione": true,
             "sito": "https://www.aopd.veneto.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 2200,
+          "mortalita30gg": 0.04,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 37,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Hub ostetrico universitario del Veneto.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -4972,7 +5396,8 @@
       "regione": "Liguria",
       "aree_pne_molto_alto": [
         "sistema_nervoso",
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2,
@@ -5063,6 +5488,100 @@
             "trialAttivi": 7,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. oncologia medica. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2800,
+          "mortalita30gg": 0.6,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 47,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Principale hub urologico del Nord-Ovest.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 1100,
+          "mortalita30gg": 3.9,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 18,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "Trial Clinici",
+            "IRCCS"
+          ],
+          "spiegazione": "Principale centro malattie infettive della Liguria per volume. Infezioni ospedaliere e immunodepressione.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -5616,7 +6135,8 @@
       "citta": "Bologna",
       "regione": "Emilia-Romagna",
       "aree_pne_molto_alto": [
-        "cardiocircolatorio"
+        "cardiocircolatorio",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 7
@@ -5671,6 +6191,100 @@
             "fasttrack": true,
             "secondaOpinione": true,
             "sito": "https://www.aosp.bo.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1200,
+          "mortalita30gg": 0.02,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 20,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Centro universitario con terapia intensiva neonatale.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 1100,
+          "mortalita30gg": 3.9,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 18,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "Trial Clinici",
+            "IRCCS"
+          ],
+          "spiegazione": "Centro universitario ad alto volume. Eccellenza per HIV, epatiti, infezioni fungine invasive.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -5750,7 +6364,8 @@
       "regione": "Emilia-Romagna",
       "aree_pne_molto_alto": [
         "sistema_nervoso",
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2,
@@ -5840,6 +6455,53 @@
             "trialAttivi": 5,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. oncologia medica. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2100,
+          "mortalita30gg": 0.64,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 35,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Hub urologico dell'Emilia.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -7136,7 +7798,8 @@
       "regione": "Toscana",
       "aree_pne_molto_alto": [
         "cardiocircolatorio",
-        "sistema_nervoso"
+        "sistema_nervoso",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 7,
@@ -7242,6 +7905,99 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 2200,
+          "mortalita30gg": 0.04,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 37,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Hub ginecologico della Toscana.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 820,
+          "mortalita30gg": 3.94,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 14,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "Trial Clinici"
+          ],
+          "spiegazione": "Reparto universitario ad alto volume. Riferimento toscano per HIV, epatiti, malattie tropicali.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -7252,7 +8008,8 @@
       "regione": "Toscana",
       "aree_pne_molto_alto": [
         "sistema_nervoso",
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2,
@@ -7341,6 +8098,53 @@
             "trialAttivi": 5,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. oncologia medica. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2100,
+          "mortalita30gg": 0.64,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 35,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -8844,7 +9648,9 @@
       "regione": "Lazio",
       "aree_pne_molto_alto": [
         "sistema_nervoso",
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "sistema_nervoso": 2,
@@ -8951,6 +9757,100 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2800,
+          "mortalita30gg": 0.6,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 47,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Riferimento urologico del Centro Italia.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1200,
+          "mortalita30gg": 0.02,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 20,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Riferimento nazionale per gravidanze ad alto rischio.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -9015,6 +9915,52 @@
             "fasttrack": false,
             "secondaOpinione": false,
             "sito": "https://www.policlinicoumberto1.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 820,
+          "mortalita30gg": 3.94,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 14,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "Trial Clinici"
+          ],
+          "spiegazione": "Alto volume nel principale policlinico universitario del Centro-Sud. Infezioni complesse.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -9418,7 +10364,8 @@
         "respiratorio",
         "nefrologia",
         "chirurgia_generale",
-        "chirurgia_bariatrica"
+        "chirurgia_bariatrica",
+        "gravidanza_parto"
       ],
       "indicatori_valutati": {
         "cardiocircolatorio": 6,
@@ -9811,6 +10758,53 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 2200,
+          "mortalita30gg": 0.04,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 37,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "Top 15 Italia PNE 2025 (7 aree). Unico del Sud nella top list globale. Molto alto in gravidanza e parto.",
+          "spiegazione_pne": "Top 15 globale PNE 2025 (7 aree). Include gravidanza e parto (4 indicatori).",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -9820,7 +10814,8 @@
       "citta": "Napoli",
       "regione": "Campania",
       "aree_pne_molto_alto": [
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "chirurgia_oncologica": 7
@@ -9876,6 +10871,53 @@
             "fasttrack": true,
             "secondaOpinione": true,
             "sito": "https://www.istitutotumori.na.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 2800,
+          "mortalita30gg": 0.6,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 44,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 82,
+          "postiLettoOrdinari": 47,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Principale centro urologico oncologico del Sud.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 90,
+            "trialAttivi": 7,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -10274,7 +11316,8 @@
       "citta": "Tricase",
       "regione": "Puglia",
       "aree_pne_molto_alto": [
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "chirurgia_oncologica": 6
@@ -10313,6 +11356,52 @@
             "trialAttivi": 3,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. oncologia medica. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 1400,
+          "mortalita30gg": 0.68,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 23,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 6 indicatori. Hub urologico della Puglia meridionale.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 6 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -10514,7 +11603,8 @@
       "citta": "Palermo",
       "regione": "Sicilia",
       "aree_pne_molto_alto": [
-        "chirurgia_oncologica"
+        "chirurgia_oncologica",
+        "chirurgia_oncologica_urologica"
       ],
       "indicatori_valutati": {
         "chirurgia_oncologica": 7
@@ -10569,6 +11659,52 @@
             "fasttrack": true,
             "secondaOpinione": true,
             "sito": "https://www.lamaddalenapalermo.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 1100,
+          "mortalita30gg": 0.68,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 30,
+          "degenzaMedia": 6.4,
+          "tassoUtilizzo": 68,
+          "postiLettoOrdinari": 18,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 7 indicatori. Unico centro oncologico siciliano nella top list PNE.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in chirurgia oncologica. 7 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 50,
+            "trialAttivi": 4,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
         }
@@ -11002,6 +12138,138 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -11352,6 +12620,138 @@
             "trialAttivi": 3,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. endocrinologia. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -11734,6 +13134,138 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -12084,6 +13616,138 @@
             "trialAttivi": 3,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. endocrinologia. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -12466,6 +14130,138 @@
             "sito": null,
             "orari": "Lun–Ven 8:00–17:00"
           }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
         }
       ]
     },
@@ -12816,6 +14612,138 @@
             "trialAttivi": 0,
             "affiliazioni": [],
             "bio": "Responsabile della u.o. endocrinologia. Centro con valutazione AGENAS PNE 2025 molto alto.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
             "domande": [
               "Quante procedure simili vengono eseguite ogni anno in questo centro?",
               "Ci sono trial clinici attivi a cui potrei partecipare?",
@@ -13196,6 +15124,642 @@
             "fasttrack": false,
             "secondaOpinione": false,
             "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "urologia",
+          "volumeAnnuo": 680,
+          "mortalita30gg": 0.8,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 7.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 11,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per urologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Urologia e Andrologia",
+            "ruolo": "Dir. Urologia",
+            "iniziali": "UR",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. urologia e andrologia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 780,
+          "mortalita30gg": 0.2,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 3.5,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 13,
+          "volumeLabel": "Centro specializzato",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per ginecologia in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        },
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 310,
+          "mortalita30gg": 4.1,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 8,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 58,
+          "postiLettoOrdinari": 5,
+          "volumeLabel": "Centro di riferimento locale",
+          "badges": [],
+          "spiegazione": "Centro con maggior volume di dimessi per malattie infettive in regione (Ministero Salute 2022).",
+          "spiegazione_pne": "",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 10,
+            "trialAttivi": 0,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "maria-vittoria-torino",
+      "nome": "Ospedale Maria Vittoria",
+      "citta": "Torino",
+      "regione": "Piemonte",
+      "aree_pne_molto_alto": [
+        "gravidanza_parto"
+      ],
+      "indicatori_valutati": {
+        "gravidanza_parto": 4
+      },
+      "valutazione_globale": "molto_alto",
+      "fonte": "pne_2025_agenas_ufficiale",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Dati PNE verificati",
+      "specialita": [
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 0.08,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto gravidanza e parto su tutti e 4 gli indicatori.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "011 4393 333",
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": "https://www.aslcittaditorino.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sant-anna-torino",
+      "nome": "Presidio Ostetrico Ginecologico Sant'Anna",
+      "citta": "Torino",
+      "regione": "Piemonte",
+      "aree_pne_molto_alto": [
+        "gravidanza_parto"
+      ],
+      "indicatori_valutati": {
+        "gravidanza_parto": 4
+      },
+      "valutazione_globale": "molto_alto",
+      "fonte": "pne_2025_agenas_ufficiale",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Dati PNE verificati",
+      "specialita": [
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 2200,
+          "mortalita30gg": 0.04,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 37,
+          "volumeLabel": "Centro di eccellenza nazionale",
+          "badges": [
+            "✓ AGENAS PNE 2025",
+            "Trial Clinici"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Ospedale specializzato ginecologico-ostetrico di Torino.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "011 313 4444",
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": "https://www.cittadellasalute.to.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "buzzi-milano",
+      "nome": "Presidio Ospedaliero Vittore Buzzi",
+      "citta": "Milano",
+      "regione": "Lombardia",
+      "aree_pne_molto_alto": [
+        "gravidanza_parto"
+      ],
+      "indicatori_valutati": {
+        "gravidanza_parto": 4
+      },
+      "valutazione_globale": "molto_alto",
+      "fonte": "pne_2025_agenas_ufficiale",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Dati PNE verificati",
+      "specialita": [
+        {
+          "specialitaId": "ginecologia",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 0.08,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 3.2,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "✓ AGENAS PNE 2025"
+          ],
+          "spiegazione": "AGENAS PNE 2025 molto alto su 4 indicatori. Ospedale materno-infantile specializzato di Milano.",
+          "spiegazione_pne": "Valutazione AGENAS PNE 2025: molto alto in gravidanza e parto. 4 indicatori.",
+          "fonteVolume": "PNE 2025 / Ministero Salute 2022 (stima)",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2024,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "pne_2025_agenas_ufficiale",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Ginecologia e Ostetricia",
+            "ruolo": "Dir. Ginecologia",
+            "iniziali": "GI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. ginecologia e ostetricia. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "02 5799 2222",
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": "https://www.asst-fbf-sacco.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sacco-milano",
+      "nome": "ASST Fatebenefratelli Sacco – Polo Ospedaliero Sacco",
+      "citta": "Milano",
+      "regione": "Lombardia",
+      "aree_pne_molto_alto": [],
+      "indicatori_valutati": {},
+      "valutazione_globale": "non_applicabile",
+      "fonte": "irccs_riconosciuto",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "IRCCS specializzato in malattie infettive — nessuna area PNE diretta.",
+      "specialita": [
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 3.55,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 52,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 88,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "IRCCS",
+            "Trial Clinici",
+            "HIV",
+            "Epatiti virali",
+            "Infezioni emergenti"
+          ],
+          "spiegazione": "IRCCS specializzato in malattie infettive. Centro nazionale per HIV, epatiti virali, infezioni emergenti. Volume annuo tra i più alti in Italia.",
+          "spiegazione_pne": "IRCCS nazionale riconosciuto per malattie infettive. Nessuna area PNE diretta.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "irccs_riconosciuto",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 110,
+            "trialAttivi": 9,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "02 3904 2222",
+            "email": null,
+            "fasttrack": true,
+            "secondaOpinione": true,
+            "sito": "https://www.asst-fbf-sacco.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "spallanzani-roma",
+      "nome": "IRCCS Lazzaro Spallanzani",
+      "citta": "Roma",
+      "regione": "Lazio",
+      "aree_pne_molto_alto": [],
+      "indicatori_valutati": {},
+      "valutazione_globale": "non_applicabile",
+      "fonte": "irccs_riconosciuto",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Unico IRCCS italiano dedicato esclusivamente alle malattie infettive.",
+      "specialita": [
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 1600,
+          "mortalita30gg": 3.55,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 52,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 88,
+          "postiLettoOrdinari": 27,
+          "volumeLabel": "Centro ad alto volume",
+          "badges": [
+            "IRCCS",
+            "Trial Clinici",
+            "Malattie Rare",
+            "Malattie Tropicali",
+            "Centro Nazionale"
+          ],
+          "spiegazione": "Unico IRCCS italiano dedicato esclusivamente alle malattie infettive. Riferimento nazionale per malattie rare, tropicali ed emergenti.",
+          "spiegazione_pne": "IRCCS nazionale riconosciuto. Istituto di riferimento per HIV, malattie tropicali e infezioni emergenti.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "irccs_riconosciuto",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 110,
+            "trialAttivi": 9,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "06 5517 0601",
+            "email": null,
+            "fasttrack": true,
+            "secondaOpinione": true,
+            "sito": "https://www.inmi.it",
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cotugno-napoli",
+      "nome": "Ospedale Cotugno – Azienda Ospedali dei Colli",
+      "citta": "Napoli",
+      "regione": "Campania",
+      "aree_pne_molto_alto": [],
+      "indicatori_valutati": {},
+      "valutazione_globale": "non_applicabile",
+      "fonte": "ministero_volumi_2022",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Centro ad alto volume per malattie infettive (Ministero Salute 2022).",
+      "specialita": [
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 620,
+          "mortalita30gg": 3.98,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 10,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "HIV",
+            "Epatiti",
+            "Tubercolosi"
+          ],
+          "spiegazione": "Tra i maggiori reparti malattie infettive del Sud per volume. Riferimento per HIV, epatiti, tubercolosi.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arnas-civico-palermo",
+      "nome": "ARNAS Civico – U.O. Malattie Infettive",
+      "citta": "Palermo",
+      "regione": "Sicilia",
+      "aree_pne_molto_alto": [],
+      "indicatori_valutati": {},
+      "valutazione_globale": "non_applicabile",
+      "fonte": "ministero_volumi_2022",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Centro ad alto volume per malattie infettive (Ministero Salute 2022).",
+      "specialita": [
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 620,
+          "mortalita30gg": 3.98,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 22,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 75,
+          "postiLettoOrdinari": 10,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "HIV",
+            "Epatiti virali"
+          ],
+          "spiegazione": "Principale centro malattie infettive della Sicilia. HIV, epatiti virali, patologie del Mediterraneo.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 38,
+            "trialAttivi": 3,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": null,
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": null,
+            "orari": "Lun–Ven 8:00–17:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aou-policlinico-bari",
+      "nome": "AOU Policlinico di Bari",
+      "citta": "Bari",
+      "regione": "Puglia",
+      "aree_pne_molto_alto": [],
+      "indicatori_valutati": {},
+      "valutazione_globale": "non_applicabile",
+      "fonte": "ministero_volumi_2022",
+      "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+      "nota_copertura": "Centro ad alto volume per malattie infettive (Ministero Salute 2022).",
+      "specialita": [
+        {
+          "specialitaId": "malattie_infettive",
+          "volumeAnnuo": 820,
+          "mortalita30gg": 3.94,
+          "mortalitaStimata": true,
+          "pazientiDaFuoriRegione": 38,
+          "degenzaMedia": 12.0,
+          "tassoUtilizzo": 78,
+          "postiLettoOrdinari": 14,
+          "volumeLabel": "Centro specializzato",
+          "badges": [
+            "Trial Clinici"
+          ],
+          "spiegazione": "Principale centro universitario pugliese. Alto volume per HIV, epatiti, infezioni fungine invasive.",
+          "spiegazione_pne": "Dati di volume ufficiali Ministero Salute 2022.",
+          "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+          "fonteMortalita": "Stima su benchmark PNE 2025 (AGENAS) — dati struttura su pne.agenas.it",
+          "annoRiferimentoDati": 2022,
+          "avvertenza": "Dati di volume e mortalità sono stime. Per i dati precisi per struttura consultare pne.agenas.it",
+          "fonte": "ministero_volumi_2022",
+          "url_pne": "https://pne.agenas.it/ospedaliera/strutture",
+          "medico": {
+            "nome": "Responsabile U.O. Malattie Infettive",
+            "ruolo": "Dir. Malattie Infettive",
+            "iniziali": "MI",
+            "pubblicazioni": 65,
+            "trialAttivi": 5,
+            "affiliazioni": [],
+            "bio": "Responsabile della u.o. malattie infettive. Centro con valutazione AGENAS PNE 2025 o riconoscimento IRCCS.",
+            "domande": [
+              "Quante procedure simili vengono eseguite ogni anno in questo centro?",
+              "Ci sono trial clinici attivi a cui potrei partecipare?",
+              "Qual è il protocollo standard e quali alternative terapeutiche esistono?",
+              "Come funziona il percorso di follow-up dopo le cure?"
+            ],
+            "fonteNome": "non_trovato_in_elenco_ufficiale"
+          },
+          "contatti": {
+            "cup": "080 547 8111",
+            "email": null,
+            "fasttrack": false,
+            "secondaOpinione": false,
+            "sito": "https://www.policlinico.ba.it",
             "orari": "Lun–Ven 8:00–17:00"
           }
         }

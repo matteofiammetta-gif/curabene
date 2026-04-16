@@ -31,6 +31,14 @@ const DOMANDE_STANDARD = [
   "Come si monitora l'efficacia del trattamento nel tempo?",
 ];
 
+// Sfondi icona personalizzati per alcune specialità
+const SPEC_ICON_BG: Record<string, string> = {
+  pronto_soccorso:    "#FEE2E2",
+  urologia:           "#EDE9FE",
+  ginecologia:        "#FCE7F3",
+  malattie_infettive: "#ECFDF5",
+};
+
 function LoadingDots() {
   return (
     <span className="ai-dots">
@@ -137,7 +145,9 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
               background: isSelected ? "#FFF5F5" : undefined,
               boxShadow: isSelected ? "0 0 0 2px rgba(220,38,38,0.15)" : undefined,
             } : {};
-            const iconStyle = isPS ? { background: "#FEE2E2" } : {};
+            const iconBg = SPEC_ICON_BG[s.id];
+            const iconStyle = iconBg ? { background: iconBg } : {};
+            const descStyle = isPS ? { color: "#DC2626" } : {};
             return (
               <button
                 key={s.id}
@@ -148,11 +158,7 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
               >
                 <div className="spec-icon" style={iconStyle}>{s.icona}</div>
                 <span className="spec-name">{s.nome}</span>
-                {isPS && (
-                  <span className="spec-desc" style={{ color: "#DC2626", fontSize: 11 }}>
-                    Trova il PS meno affollato
-                  </span>
-                )}
+                <span className="spec-desc" style={descStyle}>{s.descrizione}</span>
               </button>
             );
           })}
