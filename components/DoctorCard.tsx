@@ -20,9 +20,14 @@ export default function DoctorCard({ medico, ospedalNome }: DoctorCardProps) {
 
       {/* Badge KPI */}
       <div className="doc-badges">
-        <span className="badge badge-b">{medico.pubblicazioni} pubblicazioni</span>
+        {medico.pubblicazioni > 0 && (
+          <span className="badge badge-b">{medico.pubblicazioni} pubblicazioni</span>
+        )}
         {medico.trialAttivi > 0 && (
           <span className="badge badge-g">{medico.trialAttivi} trial attivi</span>
+        )}
+        {medico.pubblicazioni === 0 && medico.trialAttivi === 0 && (
+          <span className="badge badge-p">Dati non disponibili — contattare il centro</span>
         )}
       </div>
 

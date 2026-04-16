@@ -19,6 +19,7 @@ export interface Medico {
   affiliazioni: string[];
   bio: string;
   domande: string[];
+  fonteNome?: string; // "non_trovato_in_elenco_ufficiale" when name could not be verified
 }
 
 // ─── Contatti ──────────────────────────────────────────────────────────────────
