@@ -42,7 +42,8 @@
             "Ci sono trial clinici attivi a cui potrei partecipare?",
             "È possibile una seconda opinione prima di procedere?",
             "Quante procedure simili alla mia vengono eseguite ogni anno qui?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 5748 9521",
@@ -98,7 +99,8 @@
             "Come funziona il tumor board multidisciplinare?",
             "Esistono trial con terapie non ancora approvate?",
             "Quanto tempo passa tra diagnosi e inizio terapia?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 2390 2323",
@@ -155,7 +157,8 @@
             "Lo scompenso avanzato: quando valutare il trapianto?",
             "Come gestisco i liquidi e il peso a casa?",
             "Gliflozine: le prendo anche senza diabete?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 5800 2021",
@@ -212,7 +215,8 @@
             "Glioblastoma: cos'è la temozolomide e per quanto si prende?",
             "Epilessia refrattaria: quando si valuta la chirurgia?",
             "Il tumore cerebrale è operabile nel mio caso specifico?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 2394 1",
@@ -269,7 +273,8 @@
             "Quanto dura la protesi e quando serve la revisione?",
             "Cementata o non cementata: quale è meglio per la mia età?",
             "Protocollo ERAS: cosa significa per la mia degenza?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 6621 1",
@@ -326,7 +331,8 @@
             "Posso accedere a trial con terapie non ancora approvate?",
             "Qual è il follow-up previsto dopo il trattamento?",
             "Chirurgia robotica: quali vantaggi nel mio caso?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -375,7 +381,8 @@
             "Dopo la TAVI: devo prendere anticoagulanti a vita?",
             "Qual è la durata attesa della valvola biologica?",
             "Il follow-up ecocardiografico: ogni quanto?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -424,7 +431,8 @@
             "Stimolazione cerebrale profonda nel Parkinson: sono candidato?",
             "Come si monitora l'efficacia della terapia nel tempo?",
             "Trombectomia: in che finestra temporale si esegue?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -472,7 +480,8 @@
             "Protesi cementata vs non cementata: quale per me?",
             "Come si previene la lussazione della protesi d'anca?",
             "Fisioterapia pre-operatoria: è utile nel mio caso?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -520,7 +529,8 @@
             "Dialisi peritoneale vs emodialisi: quale per il mio stile di vita?",
             "Come rallento la progressione dell'IRC?",
             "SGLT2 inibitori: utili anche nella mia nefropatia non diabetica?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -568,7 +578,8 @@
             "TIPS: quando è indicata nelle varici esofagee?",
             "Elastografia epatica: cosa misura esattamente?",
             "Celiachia refrattaria: come si tratta?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -616,7 +627,8 @@
             "Come si monitora la progressione della fibrosi?",
             "Quando valutare il trapianto polmonare?",
             "Posso iscrivermi al registro nazionale IPF?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -665,7 +677,8 @@
             "Cushing: come si localizza la fonte dell'eccesso di cortisolo?",
             "Tumore neuroendocrino: aggressivo o si può sorvegliare?",
             "Analogici della somatostatina: per quanto tempo si prendono?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 3015 4435",
@@ -721,7 +734,8 @@
             "Quanto dura la doppia antiaggregazione dopo lo stent?",
             "Posso tornare ad attività fisica e quando?",
             "Il rischio cardiovascolare residuo: come lo gestisco?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "06 5870 3760",
@@ -777,7 +791,8 @@
             "CAR-T: devo andare in un altro centro?",
             "Come funziona il tumor board multidisciplinare?",
             "Tempi di accesso alle terapie biologiche rimborsate?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 590 3325",
@@ -834,7 +849,8 @@
             "Monitoraggio remoto del device: come funziona?",
             "Gliflozine: rimborsate anche per lo scompenso?",
             "Quando si valuta il trapianto cardiaco?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 706 2222",
@@ -882,7 +898,8 @@
             "I biologici per l'asma sono rimborsabili nel mio caso?",
             "Come si calibra la NIV domiciliare?",
             "Riabilitazione polmonare: c'è un programma attivo qui?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 706 2222",
@@ -937,7 +954,8 @@
             "Fibrillazione atriale e scompenso: come si gestiscono insieme?",
             "Il monitoraggio pressorio ambulatoriale: cosa rivela?",
             "Terapia triplice nell'insufficienza cardiaca: tutti e tre i farmaci?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 746 2066",
@@ -985,7 +1003,8 @@
             "Ho la cirrosi: ogni quanto devo fare l'ecografia?",
             "Steatosi epatica: dieta o farmaci?",
             "Quando è necessaria la biopsia epatica?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 746 2066",
@@ -1032,7 +1051,8 @@
             "Come si monitora la recidiva dopo chirurgia ipofisaria?",
             "Analoghi somatostatina: come si assumono?",
             "Feocromocitoma maligno: ci sono farmaci innovativi?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 746 2066",
@@ -1087,7 +1107,8 @@
             "Il mio tumore ha un profilo genetico analizzato?",
             "Le CAR-T sono disponibili qui o devo andare altrove?",
             "Come funziona il supporto alle cure palliative?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "091 666 2222",
@@ -1134,7 +1155,8 @@
             "BPCO e asma insieme: come si gestiscono?",
             "La spirometria: cosa misura e quando rifarla?",
             "I corticosteroidi inalatori: devo prenderli a vita?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "091 666 2222",
@@ -1190,7 +1212,8 @@
             "Il tempo porta-pallone nel vostro centro?",
             "Scompenso post-infarto: quali farmaci sono fondamentali?",
             "Follow-up dopo TAVI: cosa monitorare?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 743 5111",
@@ -1237,7 +1260,8 @@
             "Ictus lacunare vs ictus cardioembolico: stessa terapia?",
             "Come prevenire il secondo ictus?",
             "Riabilitazione post-ictus: dove e per quanto tempo?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 743 5111",
@@ -1246,6 +1270,55 @@
           "secondaOpinione": false,
           "sito": "https://www.ao-ve.it",
           "orari": "Lun–Ven 8:00–14:30"
+        }
+      },
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 630,
+        "mortalita30gg": 1.5,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 8,
+        "degenzaMedia": 8.2,
+        "tassoUtilizzo": 78.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Endoscopia avanzata",
+          "IBD Center",
+          "ERCP"
+        ],
+        "spiegazione": "630 dimessi/anno in gastroenterologia (Ministero 2022). Centro regionale di riferimento per le malattie infiammatorie croniche intestinali (IBD). Endoscopia interventistica con ERCP e mucosectomia.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia",
+          "iniziali": "GS",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Catania",
+            "Società Italiana di Gastroenterologia"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per informazioni aggiornate.",
+          "domande": [
+            "Morbo di Crohn: quando passare alla terapia biologica?",
+            "Rettocolite ulcerosa: rischio di cancerizzazione?",
+            "ERCP: quando è indicata?",
+            "Celiachia refrattaria: quali opzioni terapeutiche?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "095 743 5111",
+          "email": "gastroenterologia@ao-ve.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.ao-ve.it",
+          "orari": "Lun–Ven 8:00–14:00"
         }
       }
     ]
@@ -1291,7 +1364,8 @@
             "Emodialisi a casa è possibile nel mio caso?",
             "Come gestisco la dieta con l'IRC?",
             "Il trapianto: come accedo alla lista d'attesa?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 726 2222",
@@ -1337,7 +1411,8 @@
             "Quanto tempo per tornare a camminare?",
             "Come si previene la TVP dopo l'intervento?",
             "Riabilitazione post-chirurgica: dove?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 726 2222",
@@ -1384,7 +1459,8 @@
             "BPCO: ogni quanto fare la spirometria?",
             "Il vaccino antinfluenzale e antipneumococcico: obbligatori con la BPCO?",
             "Ossigenoterapia a lungo termine: quando è indicata?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 726 2222",
@@ -1438,7 +1514,8 @@
             "Per il trapianto: a quale centro vengo inviato?",
             "Ci sono trasporti SSN convenzionati per le sedute dialitiche?",
             "Come gestisco la dieta con l'IRC a casa?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "0935 516 111",
@@ -1495,7 +1572,8 @@
             "LVAD come ponte al trapianto: quali rischi?",
             "Cardiomiopatia ipertrofica: rischio morte improvvisa?",
             "Follow-up dopo trapianto cardiaco: dove e ogni quanto?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 214 3111",
@@ -1544,7 +1622,8 @@
             "Terapia duodenale (LCIG): cos'è e per chi è indicata?",
             "Sclerosi multipla progressiva: ci sono nuove terapie?",
             "Come gestire le complicanze non-motorie del Parkinson?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 214 3111",
@@ -1593,7 +1672,8 @@
             "ERCP: rischi della procedura nel mio caso?",
             "Cirrosi: ogni quanto fare la gastroscopia per le varici?",
             "Colite ulcerosa grave: chirurgia o continuare i farmaci?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 214 3111",
@@ -1641,7 +1721,8 @@
             "Quale infezione devo temere di più dopo il trapianto?",
             "Biopsia renale: quando è necessaria?",
             "IgA nephropathy: ci sono nuove terapie?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 214 3111",
@@ -1650,6 +1731,55 @@
           "secondaOpinione": true,
           "sito": "https://www.aosp.bo.it",
           "orari": "Lun–Ven 7:30–17:30"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 520,
+        "mortalita30gg": 0.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 24,
+        "degenzaMedia": 5.9,
+        "tassoUtilizzo": 72.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IRCCS",
+          "Tumori neuroendocrini",
+          "Tiroide",
+          "Acromegalia"
+        ],
+        "spiegazione": "520 dimessi/anno in endocrinologia (Ministero 2022). Il Sant'Orsola è centro di riferimento nazionale per i tumori neuroendocrini (NET) e per le patologie ipofisarie complesse. Attivo il centro per i tumori tiroidei ad alto rischio.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia e Diabetologia",
+          "iniziali": "EN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università di Bologna",
+            "Società Italiana di Endocrinologia"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per informazioni aggiornate.",
+          "domande": [
+            "Tumore neuroendocrino: terapia con analoghi somatostatina?",
+            "Acromegalia: quando è necessaria la chirurgia ipofisaria?",
+            "Carcinoma tiroideo differenziato: follow-up con tireoglobulina?",
+            "Insufficienza surrenalica: gestione in situazioni di stress?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "051 636 1111",
+          "email": "endocrinologia@aosp.bo.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aosp.bo.it",
+          "orari": "Lun–Ven 8:00–14:00"
         }
       }
     ]
@@ -1698,7 +1828,8 @@
             "Revisione protesica: rischi aggiuntivi rispetto al primo impianto?",
             "Chirurgia robotica per protesi: migliora i risultati?",
             "Osteosarcoma: quale chemio prima e dopo la chirurgia?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 636 6111",
@@ -1746,7 +1877,8 @@
             "Sarcoma delle parti molli: serve la radioterapia?",
             "Come si monitorano le metastasi polmonari nel follow-up?",
             "Il secondo parere oncologico: è possibile averlo qui?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "051 636 6111",
@@ -1802,7 +1934,8 @@
             "Trial di fase I: cosa significa e quali rischi?",
             "NGS (sequenziamento di nuova generazione): si può fare qui?",
             "Immunoterapia: qual è il mio score PD-L1?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "0543 739 100",
@@ -1860,7 +1993,8 @@
             "Cefalea a grappolo refrattaria: esistono nuovi trattamenti?",
             "Parkinson: sono candidato alla DBS?",
             "Neuropsicologia: c'è un servizio dedicato per le demenze?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "0382 380 380",
@@ -1916,7 +2050,8 @@
             "ERCP vs EUS: quale procedura per il mio calcolo?",
             "Pancreatite cronica: come si gestisce il dolore?",
             "Elastasi fecale bassa: indica sempre insufficienza pancreatica?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "0521 702 111",
@@ -1964,7 +2099,8 @@
             "Ipertensione polmonare: farmaci vasodilatatori rimborsabili?",
             "TAPSE bassa all'eco: cosa significa per il polmone?",
             "Test dei 6 minuti: cosa misura?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "0521 702 111",
@@ -2019,7 +2155,8 @@
             "Immunoterapia: sono eleggibile?",
             "Come si gestiscono gli effetti collaterali dei biologici?",
             "Quante sedute di chemio sono previste?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 759 1111",
@@ -2067,7 +2204,8 @@
             "GLP-1 agonisti: sono adatti anche senza obesità?",
             "Tiroide con noduli: quando serve l'agoaspirato?",
             "Il diabete gestazionale: rischi futuri?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "095 759 1111",
@@ -2123,7 +2261,8 @@
             "FA persistente di lunga data: conviene ancora l'ablazione?",
             "Wolff-Parkinson-White: si può guarire con la ablazione?",
             "Dopo l'ablazione: i farmaci si possono sospendere?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "02 5277 4400",
@@ -2179,7 +2318,8 @@
             "SLA: quali presidi riabilitativi e di supporto esistono?",
             "Tempo porta-ago per la trombolisi nel vostro centro?",
             "Demenza: la valutazione neuropsicologica è disponibile?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 747 2888",
@@ -2226,7 +2366,8 @@
             "Come si previene la TVP dopo l'intervento?",
             "Mobilizzazione precoce: possibile nel mio caso?",
             "Fisioterapia post-op: quante sedute e dove?"
-          ]
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
         },
         "contatti": {
           "cup": "081 747 2888",
@@ -2235,6 +2376,1864 @@
           "secondaOpinione": false,
           "sito": "https://www.aocardarelli.it",
           "orari": "Lun–Ven 8:00–15:30"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 820,
+        "mortalita30gg": 1.2,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 11,
+        "degenzaMedia": 7.4,
+        "tassoUtilizzo": 82.0,
+        "postiLettoOrdinari": 24,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Emodialisi",
+          "Trapianti renali",
+          "Urgenze nefrologiche"
+        ],
+        "spiegazione": "820 dimessi/anno in nefrologia (Ministero 2022). Il Cardarelli dispone di un reparto di nefrologia-dialisi di riferimento per la Campania, con emodialisi cronica e acuta, biopsie renali e gestione dello scompenso renale acuto.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia",
+          "ruolo": "Direttore Struttura Complessa Nefrologia e Dialisi",
+          "iniziali": "NF",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi della Campania Luigi Vanvitelli",
+            "Società Italiana di Nefrologia"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per informazioni aggiornate sul referente.",
+          "domande": [
+            "Insufficienza renale cronica: quando iniziare la dialisi?",
+            "Trapianto renale: sono candidato?",
+            "Come preservare la funzione renale residua?",
+            "Biopsia renale: quando è necessaria?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "081 747 2888",
+          "email": "nefrologia@aocardarelli.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.aocardarelli.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fondazione-policlinico-milano",
+    "nome": "Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico",
+    "citta": "Milano",
+    "regione": "Lombardia",
+    "specialita": [
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 2820,
+        "mortalita30gg": 1.4,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 28,
+        "degenzaMedia": 5.8,
+        "tassoUtilizzo": 76.0,
+        "postiLettoOrdinari": 52,
+        "volumeLabel": "Centro di riferimento nazionale",
+        "badges": [
+          "IRCCS",
+          "IBD Center",
+          "Endoscopia avanzata",
+          "ERCP",
+          "Trapianti epatici"
+        ],
+        "spiegazione": "2.820 dimessi/anno in gastroenterologia (Ministero 2022). Uno dei centri con i maggiori volumi in Italia per malattie infiammatorie croniche intestinali e patologie epatobiliari. Centro trapianti di fegato di riferimento nazionale.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia ed Epatologia",
+          "iniziali": "GE",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Milano",
+            "Associazione Italiana per lo Studio del Fegato (AISF)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Il reparto ospita ricercatori con riconoscimento internazionale nel campo delle IBD. Contattare il CUP.",
+          "domande": [
+            "Colite di Crohn: le biologici sono disponibili in regime SSN?",
+            "Epatite cronica B o C: qual è il protocollo attuale?",
+            "Reflusso gastroesofageo refrattario: quando operare?",
+            "Trapianto di fegato: quali criteri di accesso alla lista?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "02 5503 3444",
+          "email": "gastroenterologia@policlinico.mi.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.fondazionepoliclinico.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 1180,
+        "mortalita30gg": 1.3,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 22,
+        "degenzaMedia": 7.1,
+        "tassoUtilizzo": 78.0,
+        "postiLettoOrdinari": 30,
+        "volumeLabel": "Centro di riferimento nazionale",
+        "badges": [
+          "IRCCS",
+          "Trapianti renali",
+          "Glomerulonefriti",
+          "Dialisi peritoneale"
+        ],
+        "spiegazione": "1.180 dimessi/anno in nefrologia (Ministero 2022). Il Policlinico di Milano è tra i centri nazionali con maggiore expertise nelle glomerulonefriti rare e nei trapianti di rene. Dialisi peritoneale automatizzata domiciliare.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia, Dialisi e Trapianto",
+          "ruolo": "Direttore Struttura Complessa Nefrologia",
+          "iniziali": "ND",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Milano",
+            "Società Italiana di Nefrologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Centro con tradizione di ricerca clinica nelle nefropatie primitive e nei trapianti. Contattare il CUP.",
+          "domande": [
+            "Glomerulonefrite: biopsia renale necessaria?",
+            "Trapianto renale: lista di attesa e criteri di idoneità?",
+            "Dialisi peritoneale domiciliare: sono candidato?",
+            "IgA nefropatia: quando iniziare l'immunosoppressore?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "02 5503 3444",
+          "email": "nefrologia@policlinico.mi.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.fondazionepoliclinico.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 780,
+        "mortalita30gg": 0.7,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 24,
+        "degenzaMedia": 4.9,
+        "tassoUtilizzo": 68.0,
+        "postiLettoOrdinari": 20,
+        "volumeLabel": "Centro di riferimento nazionale",
+        "badges": [
+          "IRCCS",
+          "Malattie rare endocrine",
+          "Tumori neuroendocrini",
+          "Ipofisite"
+        ],
+        "spiegazione": "780 dimessi/anno in endocrinologia (Ministero 2022). Presidio di riferimento per le malattie endocrine rare e i tumori neuroendocrini (NET). Ambulatori dedicati per acromegalia, feocromocitoma e malattie della tiroide ad alta complessità.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia e Malattie Metaboliche",
+          "iniziali": "EM",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Milano",
+            "Società Italiana di Endocrinologia (SIE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Insulinoma: quale percorso diagnostico-terapeutico?",
+            "Malattia di Cushing: chirurgia ipofisaria o surrenalica?",
+            "Nodulo tiroideo: FNA o follow-up ecografico?",
+            "MEN1 familiare: screening per familiari di primo grado?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "02 5503 3444",
+          "email": "endocrinologia@policlinico.mi.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.fondazionepoliclinico.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "pneumologia",
+        "volumeAnnuo": 1520,
+        "mortalita30gg": 2.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 19,
+        "degenzaMedia": 9.2,
+        "tassoUtilizzo": 80.0,
+        "postiLettoOrdinari": 40,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IRCCS",
+          "BPCO avanzata",
+          "Fibrosi polmonare",
+          "Ipertensione polmonare",
+          "Broncoscopia interventistica"
+        ],
+        "spiegazione": "1.520 dimessi/anno in pneumologia (Ministero 2022). Uno dei centri di riferimento lombardi per la fibrosi polmonare idiopatica (IPF) e l'ipertensione arteriosa polmonare. Broncoscopia interventistica con navigazione elettromagnetica.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Pneumologia",
+          "ruolo": "Direttore Struttura Complessa Pneumologia e Fisiopatologia Respiratoria",
+          "iniziali": "PL",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Milano",
+            "Associazione Italiana Pneumologi Ospedalieri (AIPO)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "IPF: i farmaci antifibrotici sono rimborsati dal SSN?",
+            "BPCO in stadio GOLD IV: sono candidato al trapianto polmonare?",
+            "Ipertensione polmonare: esiste un centro dedicato?",
+            "Apnee notturne gravi: percorso diagnostico e CPAP?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "02 5503 3444",
+          "email": "pneumologia@policlinico.mi.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.fondazionepoliclinico.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "aou-padova",
+    "nome": "Azienda Ospedale-Università di Padova",
+    "citta": "Padova",
+    "regione": "Veneto",
+    "specialita": [
+      {
+        "specialitaId": "oncologia",
+        "volumeAnnuo": 880,
+        "mortalita30gg": 2.1,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 31,
+        "degenzaMedia": 5.4,
+        "tassoUtilizzo": 62.0,
+        "postiLettoOrdinari": 28,
+        "volumeLabel": "Centro di riferimento regionale",
+        "badges": [
+          "DEA II livello",
+          "Oncologia molecolare",
+          "Tumori rari",
+          "Trial Clinici"
+        ],
+        "spiegazione": "880 dimessi/anno in oncologia (Ministero 2022). Il Policlinico di Padova è il principale riferimento del Veneto per i tumori rari e le terapie molecolari. Stretta sinergia con l'IOV (Istituto Oncologico Veneto - IRCCS) co-localizzato nel campus.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Oncologia Medica",
+          "ruolo": "Direttore Struttura Complessa Oncologia Medica 1",
+          "iniziali": "OM",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Associazione Italiana di Oncologia Medica (AIOM)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Il campus di Padova ospita uno dei più importanti poli oncologici del Nord-Est. Contattare il CUP.",
+          "domande": [
+            "Tumori rari: esiste un percorso dedicato o un tumor board?",
+            "Terapia a bersaglio molecolare: quali test genetici sono necessari?",
+            "Trial clinici attivi: sono eleggibile?",
+            "Seconda opinione oncologica: come si prenota?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "oncologia@aopd.veneto.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "cardiologia",
+        "volumeAnnuo": 2480,
+        "mortalita30gg": 1.0,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 18,
+        "degenzaMedia": 10.8,
+        "tassoUtilizzo": 82.0,
+        "postiLettoOrdinari": 74,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Emodinamica H24",
+          "Cardiochirurgia",
+          "Scompenso avanzato",
+          "TAVI"
+        ],
+        "spiegazione": "2.480 dimessi/anno in cardiologia (Ministero 2022). Uno dei principali centri cardiologici del Nord-Est, con cardiochirurgia e cardiologia interventistica in unica sede. Expertize in TAVI percutanea e insufficienza cardiaca avanzata.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Cardiologia",
+          "ruolo": "Direttore Struttura Complessa Cardiologia",
+          "iniziali": "CR",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Cardiologia (SIC)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. La Cattedra di Cardiologia di Padova è tra le più antiche d'Italia. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Scompenso cardiaco terminale: lista trapianto?",
+            "Valvulopatia aortica: TAVI o chirurgia aperta?",
+            "Fibrillazione atriale: ablazione transcatetere o farmaci?",
+            "Cardiopatia ischemica: bypass o angioplastica?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "cardiologia@aopd.veneto.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "neurologia",
+        "volumeAnnuo": 780,
+        "mortalita30gg": 5.2,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 20,
+        "degenzaMedia": 7.6,
+        "tassoUtilizzo": 79.0,
+        "postiLettoOrdinari": 30,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Stroke Unit",
+          "Sclerosi multipla",
+          "Malattie neuromuscolari",
+          "Epilessia chirurgica"
+        ],
+        "spiegazione": "780 dimessi/anno in neurologia (Ministero 2022). La Neurologia di Padova è centro di riferimento per la sclerosi multipla, le malattie neuromuscolari rare e l'epilessia farmacoresistente candidata a chirurgia.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Neurologia",
+          "ruolo": "Direttore Struttura Complessa Neurologia",
+          "iniziali": "NR",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Neurologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Sclerosi multipla recidivante: quali biologici sono disponibili?",
+            "Parkinson avanzato: DBS (stimolazione cerebrale profonda): sono candidato?",
+            "Epilessia farmacoresistente: è possibile la valutazione chirurgica?",
+            "Malattia di Charcot-Marie-Tooth: follow-up neurofisiologico?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "neurologia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "ortopedia",
+        "volumeAnnuo": 620,
+        "mortalita30gg": 0.9,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 16,
+        "degenzaMedia": 6.2,
+        "tassoUtilizzo": 74.0,
+        "postiLettoOrdinari": 26,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Chirurgia protesica",
+          "Oncologia ortopedica",
+          "Artroscopia avanzata",
+          "Scoliosi"
+        ],
+        "spiegazione": "620 dimessi/anno in ortopedia (Ministero 2022). Il reparto di ortopedia del Policlinico di Padova si distingue per l'oncologia scheletrica e la chirurgia protesica complessa delle revisioni. Collegamento funzionale con il reparto di ortopedia pediatrica.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Ortopedia e Traumatologia",
+          "ruolo": "Direttore Struttura Complessa Ortopedia e Traumatologia",
+          "iniziali": "OT",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Ortopedia e Traumatologia (SIOT)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Revisione protesi anca infetta: tempi e percorso?",
+            "Tumore osseo: sarcoma – centro di riferimento per il trattamento?",
+            "Scoliosi grave nell'adulto: indicazione chirurgica?",
+            "Artroscopia di ginocchio: quando evitabile con terapia conservativa?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "ortopedia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 920,
+        "mortalita30gg": 1.1,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 22,
+        "degenzaMedia": 7.0,
+        "tassoUtilizzo": 76.0,
+        "postiLettoOrdinari": 28,
+        "volumeLabel": "Centro di riferimento regionale",
+        "badges": [
+          "Trapianti renali",
+          "Dialisi peritoneale",
+          "Glomerulonefriti rare",
+          "Rene acuto"
+        ],
+        "spiegazione": "920 dimessi/anno in nefrologia (Ministero 2022). Padova è sede di uno dei centri trapianto rene più attivi del Nord-Est. Expertise nelle glomerulonefriti rare (sindrome nefrosica, vasculiti ANCA). Dialisi peritoneale automatizzata.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia, Dialisi e Trapianto Renale",
+          "ruolo": "Direttore Struttura Complessa Nefrologia",
+          "iniziali": "NF",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Nefrologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Glomerulosclerosi focale: biopsia e immunosoppressori?",
+            "Emodialisi vs dialisi peritoneale: qual è più adatta al mio caso?",
+            "Lista trapianto renale: tempi medi in Veneto?",
+            "Danno renale acuto in terapia intensiva: quando la CVVH?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "nefrologia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 610,
+        "mortalita30gg": 1.3,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 15,
+        "degenzaMedia": 7.8,
+        "tassoUtilizzo": 71.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IBD Center",
+          "Endoscopia operativa",
+          "Colangioscopia",
+          "ERCP"
+        ],
+        "spiegazione": "610 dimessi/anno in gastroenterologia (Ministero 2022). Centro di riferimento per le malattie infiammatorie croniche intestinali del Veneto. Endoscopia diagnostica e terapeutica avanzata, inclusa la colangioscopia per le patologie delle vie biliari.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia",
+          "iniziali": "GS",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Gastroenterologia (SIGE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Malattia di Crohn stenosante: dilatazione endoscopica o chirurgia?",
+            "Calcoli coledoco: ERCP vs chirurgia laparoscopica?",
+            "Pancreatite cronica: follow-up e rischio oncologico?",
+            "Colangite sclerosante primitiva: trapianto di fegato nei casi avanzati?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "gastroenterologia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 420,
+        "mortalita30gg": 0.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 14,
+        "degenzaMedia": 4.8,
+        "tassoUtilizzo": 65.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Malattie rare endocrine",
+          "Tumori neuroendocrini",
+          "Patologie tiroidee"
+        ],
+        "spiegazione": "420 dimessi/anno in endocrinologia (Ministero 2022). Il reparto di Padova è specializzato nei tumori neuroendocrini e nelle malattie endocrine rare. Ambulatorio dedicato per il follow-up post-tiroidectomia e per l'osteoporosi severa.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia e Malattie del Metabolismo",
+          "iniziali": "EN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Società Italiana di Endocrinologia (SIE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "MEN2: timing ottimale per tiroidectomia profilattica?",
+            "Tumore neuroendocrino pancreatico: scintigrafia con Ga-68 e octreotide?",
+            "Ipopituitarismo post-chirurgico: quale terapia sostitutiva?",
+            "Iperparatiroidismo primario: adenoma o iperplasia?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "endocrinologia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "pneumologia",
+        "volumeAnnuo": 520,
+        "mortalita30gg": 2.6,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 14,
+        "degenzaMedia": 8.4,
+        "tassoUtilizzo": 72.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Fibrosi polmonare",
+          "BPCO avanzata",
+          "Ipertensione polmonare",
+          "Broncoscopia interventistica"
+        ],
+        "spiegazione": "520 dimessi/anno in pneumologia (Ministero 2022). Centro di riferimento del Veneto per le pneumopatie interstiziali rare e l'ipertensione polmonare. Attivo il programma di broncoscopia avanzata con EBUS per le neoplasie polmonari.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Pneumologia",
+          "ruolo": "Direttore Struttura Complessa Pneumologia",
+          "iniziali": "PN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Padova",
+            "Associazione Italiana Pneumologi Ospedalieri (AIPO)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Fibrosi polmonare idiopatica: nintedanib o pirfenidone? Quale preferire?",
+            "Sarcoidosi con coinvolgimento polmonare: è necessario il cortisone?",
+            "Ipertensione polmonare precapillare: iter diagnostico?",
+            "Neoplasia polmonare sospetta: EBUS o PET per la stadiazione?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "049 821 1111",
+          "email": "pneumologia@aopd.veneto.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aopd.veneto.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "citta-salute-torino",
+    "nome": "AOU Città della Salute e della Scienza di Torino",
+    "citta": "Torino",
+    "regione": "Piemonte",
+    "specialita": [
+      {
+        "specialitaId": "oncologia",
+        "volumeAnnuo": 740,
+        "mortalita30gg": 2.2,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 26,
+        "degenzaMedia": 5.6,
+        "tassoUtilizzo": 61.0,
+        "postiLettoOrdinari": 26,
+        "volumeLabel": "Centro di riferimento regionale",
+        "badges": [
+          "DEA II livello",
+          "Ematologia-oncologia",
+          "Chirurgia oncologica",
+          "Trial Clinici"
+        ],
+        "spiegazione": "740 dimessi/anno in oncologia medica (Ministero 2022). Il polo oncologico del Città della Salute — la Molinette — è il principale centro pubblico oncologico piemontese per casistica e complessità. Stretta sinergia con il Dipartimento di Oncologia dell'Università di Torino.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Oncologia Medica",
+          "ruolo": "Direttore Struttura Complessa Oncologia Medica",
+          "iniziali": "OM",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Associazione Italiana di Oncologia Medica (AIOM)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Tumore mammario HER2+: pertuzumab + trastuzumab: indicazione?",
+            "Tumori del colon con instabilità dei microsatelliti: immunoterapia in prima linea?",
+            "Tumore del polmone: PD-L1 espresso: quale immunoterapia?",
+            "Trial clinici oncologici attivi a Torino?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "oncologia@cittadellasalute.to.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "cardiologia",
+        "volumeAnnuo": 3120,
+        "mortalita30gg": 1.0,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 20,
+        "degenzaMedia": 11.4,
+        "tassoUtilizzo": 83.0,
+        "postiLettoOrdinari": 86,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Trapianti cardiaci",
+          "LVAD",
+          "Cardiochirurgia",
+          "Emodinamica H24"
+        ],
+        "spiegazione": "3.120 dimessi/anno in cardiologia (Ministero 2022). La Cardiologia della Molinette è tra i centri con i maggiori volumi del Nord-Ovest. Attivo il programma di trapianto cardiaco e di assistenza meccanica al circolo (LVAD).",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Cardiologia",
+          "ruolo": "Direttore Struttura Complessa Cardiologia Universitaria",
+          "iniziali": "CA",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Cardiologia (SIC)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. La Cattedra di Cardiologia di Torino è tra le più attive in Italia per la ricerca in elettrofisiologia. Contattare il CUP.",
+          "domande": [
+            "Insufficienza cardiaca NYHA IV: LVAD o trapianto?",
+            "Fibrillazione atriale parossistica: ablazione con cryoablazione?",
+            "Miocardiopatia aritmogena del ventricolo destro: ICD profilattico?",
+            "Amyloidosi cardiaca TTR wild-type: prognosi e terapia?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "cardiologia@cittadellasalute.to.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "neurologia",
+        "volumeAnnuo": 710,
+        "mortalita30gg": 5.4,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 19,
+        "degenzaMedia": 7.8,
+        "tassoUtilizzo": 78.0,
+        "postiLettoOrdinari": 28,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Stroke Unit",
+          "Sclerosi multipla",
+          "SLA",
+          "Neurochirurgia funzionale"
+        ],
+        "spiegazione": "710 dimessi/anno in neurologia (Ministero 2022). La Neurologia della Molinette è centro di riferimento regionale per la SLA, la sclerosi multipla progressiva e le demenze rare. Stroke Unit certificata.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Neurologia",
+          "ruolo": "Direttore Struttura Complessa Neurologia II",
+          "iniziali": "NR",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Neurologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "SLA: peg-tube e NIV – quando iniziarli?",
+            "Sclerosi multipla progressiva: ocrelizumab è ancora efficace?",
+            "Ictus criptogenetico: PFO: occludere o anticoagulare?",
+            "Demenza frontotemporale vs Alzheimer: diagnosi differenziale?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "neurologia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "ortopedia",
+        "volumeAnnuo": 540,
+        "mortalita30gg": 0.9,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 15,
+        "degenzaMedia": 5.8,
+        "tassoUtilizzo": 72.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Chirurgia protesica complessa",
+          "Oncologia ortopedica",
+          "Trauma complesso"
+        ],
+        "spiegazione": "540 dimessi/anno in ortopedia (Ministero 2022). Il polo ortopedico torinese si avvale della collaborazione con il CTO per la traumatologia. Specializzazione in revisioni protesiche complesse e chirurgia del rachide.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Ortopedia e Traumatologia",
+          "ruolo": "Direttore Struttura Complessa Ortopedia",
+          "iniziali": "OT",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Ortopedia e Traumatologia (SIOT)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Protesi di anca in paziente giovane (< 50 anni): ceramic-on-ceramic?",
+            "Spondilolisi: chirurgia o fisioterapia?",
+            "Frattura vertebrale da osteoporosi: vertebroplastica o conservativa?",
+            "Revisione protesi ginocchio infetta: monostadio o bistadio?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "ortopedia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 640,
+        "mortalita30gg": 1.2,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 18,
+        "degenzaMedia": 7.2,
+        "tassoUtilizzo": 74.0,
+        "postiLettoOrdinari": 24,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Trapianti renali",
+          "Dialisi peritoneale",
+          "Rene policistico",
+          "Urgenze nefrologiche"
+        ],
+        "spiegazione": "640 dimessi/anno in nefrologia (Ministero 2022). La Nefrologia della Molinette è centro trapianto rene di riferimento per il Piemonte e la Valle d'Aosta. Expertise nelle nefropatie ereditarie (rene policistico, sindrome di Alport).",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia, Dialisi e Trapianto",
+          "ruolo": "Direttore Struttura Complessa Nefrologia",
+          "iniziali": "NF",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Nefrologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Rene policistico autosomico dominante: tolvaptan: sono candidato?",
+            "Lista trapianto renale: tempi medi in Piemonte?",
+            "Sindrome nefrosica recidiva su rene trapiantato: gestione?",
+            "CKD stadio 4: quando iniziare la preparazione alla dialisi?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "nefrologia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 560,
+        "mortalita30gg": 1.4,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 16,
+        "degenzaMedia": 8.0,
+        "tassoUtilizzo": 70.0,
+        "postiLettoOrdinari": 20,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IBD Center",
+          "Endoscopia avanzata",
+          "Chirurgia epatobiliare",
+          "ERCP"
+        ],
+        "spiegazione": "560 dimessi/anno in gastroenterologia (Ministero 2022). Il reparto garantisce un percorso IBD con accesso prioritario alle terapie biologiche. Endoscopia operativa avanzata inclusa la resuscitazione endoscopica nei sanguinamenti acuti.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia",
+          "iniziali": "GS",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Gastroenterologia (SIGE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Epatite C: cure con antivirali ad azione diretta – sono ancora eligible?",
+            "Epatocarcinoma su cirrosi: radiofrequenza, TACE o trapianto?",
+            "Rettocolite ulcerosa refrattaria: colectomia o biologici avanzati?",
+            "Polipo colorettale avanzato: resezione endoscopica o chirurgica?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "gastroenterologia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 480,
+        "mortalita30gg": 0.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 14,
+        "degenzaMedia": 5.2,
+        "tassoUtilizzo": 66.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Tumori neuroendocrini",
+          "Patologie tiroidee",
+          "Osteoporosi severa",
+          "Diabete tipo 1"
+        ],
+        "spiegazione": "480 dimessi/anno in endocrinologia (Ministero 2022). Centro di riferimento piemontese per i tumori neuroendocrini e l'acromegalia. Ambulatorio ad alta complessità per il diabete mellito tipo 1 e le complicanze.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia, Diabetologia e Metabolismo",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia",
+          "iniziali": "EN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Società Italiana di Endocrinologia (SIE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Diabete di tipo 1: pancreas-rene: trapianto combinato?",
+            "Iperaldosteronismo primario: adenoma vs iperplasia: come distinguerli?",
+            "Ipercalcemia paraneoplastica: workup urgente?",
+            "Terapia con SGLT2 inibitori: quali vantaggi nel diabete tipo 2?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "endocrinologia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "pneumologia",
+        "volumeAnnuo": 580,
+        "mortalita30gg": 2.9,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 15,
+        "degenzaMedia": 9.0,
+        "tassoUtilizzo": 73.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "BPCO avanzata",
+          "Fibrosi polmonare",
+          "Broncoscopia avanzata",
+          "Pneumopatie occupazionali"
+        ],
+        "spiegazione": "580 dimessi/anno in pneumologia (Ministero 2022). La Pneumologia della Molinette è centro di riferimento per le malattie polmonari occupazionali (silicosi, asbestosi) e per la fibrosi polmonare idiopatica. Attivo il programma EBUS per la stadiazione del cancro del polmone.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Pneumologia",
+          "ruolo": "Direttore Struttura Complessa Pneumologia",
+          "iniziali": "PN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Torino",
+            "Associazione Italiana Pneumologi Ospedalieri (AIPO)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Asbestosi: monitoraggio e rischio mesotelioma?",
+            "BPCO: riduzione chirurgica dei volumi polmonari – sono candidato?",
+            "Trapianto polmonare: centri attivi in Piemonte?",
+            "Apnee notturne complesse: CPAP o bilevel PAP?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "011 633 1111",
+          "email": "pneumologia@cittadellasalute.to.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.cittadellasalute.to.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "careggi-firenze",
+    "nome": "AOU Careggi – Azienda Ospedaliero-Universitaria di Firenze",
+    "citta": "Firenze",
+    "regione": "Toscana",
+    "specialita": [
+      {
+        "specialitaId": "oncologia",
+        "volumeAnnuo": 720,
+        "mortalita30gg": 2.0,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 22,
+        "degenzaMedia": 5.2,
+        "tassoUtilizzo": 60.0,
+        "postiLettoOrdinari": 24,
+        "volumeLabel": "Centro di riferimento regionale",
+        "badges": [
+          "DEA II livello",
+          "Ematologia-oncologia",
+          "CAR-T",
+          "Trial Clinici",
+          "Seconda Opinione"
+        ],
+        "spiegazione": "720 dimessi/anno in oncologia medica (Ministero 2022). AOU Careggi è il principale polo oncologico della Toscana, con accesso alle terapie cellulari avanzate (CAR-T). Il Department of Oncology è affiliato all'Università degli Studi di Firenze.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Oncologia Medica",
+          "ruolo": "Direttore Struttura Complessa Oncologia Medica",
+          "iniziali": "OM",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Associazione Italiana di Oncologia Medica (AIOM)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Linfoma B diffuso a grandi cellule: CAR-T in seconda linea – sono eligible?",
+            "Mieloma multiplo recidivato: daratumumab o carfilzomib?",
+            "Tumore del colon metastatico: FOLFOX o FOLFIRI in prima linea?",
+            "Seconda opinione oncologica: modalità e tempi di prenotazione?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "oncologia@aou-careggi.toscana.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "cardiologia",
+        "volumeAnnuo": 2200,
+        "mortalita30gg": 1.1,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 18,
+        "degenzaMedia": 11.2,
+        "tassoUtilizzo": 80.0,
+        "postiLettoOrdinari": 76,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Emodinamica H24",
+          "Cardiochirurgia",
+          "Scompenso avanzato",
+          "Aritmologia"
+        ],
+        "spiegazione": "2.200 dimessi/anno in cardiologia (Ministero 2022). La Cardiologia di Careggi è il principale riferimento cardiologico della Toscana, con cardiochirurgia e ablazione per fibrillazione atriale nella stessa struttura.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Cardiologia",
+          "ruolo": "Direttore Struttura Complessa Cardiologia",
+          "iniziali": "CA",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Cardiologia (SIC)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Stenosi aortica severa: TAVI o chirurgia? Qual è l'età-limite per la TAVI?",
+            "Cardiomiopatia dilatativa: Sacubitril-valsartan – sono candidato?",
+            "Fibrillazione atriale permanente: ablazione o terapia farmacologica?",
+            "Scompenso cardiaco acuto: inotropi e timing del trapianto?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "cardiologia@aou-careggi.toscana.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "neurologia",
+        "volumeAnnuo": 680,
+        "mortalita30gg": 5.0,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 16,
+        "degenzaMedia": 7.4,
+        "tassoUtilizzo": 77.0,
+        "postiLettoOrdinari": 26,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Stroke Unit",
+          "Sclerosi multipla",
+          "Malattie rare neurologiche",
+          "Neurochirurgia"
+        ],
+        "spiegazione": "680 dimessi/anno in neurologia (Ministero 2022). Centro regionale per la sclerosi multipla e le demenze. La Neurologia di Careggi è affiliata alla scuola neurologica fiorentina, storica e riconosciuta internazionalmente.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Neurologia",
+          "ruolo": "Direttore Struttura Complessa Neurologia",
+          "iniziali": "NR",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Neurologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Malattia di Parkinson: pompa di apomorfina o intestinale – quale preferire?",
+            "Sclerosi multipla recidivante: ofatumumab o ocrelizumab?",
+            "Ictus ischemico: finestra temporale per la trombectomia meccanica?",
+            "Neuropatia periferica rara: EMG avanzato e biopsia del nervo?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "neurologia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "ortopedia",
+        "volumeAnnuo": 460,
+        "mortalita30gg": 0.9,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 13,
+        "degenzaMedia": 5.6,
+        "tassoUtilizzo": 70.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Protesi di anca e ginocchio",
+          "Chirurgia del rachide",
+          "Artroscopia",
+          "Oncologia ortopedica"
+        ],
+        "spiegazione": "460 dimessi/anno in ortopedia (Ministero 2022). Il reparto ortopedico di Careggi è centro di riferimento per le revisioni protesiche complesse e la chirurgia del rachide degenerativo. Collegamento con centro di fisioterapia universitaria.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Ortopedia e Traumatologia",
+          "ruolo": "Direttore Struttura Complessa Ortopedia",
+          "iniziali": "OT",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Ortopedia e Traumatologia (SIOT)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Lesione del LCA: chirurgia con tendine autologo o eterologo?",
+            "Ernia del disco lombare L4-L5: discectomia o fisioterapia intensiva?",
+            "Protesi di ginocchio monocompartimentale vs totale: quale indicazione?",
+            "Frattura periprotesica di femore: revisione urgente?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "ortopedia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 520,
+        "mortalita30gg": 1.1,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 15,
+        "degenzaMedia": 7.0,
+        "tassoUtilizzo": 72.0,
+        "postiLettoOrdinari": 20,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Trapianti renali",
+          "Emodialisi",
+          "Nefriti rare",
+          "Rene acuto in ICU"
+        ],
+        "spiegazione": "520 dimessi/anno in nefrologia (Ministero 2022). La Nefrologia di Careggi è centro trapianto rene di riferimento per la Toscana centrale. Expertise nelle nefropatie lupiche e nelle vasculiti ANCA-associate.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia e Dialisi",
+          "ruolo": "Direttore Struttura Complessa Nefrologia",
+          "iniziali": "NF",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Nefrologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Nefrite lupica classe III/IV: quando la biopsia?",
+            "Vasculite ANCA: rituximab o ciclofosfamide in induzione?",
+            "Trapianto rene: lista attesa in Toscana – tempi medi?",
+            "Rene acuto post-contrasto: prevenzione e management?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "nefrologia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 760,
+        "mortalita30gg": 1.3,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 14,
+        "degenzaMedia": 8.4,
+        "tassoUtilizzo": 74.0,
+        "postiLettoOrdinari": 26,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IBD Center",
+          "Fegato e vie biliari",
+          "Endoscopia avanzata",
+          "Trapianti epatici"
+        ],
+        "spiegazione": "760 dimessi/anno in gastroenterologia (Ministero 2022). Careggi ospita uno dei centri trapianti di fegato più attivi d'Italia. Ambulatorio IBD con accesso rapido alle terapie biologiche e reference per la colangite sclerosante primitiva.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia",
+          "iniziali": "GS",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Gastroenterologia (SIGE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Trapianto di fegato per epatite autoimmune: quando è indicato?",
+            "Cirrosi epatica compensata: profilassi del sanguinamento?",
+            "IBD refrattaria: vedolizumab o ustekinumab dopo fallimento anti-TNF?",
+            "Colangioscopia: quali condizioni la richiedono?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "gastroenterologia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 440,
+        "mortalita30gg": 0.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 12,
+        "degenzaMedia": 5.0,
+        "tassoUtilizzo": 64.0,
+        "postiLettoOrdinari": 16,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Malattie tiroidee complesse",
+          "Osteoporosi",
+          "Obesità",
+          "Malattie rare endocrine"
+        ],
+        "spiegazione": "440 dimessi/anno in endocrinologia (Ministero 2022). Il reparto di Careggi si distingue per la gestione dell'obesità severa e delle sue comorbilità endocrine, in sinergia con il reparto di chirurgia bariatrica. Centro di riferimento per l'iperinsulinismo.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia",
+          "iniziali": "EN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Società Italiana di Endocrinologia (SIE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Obesità severa (BMI > 40): chirurgia bariatrica – iter di accesso?",
+            "Ipoglicemia iperinsulinemica: imaging e timing dell'intervento?",
+            "Morbo di Basedow: tireostatici, radioiodio o chirurgia?",
+            "Osteoporosi post-menopausale: romosozumab vs denosumab?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "endocrinologia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "pneumologia",
+        "volumeAnnuo": 620,
+        "mortalita30gg": 2.7,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 13,
+        "degenzaMedia": 9.2,
+        "tassoUtilizzo": 73.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Fibrosi polmonare",
+          "Trapianto polmonare",
+          "BPCO avanzata",
+          "Ipertensione polmonare"
+        ],
+        "spiegazione": "620 dimessi/anno in pneumologia (Ministero 2022). La Pneumologia di Careggi è il principale centro toscano per il trapianto polmonare e per la fibrosi cistica nell'adulto. Programma attivo per le pneumopatie interstiziali difficili.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Pneumologia",
+          "ruolo": "Direttore Struttura Complessa Pneumologia e Fisiopatologia Respiratoria",
+          "iniziali": "PN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Firenze",
+            "Associazione Italiana Pneumologi Ospedalieri (AIPO)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Fibrosi cistica nell'adulto: trapianto polmonare – timing e lista?",
+            "BPCO: riduzione dei volumi endoscopica con valvole endobronchiali?",
+            "Ipertensione polmonare primitiva: triplice terapia orale?",
+            "Polmonite interstiziale non specifica (NSIP): steroidi o altri IS?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "055 794 8282",
+          "email": "pneumologia@aou-careggi.toscana.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.aou-careggi.toscana.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "policlinico-bari",
+    "nome": "AOU Consorziale Policlinico di Bari",
+    "citta": "Bari",
+    "regione": "Puglia",
+    "specialita": [
+      {
+        "specialitaId": "oncologia",
+        "volumeAnnuo": 640,
+        "mortalita30gg": 2.3,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 14,
+        "degenzaMedia": 5.8,
+        "tassoUtilizzo": 62.0,
+        "postiLettoOrdinari": 22,
+        "volumeLabel": "Centro di riferimento regionale",
+        "badges": [
+          "DEA II livello",
+          "Oncologia medica",
+          "Chirurgia oncologica",
+          "Radioterapia oncologica"
+        ],
+        "spiegazione": "640 dimessi/anno in oncologia (Ministero 2022). Il Policlinico di Bari è il principale polo oncologico pubblico pugliese per volumi e complessità. Il Dipartimento di Oncologia è affiliato all'Università di Bari Aldo Moro.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Oncologia Medica",
+          "ruolo": "Direttore Struttura Complessa Oncologia Medica",
+          "iniziali": "OM",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Associazione Italiana di Oncologia Medica (AIOM)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Carcinoma della mammella triplo negativo: immunoterapia con pembrolizumab?",
+            "Tumori del retto avanzati: chirurgia TME robot-assistita disponibile?",
+            "Melanoma con mutazione BRAF: terapia target o immunoterapia in prima linea?",
+            "Trial clinici in oncologia attivi a Bari?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "oncologia@policlinico.ba.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "cardiologia",
+        "volumeAnnuo": 1840,
+        "mortalita30gg": 1.2,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 11,
+        "degenzaMedia": 11.0,
+        "tassoUtilizzo": 80.0,
+        "postiLettoOrdinari": 62,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "DEA II livello",
+          "Emodinamica H24",
+          "TAVI",
+          "Cardiomiopatie",
+          "Scompenso cardiaco"
+        ],
+        "spiegazione": "1.840 dimessi/anno in cardiologia (Ministero 2022). La Cardiologia del Policlinico di Bari è il principale centro cardiologico della Puglia per volume e casistica. Emodinamica H24 per IMA-STEMI. Attivo il programma TAVI per la stenosi aortica.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Cardiologia Universitaria",
+          "ruolo": "Direttore Struttura Complessa Cardiologia",
+          "iniziali": "CA",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Cardiologia (SIC)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "IMA anteriore: PTCA primaria – qual è il tempo porta-pallone medio nel vostro centro?",
+            "Stenosi aortica: TAVI con accesso transapicale: quali controindicazioni?",
+            "Cardiomiopatia ipertrofica ostruttiva: alcoolizzazione del setto o chirurgia?",
+            "Scompenso cardiaco ischemico: ICD o CRT-D – quale scelgo?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "cardiologia@policlinico.ba.it",
+          "fasttrack": true,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–16:00"
+        }
+      },
+      {
+        "specialitaId": "neurologia",
+        "volumeAnnuo": 520,
+        "mortalita30gg": 5.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 10,
+        "degenzaMedia": 7.6,
+        "tassoUtilizzo": 76.0,
+        "postiLettoOrdinari": 20,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Stroke Unit",
+          "Sclerosi multipla",
+          "Malattie neuromuscolari",
+          "Epilessia"
+        ],
+        "spiegazione": "520 dimessi/anno in neurologia (Ministero 2022). La Neurologia del Policlinico di Bari è il principale riferimento neurologico della Puglia. Stroke Unit con trombectomia meccanica H24. Centro di riferimento per la sclerosi multipla.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Neurologia",
+          "ruolo": "Direttore Struttura Complessa Neurologia",
+          "iniziali": "NR",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Neurologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Sclerosi multipla RRMS: natalizumab in paziente JC-positivo – rischio PML?",
+            "Epilessia farmacoresistente: valutazione per chirurgia?",
+            "Ictus emorragico: timing della rivascolarizzazione?",
+            "Miastenia gravis grave: plasmaferesi o IVIG in crisi?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "neurologia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "ortopedia",
+        "volumeAnnuo": 440,
+        "mortalita30gg": 1.0,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 10,
+        "degenzaMedia": 6.0,
+        "tassoUtilizzo": 70.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Chirurgia protesica",
+          "Artroscopia",
+          "Trauma complesso",
+          "Colonna vertebrale"
+        ],
+        "spiegazione": "440 dimessi/anno in ortopedia (Ministero 2022). Reparto di riferimento pugliese per la chirurgia protesica e la traumatologia complessa. Attivo ambulatorio per la chirurgia della colonna vertebrale degenerativa.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Ortopedia e Traumatologia",
+          "ruolo": "Direttore Struttura Complessa Ortopedia",
+          "iniziali": "OT",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Ortopedia e Traumatologia (SIOT)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Stenosi del canale lombare: chirurgia decompressiva vs fisioterapia?",
+            "Coxartrosi avanzata in paziente giovane: resurfacing vs protesi totale?",
+            "Frattura di plateu tibiale: fissazione interna o esterna?",
+            "Cifosi post-traumatica: osteotomia vertebrale: quali rischi?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "ortopedia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "nefrologia",
+        "volumeAnnuo": 720,
+        "mortalita30gg": 1.3,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 12,
+        "degenzaMedia": 7.2,
+        "tassoUtilizzo": 76.0,
+        "postiLettoOrdinari": 24,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Trapianti renali",
+          "Emodialisi",
+          "Dialisi peritoneale",
+          "Nefriti rare"
+        ],
+        "spiegazione": "720 dimessi/anno in nefrologia (Ministero 2022). Il Policlinico di Bari è centro trapianto rene di riferimento per la Puglia. Expertise nei pazienti diabetici con nefropatia avanzata e nell'accesso vascolare per dialisi.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Nefrologia, Dialisi e Trapianto",
+          "ruolo": "Direttore Struttura Complessa Nefrologia",
+          "iniziali": "NF",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Nefrologia (SIN)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Nefropatia diabetica avanzata: SGLT2 inibitori – quando iniziare?",
+            "Accesso vascolare per emodialisi: FAV o catetere tunnellizzato?",
+            "Trapianto rene: donatore vivente – iter valutazione?",
+            "Nefropatia a IgA con proteinuria > 1g: sparsentan o standard?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "nefrologia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "gastroenterologia",
+        "volumeAnnuo": 540,
+        "mortalita30gg": 1.4,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 11,
+        "degenzaMedia": 8.0,
+        "tassoUtilizzo": 72.0,
+        "postiLettoOrdinari": 20,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "IBD Center",
+          "Endoscopia avanzata",
+          "Patologie epatobiliari",
+          "ERCP"
+        ],
+        "spiegazione": "540 dimessi/anno in gastroenterologia (Ministero 2022). Centro IBD di riferimento per la Puglia. Endoscopia operativa avanzata con ERCP e mucosectomia. Ambulatorio dedicato per la malattia epatica cronica e la steatoepatite.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Gastroenterologia",
+          "ruolo": "Direttore Struttura Complessa Gastroenterologia",
+          "iniziali": "GS",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Gastroenterologia (SIGE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "NASH/NAFLD avanzata con fibrosi F3: quali farmaci in sperimentazione?",
+            "Rettocolite ulcerosa estesa: ozanimod o upadacitinib dopo corticosteroidi?",
+            "Calcolo colecistico complicato: colecistectomia laparoscopica urgente?",
+            "Epatocarcinoma in lista trapianto: TACE ponte è indicata?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "gastroenterologia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "endocrinologia",
+        "volumeAnnuo": 380,
+        "mortalita30gg": 0.9,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 10,
+        "degenzaMedia": 5.0,
+        "tassoUtilizzo": 62.0,
+        "postiLettoOrdinari": 14,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "Patologie tiroidee",
+          "Diabete tipo 1 e 2",
+          "Osteoporosi",
+          "Malattie rare endocrine"
+        ],
+        "spiegazione": "380 dimessi/anno in endocrinologia (Ministero 2022). La Clinica Endocrinologica del Policlinico di Bari è la principale della Puglia per complessità e volume. Ambulatorio di secondo livello per il diabete di tipo 1 con microinfusore.",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Endocrinologia e Malattie del Metabolismo",
+          "ruolo": "Direttore Struttura Complessa Endocrinologia",
+          "iniziali": "EN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Società Italiana di Endocrinologia (SIE)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Diabete tipo 1: microinfusore + sensore CGM – rimborso SSN?",
+            "Carcinoma tiroideo papillare multifocale: emitiroidectomia o tiroidectomia totale?",
+            "Iperparatiroidismo primario asintomatico: chirurgia o osservazione?",
+            "Ipotiroidismo refrattario a levotiroxina: T3 in aggiunta?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "endocrinologia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": true,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
+        }
+      },
+      {
+        "specialitaId": "pneumologia",
+        "volumeAnnuo": 500,
+        "mortalita30gg": 2.8,
+        "mortalitaStimata": true,
+        "pazientiDaFuoriRegione": 10,
+        "degenzaMedia": 9.0,
+        "tassoUtilizzo": 71.0,
+        "postiLettoOrdinari": 18,
+        "volumeLabel": "Hub regionale",
+        "badges": [
+          "BPCO avanzata",
+          "Asma grave",
+          "Fibrosi polmonare",
+          "Broncoscopia diagnostica"
+        ],
+        "spiegazione": "500 dimessi/anno in pneumologia (Ministero 2022). Il reparto di Pneumologia del Policlinico di Bari copre l'intera casistica polmonare della Puglia centrale. Centro di riferimento per l'asma grave con accesso al biologico (mepolizumab, dupilumab).",
+        "fonteVolume": "Ministero Salute – Annuario SSN 2022",
+        "fonteMortalita": "Stima basata su medie PNE 2024 (AGENAS) + volume struttura",
+        "annoRiferimentoDati": 2022,
+        "avvertenza": "I dati di volume e degenza sono ufficiali (Ministero Salute). La mortalità è una stima — per i dati precisi per struttura consultare pne.agenas.it",
+        "medico": {
+          "nome": "Direttore S.C. Pneumologia",
+          "ruolo": "Direttore Struttura Complessa Malattie dell'Apparato Respiratorio",
+          "iniziali": "PN",
+          "pubblicazioni": 0,
+          "trialAttivi": 0,
+          "affiliazioni": [
+            "Università degli Studi di Bari Aldo Moro",
+            "Associazione Italiana Pneumologi Ospedalieri (AIPO)"
+          ],
+          "bio": "Dati del responsabile non verificabili dall'elenco ufficiale. Contattare il CUP per il referente attuale.",
+          "domande": [
+            "Asma grave eosinofilica: mepolizumab o benralizumab?",
+            "BPCO riesacerbata frequente: triplice terapia inalatoria o azitromicina?",
+            "Neoplasia polmonare sospetta: bronoscopia con BAL e biopsia – tempi?",
+            "Tuberculosi polmonare attiva: regime HRZE – gestione e monitoraggio?"
+          ],
+          "fonteNome": "non_trovato_in_elenco_ufficiale"
+        },
+        "contatti": {
+          "cup": "080 559 3111",
+          "email": "pneumologia@policlinico.ba.it",
+          "fasttrack": false,
+          "secondaOpinione": false,
+          "sito": "https://www.policlinico.ba.it",
+          "orari": "Lun–Ven 8:00–14:00"
         }
       }
     ]

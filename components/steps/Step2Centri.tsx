@@ -18,16 +18,41 @@ function getSpec(ospedale: Ospedale, specialitaId: string): OspedaleSpecialita |
 
 function filterOspedali(ospedali: Ospedale[], state: AppState): Array<{ ospedale: Ospedale; spec: OspedaleSpecialita }> {
   if (!state.specialitaSelezionata) return [];
-  return ospedali
+
+  const allMatching = ospedali
     .flatMap((o) => {
       const spec = getSpec(o, state.specialitaSelezionata!.id);
       if (!spec) return [];
-      const stessaRegione = o.regione.toLowerCase() === (state.regione ?? "").toLowerCase();
-      if (state.raggio === "regione" && !stessaRegione) return [];
-      if (state.raggio === "fuori"   &&  stessaRegione) return [];
       return [{ ospedale: o, spec }];
     })
     .sort((a, b) => b.spec.volumeAnnuo - a.spec.volumeAnnuo);
+
+  if (state.raggio === "regione") {
+    // Solo centri nella regione selezionata
+    return allMatching.filter(({ ospedale }) =>
+      ospedale.regione.toLowerCase() === (state.regione ?? "").toLowerCase()
+    );
+  }
+
+  if (state.raggio === "fuori") {
+    // Centri nella propria regione + top 5 nazionali fuori regione
+    const regioneUtente = (state.regione ?? "").toLowerCase();
+    const inRegione = allMatching.filter(({ ospedale }) =>
+      ospedale.regione.toLowerCase() === regioneUtente
+    );
+    const fuoriRegione = allMatching
+      .filter(({ ospedale }) => ospedale.regione.toLowerCase() !== regioneUtente)
+      .slice(0, 5);
+    const seen = new Set<string>();
+    return [...inRegione, ...fuoriRegione].filter(({ ospedale }) => {
+      if (seen.has(ospedale.id)) return false;
+      seen.add(ospedale.id);
+      return true;
+    });
+  }
+
+  // "italia" – tutti ordinati per volume
+  return allMatching;
 }
 
 export default function Step2Centri({ ospedali, specialita, state, onChange, onNext, onBack }: Step2Props) {

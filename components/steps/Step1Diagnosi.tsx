@@ -23,6 +23,14 @@ const RAGGIO_OPTIONS = [
   { value: "italia"  as const, label: "Tutta Italia" },
 ];
 
+const DOMANDE_STANDARD = [
+  "Qual è la diagnosi precisa e lo stadio della mia condizione?",
+  "Quali sono le opzioni terapeutiche disponibili per me?",
+  "Quanto tempo richiede il percorso di cura?",
+  "Ci sono trial clinici o terapie innovative a cui potrei accedere?",
+  "Come si monitora l'efficacia del trattamento nel tempo?",
+];
+
 function LoadingDots() {
   return (
     <span className="ai-dots">
@@ -34,35 +42,83 @@ function LoadingDots() {
 }
 
 export default function Step1Diagnosi({ specialita, state, onChange, onNext }: Step1Props) {
-  const [loading, setLoading] = useState(false);
-  const [errore, setErrore]   = useState<string | null>(null);
+  const [loading, setLoading]         = useState(false);
+  const [streamingText, setStreaming] = useState<string>("");
+  const [errore, setErrore]           = useState<string | null>(null);
 
   const canAnalyze  = state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
   const canContinue = canAnalyze && state.analisiAI !== null;
+
+  // True while we have streaming content but haven't committed to appState yet
+  const isStreaming = streamingText !== "" && state.analisiAI === null;
 
   async function handleAnalyze() {
     if (!canAnalyze || !state.specialitaSelezionata) return;
     setLoading(true);
     setErrore(null);
+    setStreaming("");
+    onChange({ analisiAI: null });
+
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ diagnosi: state.diagnosi, specialitaId: state.specialitaSelezionata.id }),
+        body: JSON.stringify({
+          diagnosi: state.diagnosi,
+          specialitaId: state.specialitaSelezionata.id,
+        }),
       });
+
       if (!res.ok) {
-        const err = await res.json().catch(() => ({ errore: "Errore sconosciuto" }));
-        throw new Error(err.errore ?? "Errore del server");
+        const errBody = await res.json().catch(() => ({ errore: "Errore sconosciuto" }));
+        throw new Error(errBody.errore ?? "Errore del server");
       }
-      const data = await res.json();
-      const analisi: AnalisiAI = data.analisi;
+
+      if (!res.body) throw new Error("Risposta vuota dal server");
+
+      // Switch from spinner to inline streaming display
+      setLoading(false);
+
+      const reader  = res.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText  = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        fullText += decoder.decode(value, { stream: true });
+        setStreaming(fullText);
+      }
+
+      if (!fullText.trim()) throw new Error("Risposta AI vuota");
+
+      const analisi: AnalisiAI = {
+        sommario: fullText,
+        domandeDaPorre: DOMANDE_STANDARD,
+        coseDaSapere: [
+          "Chiedere una seconda opinione è un tuo diritto e può essere prezioso",
+          "Portare tutti gli esami precedenti alla prima visita",
+          "Il SSN copre la maggior parte dei percorsi diagnostici e terapeutici",
+          "I centri ad alto volume hanno spesso risultati migliori per condizioni complesse",
+        ],
+        livelloUrgenza: "media",
+      };
       onChange({ analisiAI: analisi });
+
     } catch (e: unknown) {
       setErrore(e instanceof Error ? e.message : "Errore di rete");
     } finally {
       setLoading(false);
+      setStreaming("");
     }
   }
+
+  // Displayed HTML: streaming content while in flight, committed analisi once done
+  const displayedHtml = isStreaming
+    ? streamingText
+    : (state.analisiAI?.sommario ?? "");
+
+  const showBox = isStreaming || state.analisiAI !== null;
 
   return (
     <div className="step-body">
@@ -135,20 +191,29 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
 
       {/* Bottone AI */}
       <div style={{ marginBottom: "1rem" }}>
-        <button onClick={handleAnalyze} disabled={!canAnalyze || loading} className="btn-primary">
-          {loading ? <><LoadingDots /> <span style={{ marginLeft: 6 }}>Analisi in corso…</span></> : "✨ Analizza con AI"}
+        <button onClick={handleAnalyze} disabled={!canAnalyze || loading || isStreaming} className="btn-primary">
+          {loading
+            ? <><LoadingDots /><span style={{ marginLeft: 6 }}>Analisi in corso…</span></>
+            : "✨ Analizza con AI"}
         </button>
         {errore && (
           <p style={{ fontSize: 13, color: "#B91C1C", marginTop: 8 }}>{errore}</p>
         )}
       </div>
 
-      {/* Box AI result */}
-      {state.analisiAI && (
+      {/* Box AI result — visibile sia durante lo streaming che a fine */}
+      {showBox && (
         <div className="ai-box">
-          <span className="ai-label">✨ Analisi AI</span>
-          <div className="ai-content" dangerouslySetInnerHTML={{ __html: state.analisiAI.sommario }} />
-          {state.analisiAI.domandeDaPorre.length > 0 && (
+          <span className="ai-label">
+            ✨ Analisi AI
+            {isStreaming && <LoadingDots />}
+          </span>
+          <div
+            className="ai-content"
+            dangerouslySetInnerHTML={{ __html: displayedHtml }}
+          />
+          {/* Domande utili — mostrate solo quando lo streaming è completo */}
+          {state.analisiAI && state.analisiAI.domandeDaPorre.length > 0 && (
             <div className="ai-questions">
               <span className="ai-questions-title">Domande utili da fare al medico</span>
               <ol style={{ paddingLeft: 0, listStyle: "none" }}>

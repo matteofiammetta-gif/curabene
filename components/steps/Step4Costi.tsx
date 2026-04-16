@@ -17,16 +17,17 @@ const COSTI_TRENO_BASE = 0.12;
 const COSTI_AEREO_BASE = 80;
 
 const DISTANZE: Record<string, Record<string, number>> = {
-  Milano:   { Roma: 572, Napoli: 771, Palermo: 1403, Bologna: 210, Torino: 140, Firenze: 298, Venezia: 267, Bari: 879 },
-  Roma:     { Milano: 572, Napoli: 225, Palermo: 1043, Bologna: 378, Torino: 670, Firenze: 277, Venezia: 527, Bari: 458 },
-  Napoli:   { Milano: 771, Roma: 225, Palermo: 720, Bologna: 571, Torino: 867, Firenze: 494, Venezia: 738, Bari: 263 },
-  Bologna:  { Milano: 210, Roma: 378, Napoli: 571, Palermo: 1180, Torino: 295, Firenze: 105, Venezia: 152, Bari: 641 },
-  Palermo:  { Milano: 1403, Roma: 1043, Napoli: 720, Bologna: 1180, Torino: 1470, Firenze: 1093, Venezia: 1292, Bari: 668 },
-  Torino:   { Milano: 140, Roma: 670, Napoli: 867, Bologna: 295, Palermo: 1470, Firenze: 400, Venezia: 390, Bari: 974 },
-  Firenze:  { Milano: 298, Roma: 277, Napoli: 494, Bologna: 105, Palermo: 1093, Torino: 400, Venezia: 257, Bari: 633 },
-  Venezia:  { Milano: 267, Roma: 527, Napoli: 738, Bologna: 152, Palermo: 1292, Torino: 390, Firenze: 257, Bari: 793 },
-  Bari:     { Milano: 879, Roma: 458, Napoli: 263, Bologna: 641, Palermo: 668, Torino: 974, Firenze: 633, Venezia: 793 },
+  Milano:   { Roma: 572, Napoli: 771, Palermo: 1403, Bologna: 210, Torino: 140, Firenze: 298, Venezia: 267, Bari: 879, Padova: 245 },
+  Roma:     { Milano: 572, Napoli: 225, Palermo: 1043, Bologna: 378, Torino: 670, Firenze: 277, Venezia: 527, Bari: 458, Padova: 498 },
+  Napoli:   { Milano: 771, Roma: 225, Palermo: 720, Bologna: 571, Torino: 867, Firenze: 494, Venezia: 738, Bari: 263, Padova: 718 },
+  Bologna:  { Milano: 210, Roma: 378, Napoli: 571, Palermo: 1180, Torino: 295, Firenze: 105, Venezia: 152, Bari: 641, Padova: 120 },
+  Palermo:  { Milano: 1403, Roma: 1043, Napoli: 720, Bologna: 1180, Torino: 1470, Firenze: 1093, Venezia: 1292, Bari: 668, Padova: 1260 },
+  Torino:   { Milano: 140, Roma: 670, Napoli: 867, Bologna: 295, Palermo: 1470, Firenze: 400, Venezia: 390, Bari: 974, Padova: 310 },
+  Firenze:  { Milano: 298, Roma: 277, Napoli: 494, Bologna: 105, Palermo: 1093, Torino: 400, Venezia: 257, Bari: 633, Padova: 250 },
+  Venezia:  { Milano: 267, Roma: 527, Napoli: 738, Bologna: 152, Palermo: 1292, Torino: 390, Firenze: 257, Bari: 793, Padova: 37 },
+  Bari:     { Milano: 879, Roma: 458, Napoli: 263, Bologna: 641, Palermo: 668, Torino: 974, Firenze: 633, Venezia: 793, Padova: 790 },
   Catania:  { Milano: 1453, Roma: 1093, Napoli: 770, Bologna: 1230, Palermo: 210, Torino: 1520, Firenze: 1143, Venezia: 1342 },
+  Padova:   { Milano: 245, Roma: 498, Napoli: 718, Bologna: 120, Palermo: 1260, Torino: 310, Firenze: 250, Venezia: 37, Bari: 790 },
   Pavia:    { Milano: 36, Roma: 588, Napoli: 797, Bologna: 236, Torino: 170, Firenze: 324 },
   "San Donato Milanese": { Milano: 12, Roma: 578, Napoli: 783, Bologna: 218 },
   Meldola:  { Milano: 310, Roma: 378, Napoli: 640, Bologna: 81 },
@@ -37,6 +38,7 @@ const DISTANZE: Record<string, Record<string, number>> = {
 const CITTA_OSPEDALE: Record<string, string> = {
   "ieo-milano": "Milano", "int-milano": "Milano", "monzino-milano": "Milano",
   "besta-milano": "Milano", "galeazzi-milano": "Milano",
+  "fondazione-policlinico-milano": "Milano",
   "san-donato-milano": "San Donato Milanese", "mondino-pavia": "Pavia",
   "gemelli-roma": "Roma", "san-camillo-roma": "Roma",
   "pascale-napoli": "Napoli", "colli-napoli": "Napoli",
@@ -45,6 +47,10 @@ const CITTA_OSPEDALE: Record<string, string> = {
   "cannizzaro-catania": "Catania", "garibaldi-catania": "Catania",
   "asp-enna": "Enna", "santorsola-bologna": "Bologna",
   "rizzoli-bologna": "Bologna", "irst-meldola": "Meldola", "parma-aou": "Parma",
+  "aou-padova": "Padova",
+  "citta-salute-torino": "Torino",
+  "careggi-firenze": "Firenze",
+  "policlinico-bari": "Bari",
 };
 
 const CITTA_COMUNI = [
