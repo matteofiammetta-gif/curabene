@@ -8,115 +8,65 @@ interface HospitalCardProps {
   onSelect: () => void;
 }
 
-function mortalitaColor(valore: number, media: number) {
+function mortalitaBadge(valore: number, media: number) {
   const diff = valore - media;
-  if (diff <= -0.3) return { bg: "var(--cb-green-light)", text: "var(--cb-green)", label: "↓ sotto media" };
-  if (diff >= 0.5)  return { bg: "#FEE2E2",               text: "#991B1B",         label: "↑ sopra media" };
-  return               { bg: "var(--cb-amber-light)",    text: "var(--cb-amber)", label: "≈ media" };
+  if (diff <= -0.3) return { cls: "badge-g", label: `${valore.toFixed(1)}% ↓ sotto media` };
+  if (diff >= 0.5)  return { cls: "badge-a", label: `${valore.toFixed(1)}% ↑ sopra media` };
+  return               { cls: "badge-b", label: `${valore.toFixed(1)}% ≈ media` };
 }
 
-export default function HospitalCard({
-  ospedale,
-  spec,
-  mediaNazionale,
-  selected,
-  onSelect,
-}: HospitalCardProps) {
-  const mc = mortalitaColor(spec.mortalita30gg, mediaNazionale);
+export default function HospitalCard({ ospedale, spec, mediaNazionale, selected, onSelect }: HospitalCardProps) {
+  const mb = mortalitaBadge(spec.mortalita30gg, mediaNazionale);
 
   return (
-    <button
-      onClick={onSelect}
-      className={`hospital-card${selected ? " selected" : ""}`}
-      aria-pressed={selected}
-    >
-      {/* Header riga */}
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <h3
-              className="font-fraunces text-base font-normal leading-snug"
-              style={{ color: "var(--cb-text1)" }}
-            >
-              {ospedale.nome}
-            </h3>
-            {selected && (
-              <span
-                className="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0"
-                style={{ background: "var(--cb-blue)" }}
-              >
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                  <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#fff" strokeWidth="1.6"
-                        strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            )}
-          </div>
-          <p className="text-xs mt-0.5" style={{ color: "var(--cb-text3)" }}>
-            📍 {ospedale.citta}, {ospedale.regione}
-          </p>
+    <button onClick={onSelect} className={`hosp-card${selected ? " selected" : ""}`} aria-pressed={selected}>
+      {/* Riga superiore */}
+      <div className="hosp-top">
+        <div>
+          <div className="hosp-name">{ospedale.nome}</div>
+          <div className="hosp-loc">📍 {ospedale.citta}, {ospedale.regione}</div>
         </div>
-
-        {/* Badge volume */}
-        <span
-          className="text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0"
-          style={{ background: "var(--cb-blue-light)", color: "var(--cb-blue)" }}
-        >
-          {spec.volumeLabel}
-        </span>
+        <span className="badge badge-b">{spec.volumeLabel}</span>
       </div>
 
-      {/* Stat grid — 2 col mobile, 4 col desktop */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+      {/* Stat grid */}
+      <div className="stats-grid">
         <div className="stat-box">
-          <div className="stat-value">{spec.volumeAnnuo.toLocaleString("it-IT")}</div>
-          <div className="stat-label">Dimessi/anno</div>
+          <div className="stat-val">{spec.volumeAnnuo.toLocaleString("it-IT")}</div>
+          <div className="stat-lbl">Dimessi/anno</div>
         </div>
         <div className="stat-box">
-          <div className="stat-value">{spec.degenzaMedia}<span style={{ fontSize: 11, fontWeight: 400 }}> gg</span></div>
-          <div className="stat-label">Degenza media</div>
+          <div className="stat-val">{spec.degenzaMedia}<span style={{ fontSize: 13, fontWeight: 400 }}> gg</span></div>
+          <div className="stat-lbl">Degenza media</div>
         </div>
         <div className="stat-box">
-          <div className="stat-value">{spec.pazientiDaFuoriRegione}%</div>
-          <div className="stat-label">Fuori regione</div>
+          <div className="stat-val">{spec.pazientiDaFuoriRegione}%</div>
+          <div className="stat-lbl">Fuori regione</div>
         </div>
-        <div className="stat-box" style={{ background: mc.bg }}>
-          <div className="stat-value" style={{ color: mc.text, fontSize: 13 }}>
-            {spec.mortalita30gg.toFixed(1)}%
-          </div>
-          <div className="stat-label" style={{ color: mc.text }}>{mc.label}</div>
+        <div className="stat-box">
+          <span className={`badge ${mb.cls}`} style={{ fontSize: 12, margin: 0 }}>{mb.label}</span>
+          <div className="stat-lbl" style={{ marginTop: 6 }}>Mortalità 30gg</div>
         </div>
       </div>
 
-      {/* Badges eccellenza */}
+      {/* Badges */}
       {spec.badges.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {spec.badges.map((badge) => (
-            <span
-              key={badge}
-              className="text-xs px-2 py-0.5 rounded-full"
-              style={{
-                background: "var(--cb-violet-light)",
-                color: "var(--cb-violet)",
-              }}
-            >
-              {badge}
-            </span>
+        <div className="hosp-badges">
+          {spec.badges.map((b) => (
+            <span key={b} className="badge badge-p">{b}</span>
           ))}
         </div>
       )}
 
       {/* Spiegazione */}
-      <p className="text-sm leading-relaxed" style={{ color: "var(--cb-text2)" }}>
-        {spec.spiegazione}
-      </p>
+      <div className="hosp-explain">{spec.spiegazione}</div>
 
-      {/* Disclaimer mortalità stimata */}
+      {/* Disclaimer */}
       {spec.mortalitaStimata && (
-        <p className="mt-2 text-xs" style={{ color: "var(--cb-text3)" }}>
+        <div className="hosp-disclaimer">
           ⚠️ Mortalità stimata su benchmark PNE 2024 · dati reali su{" "}
           <span style={{ textDecoration: "underline" }}>pne.agenas.it</span>
-        </p>
+        </div>
       )}
     </button>
   );

@@ -1,33 +1,24 @@
-import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
-import "./globals.css";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "CuraBene — Il tuo navigatore sanitario",
-  description:
-    "Trova i migliori centri, medici e percorsi di cura per la tua patologia in Italia.",
-};
+  title: 'CuraBene — Navigatore Sanitario',
+  description: 'Scegli dove curarti con dati PNE reali',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="it" className={`${fraunces.variable} ${dmSans.variable}`}>
-      <body className="font-dm-sans antialiased">{children}</body>
+    <html lang="it">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+      </head>
+      <body>{children}</body>
     </html>
-  );
+  )
 }

@@ -12,7 +12,7 @@ interface Step4Props {
 type Mezzo = "treno" | "aereo" | "auto";
 type NumPersone = 1 | 2 | 3 | 4;
 
-const COSTI_KM_AUTO   = 0.26;
+const COSTI_KM_AUTO    = 0.26;
 const COSTI_TRENO_BASE = 0.12;
 const COSTI_AEREO_BASE = 80;
 
@@ -65,56 +65,58 @@ function calcolaTrasporto(km: number, mezzo: Mezzo, persone: NumPersone): number
   return km > 400 ? COSTI_AEREO_BASE * 2 * persone : km * 2 * COSTI_TRENO_BASE * persone;
 }
 
-const COSTO_HOTEL_NOTTE = 90;
-const COSTO_PASTI_GIORNO = 35;
-
-const MEZZO_OPTS: { value: Mezzo; label: string; icon: string }[] = [
-  { value: "treno", label: "Treno", icon: "🚆" },
-  { value: "aereo", label: "Aereo", icon: "✈️" },
-  { value: "auto",  label: "Auto",  icon: "🚗" },
+const MEZZO_OPTS: { value: Mezzo; icon: string; label: string }[] = [
+  { value: "treno", icon: "🚆", label: "Treno" },
+  { value: "aereo", icon: "✈️", label: "Aereo" },
+  { value: "auto",  icon: "🚗", label: "Auto"  },
 ];
 
-const PERSONE_OPTS: NumPersone[] = [1, 2, 3, 4];
+const PERSONE_OPTS: { value: NumPersone; label: string }[] = [
+  { value: 1, label: "Solo" },
+  { value: 2, label: "+1" },
+  { value: 3, label: "+2" },
+  { value: 4, label: "+3" },
+];
 
 export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
   const [cittaPartenza, setCittaPartenza] = useState("");
-  const [mezzo, setMezzo]   = useState<Mezzo>("treno");
+  const [mezzo, setMezzo]     = useState<Mezzo>("treno");
   const [persone, setPersone] = useState<NumPersone>(1);
 
   const ospedale  = state.ospedaleSelezionato;
   const cittaDest = ospedale ? (CITTA_OSPEDALE[ospedale.id] ?? ospedale.citta) : null;
   const spec = ospedale?.specialita.find((s) => s.specialitaId === state.specialitaSelezionata?.id) ?? null;
-  const degenza = spec?.degenzaMedia ?? 3;
-  const notti   = Math.ceil(degenza);
-  const camere  = Math.ceil(persone / 2);
+  const notti  = Math.ceil(spec?.degenzaMedia ?? 3);
+  const camere = Math.ceil(persone / 2);
 
   const costi = useMemo(() => {
     if (!cittaPartenza || !cittaDest) return null;
     const km = getDistanza(cittaPartenza, cittaDest);
     if (km === null) return null;
     const trasporto = calcolaTrasporto(km, mezzo, persone);
-    const hotel     = notti * camere * COSTO_HOTEL_NOTTE;
-    const pasti     = notti * persone * COSTO_PASTI_GIORNO;
-    return { km, trasporto, hotel, pasti, totale: trasporto + hotel + pasti, notti };
+    const hotel     = notti * camere * 90;
+    const pasti     = notti * persone * 35;
+    return { km, trasporto, hotel, pasti, totale: trasporto + hotel + pasti };
   }, [cittaPartenza, cittaDest, mezzo, persone, notti, camere]);
 
+  const mezzoIcon = MEZZO_OPTS.find((m) => m.value === mezzo)?.icon ?? "";
+
   return (
-    <div className="px-5 pb-6 space-y-6">
-      <p className="text-xs" style={{ color: "var(--cb-text3)" }}>
-        Calcolo orientativo per pianificare il viaggio verso{" "}
-        <strong style={{ color: "var(--cb-text1)" }}>{cittaDest ?? "la struttura"}</strong>
+    <div className="step-body">
+      <p className="section-note">
+        Calcolo orientativo per il viaggio verso{" "}
+        <strong style={{ color: "#1A1814" }}>{cittaDest ?? "la struttura"}</strong>
       </p>
 
       {/* Città partenza */}
-      <div>
-        <label htmlFor="citta-partenza" className="block text-sm font-medium mb-1" style={{ color: "var(--cb-text1)" }}>
-          La tua città di partenza
-        </label>
+      <div className="field-group">
+        <label htmlFor="citta-partenza" className="field-label">La tua città di partenza</label>
         <select
           id="citta-partenza"
           value={cittaPartenza}
           onChange={(e) => setCittaPartenza(e.target.value)}
-          className="cb-select w-full sm:w-64"
+          className="field-input"
+          style={{ maxWidth: 280 }}
         >
           <option value="">Seleziona città…</option>
           {CITTA_COMUNI.map((c) => <option key={c} value={c}>{c}</option>)}
@@ -122,38 +124,28 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
       </div>
 
       {/* Persone */}
-      <div>
-        <p className="text-sm font-medium mb-2" style={{ color: "var(--cb-text1)" }}>
-          Chi viene con te?
-        </p>
-        <div className="flex gap-2">
-          {PERSONE_OPTS.map((n) => (
-            <button
-              key={n}
-              onClick={() => setPersone(n)}
-              className={`toggle-pill${persone === n ? " active" : ""}`}
-            >
-              {n === 1 ? "Solo" : `+${n - 1}`}
+      <div className="field-group">
+        <label className="field-label">Chi viene con te?</label>
+        <div className="toggle-group">
+          {PERSONE_OPTS.map((opt) => (
+            <button key={opt.value} onClick={() => setPersone(opt.value)}
+                    className={`toggle-btn${persone === opt.value ? " active" : ""}`}>
+              {opt.label}
             </button>
           ))}
         </div>
-        <p className="mt-1 text-xs" style={{ color: "var(--cb-text3)" }}>
+        <p className="field-hint">
           {persone === 1 ? "Solo tu" : `Tu + ${persone - 1} accompagnator${persone === 2 ? "e" : "i"}`}
         </p>
       </div>
 
       {/* Mezzo */}
-      <div>
-        <p className="text-sm font-medium mb-2" style={{ color: "var(--cb-text1)" }}>
-          Come vuoi viaggiare?
-        </p>
-        <div className="flex gap-2 flex-wrap">
+      <div className="field-group">
+        <label className="field-label">Come vuoi viaggiare?</label>
+        <div className="toggle-group">
           {MEZZO_OPTS.map((opt) => (
-            <button
-              key={opt.value}
-              onClick={() => setMezzo(opt.value)}
-              className={`toggle-pill${mezzo === opt.value ? " active" : ""}`}
-            >
+            <button key={opt.value} onClick={() => setMezzo(opt.value)}
+                    className={`toggle-btn${mezzo === opt.value ? " active" : ""}`}>
               {opt.icon} {opt.label}
             </button>
           ))}
@@ -162,80 +154,45 @@ export default function Step4Costi({ state, onNext, onBack }: Step4Props) {
 
       {/* Tabella costi */}
       {costi && (
-        <div
-          className="rounded-xl overflow-hidden"
-          style={{ border: "1px solid var(--cb-border)" }}
-        >
-          {/* Header tabella */}
-          <div
-            className="px-4 py-2.5"
-            style={{ background: "var(--cb-surface2)", borderBottom: "1px solid var(--cb-border)" }}
-          >
-            <p className="text-xs" style={{ color: "var(--cb-text3)" }}>
-              Stima per {costi.km} km · degenza media {costi.notti} notti
-            </p>
-          </div>
-
-          {/* Righe */}
-          {[
-            { icon: "🚆", label: `Trasporto (${mezzo}) A/R × ${persone} ${persone === 1 ? "persona" : "persone"}`, value: costi.trasporto },
-            { icon: "🏨", label: `Hotel ${costi.notti} nott${costi.notti === 1 ? "e" : "i"} × ${camere} camera/e`, value: costi.hotel },
-            { icon: "🍽️", label: `Pasti ${costi.notti} giorni × ${persone} ${persone === 1 ? "persona" : "persone"}`, value: costi.pasti },
-          ].map((row, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between px-4 py-3"
-              style={{ borderBottom: "1px solid var(--cb-border)" }}
-            >
-              <span className="text-sm" style={{ color: "var(--cb-text2)" }}>
-                {row.icon} {row.label}
-              </span>
-              <span className="text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
-                € {row.value.toFixed(0)}
-              </span>
+        <div style={{ marginBottom: "1rem" }}>
+          <p className="field-hint" style={{ marginBottom: 8 }}>
+            Stima per {costi.km} km · degenza media {notti} notti
+          </p>
+          <div className="cost-table">
+            <div className="cost-table-row">
+              <span className="cost-key">{mezzoIcon} Trasporto ({mezzo}) A/R × {persone} {persone === 1 ? "persona" : "persone"}</span>
+              <span className="cost-val">€ {costi.trasporto.toFixed(0)}</span>
             </div>
-          ))}
-
-          {/* Totale — box ambra */}
-          <div
-            className="flex items-center justify-between px-4 py-4"
-            style={{ background: "var(--cb-amber-light)" }}
-          >
-            <span className="text-sm font-medium" style={{ color: "var(--cb-amber)" }}>
-              Totale stimato
-            </span>
-            <span className="font-fraunces text-2xl font-normal" style={{ color: "var(--cb-amber)" }}>
-              € {costi.totale.toFixed(0)}
-            </span>
+            <div className="cost-table-row">
+              <span className="cost-key">🏨 Hotel {notti} nott{notti === 1 ? "e" : "i"} × {camere} camera/e</span>
+              <span className="cost-val">€ {costi.hotel.toFixed(0)}</span>
+            </div>
+            <div className="cost-table-row">
+              <span className="cost-key">🍽️ Pasti {notti} giorni × {persone} {persone === 1 ? "persona" : "persone"}</span>
+              <span className="cost-val">€ {costi.pasti.toFixed(0)}</span>
+            </div>
+          </div>
+          <div className="cost-total-row">
+            <span className="cost-total-lbl">Totale stimato</span>
+            <span className="cost-total-amt">€ {costi.totale.toFixed(0)}</span>
           </div>
         </div>
       )}
 
       {!costi && cittaPartenza && (
-        <p
-          className="text-sm rounded-xl px-4 py-3"
-          style={{ background: "var(--cb-amber-light)", color: "var(--cb-amber)" }}
-        >
+        <div className="note-box" style={{ marginBottom: "1rem" }}>
           Non ho dati sulla distanza tra {cittaPartenza} e {cittaDest}. Prova un&apos;altra città.
-        </p>
+        </div>
       )}
 
       {/* Nota SSN */}
-      <div
-        className="rounded-xl px-4 py-4 text-sm space-y-1"
-        style={{ background: "var(--cb-green-light)", border: "1px solid rgba(26,107,60,0.15)" }}
-      >
-        <p className="font-medium" style={{ color: "var(--cb-green)" }}>
-          💡 Rimborso SSN
-        </p>
-        <p style={{ color: "var(--cb-text1)" }}>
-          Se la prestazione non è disponibile nella tua regione potresti avere diritto al{" "}
-          <strong>rimborso delle spese di viaggio</strong> (L. 833/1978). Chiedi al medico di
-          base il modulo per la mobilità sanitaria interregionale.
-        </p>
+      <div className="rimborso-note">
+        <strong>💡 Rimborso SSN —</strong> Se la prestazione non è disponibile nella tua regione
+        potresti avere diritto al rimborso delle spese di viaggio (L. 833/1978).
+        Chiedi al medico di base il modulo per la mobilità sanitaria interregionale.
       </div>
 
-      <div className="flex justify-between pt-1">
+      <div className="step-nav">
         <button onClick={onBack} className="btn-secondary">← Indietro</button>
         <button onClick={onNext} className="btn-primary">Avanti → Piano d&apos;azione</button>
       </div>
