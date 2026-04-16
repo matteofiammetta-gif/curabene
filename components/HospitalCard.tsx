@@ -8,30 +8,11 @@ interface HospitalCardProps {
   onSelect: () => void;
 }
 
-function MortalitaBadge({
-  valore,
-  media,
-}: {
-  valore: number;
-  media: number;
-}) {
+function mortalitaColor(valore: number, media: number) {
   const diff = valore - media;
-  const isGood = diff <= -0.3;
-  const isBad = diff >= 0.5;
-
-  const color = isGood
-    ? "bg-emerald-100 text-emerald-800"
-    : isBad
-    ? "bg-red-100 text-red-800"
-    : "bg-amber-100 text-amber-800";
-
-  const label = isGood ? "↓ sotto media" : isBad ? "↑ sopra media" : "≈ media";
-
-  return (
-    <span className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium ${color}`}>
-      {valore.toFixed(1)}% {label}
-    </span>
-  );
+  if (diff <= -0.3) return { bg: "var(--cb-green-light)", text: "var(--cb-green)", label: "↓ sotto media" };
+  if (diff >= 0.5)  return { bg: "#FEE2E2",               text: "#991B1B",         label: "↑ sopra media" };
+  return               { bg: "var(--cb-amber-light)",    text: "var(--cb-amber)", label: "≈ media" };
 }
 
 export default function HospitalCard({
@@ -41,81 +22,83 @@ export default function HospitalCard({
   selected,
   onSelect,
 }: HospitalCardProps) {
+  const mc = mortalitaColor(spec.mortalita30gg, mediaNazionale);
+
   return (
     <button
       onClick={onSelect}
-      className={[
-        "w-full text-left rounded-2xl border-2 p-5 transition-all duration-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
-        selected
-          ? "border-brand-500 bg-brand-50 shadow-md"
-          : "border-gray-200 bg-white hover:border-brand-300",
-      ].join(" ")}
+      className={`hospital-card${selected ? " selected" : ""}`}
       aria-pressed={selected}
     >
-      {/* Header */}
+      {/* Header riga */}
       <div className="flex items-start justify-between gap-3 mb-3">
-        <div>
-          <h3 className="font-fraunces text-lg font-semibold text-gray-900 leading-snug">
-            {ospedale.nome}
-          </h3>
-          <p className="text-sm text-gray-500 mt-0.5">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h3
+              className="font-fraunces text-base font-normal leading-snug"
+              style={{ color: "var(--cb-text1)" }}
+            >
+              {ospedale.nome}
+            </h3>
+            {selected && (
+              <span
+                className="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0"
+                style={{ background: "var(--cb-blue)" }}
+              >
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#fff" strokeWidth="1.6"
+                        strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            )}
+          </div>
+          <p className="text-xs mt-0.5" style={{ color: "var(--cb-text3)" }}>
             📍 {ospedale.citta}, {ospedale.regione}
           </p>
         </div>
-        {selected && (
-          <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center">
-            <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </span>
-        )}
-      </div>
 
-      {/* Volume label */}
-      <p className="text-xs font-semibold text-brand-700 uppercase tracking-wide mb-2">
-        {spec.volumeLabel}
-      </p>
-
-      {/* KPI grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-3">
-        <div className="bg-gray-50 rounded-xl p-3">
-          <p className="text-xs text-gray-500 mb-0.5">Dimessi/anno</p>
-          <p className="text-lg font-bold text-gray-900">
-            {spec.volumeAnnuo.toLocaleString("it-IT")}
-          </p>
-        </div>
-        <div className="bg-gray-50 rounded-xl p-3">
-          <p className="text-xs text-gray-500 mb-0.5">Degenza media</p>
-          <p className="text-lg font-bold text-gray-900">
-            {spec.degenzaMedia} <span className="text-sm font-normal">gg</span>
-          </p>
-        </div>
-        <div className="bg-gray-50 rounded-xl p-3 col-span-2 sm:col-span-1">
-          <p className="text-xs text-gray-500 mb-1">Mortalità 30gg (stima)</p>
-          <MortalitaBadge valore={spec.mortalita30gg} media={mediaNazionale} />
-        </div>
-      </div>
-
-      {/* Fuori regione */}
-      <div className="flex items-center gap-2 mb-3">
-        <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-brand-400 rounded-full"
-            style={{ width: `${Math.min(spec.pazientiDaFuoriRegione, 100)}%` }}
-          />
-        </div>
-        <span className="text-xs text-gray-600 whitespace-nowrap">
-          {spec.pazientiDaFuoriRegione}% da fuori regione
+        {/* Badge volume */}
+        <span
+          className="text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0"
+          style={{ background: "var(--cb-blue-light)", color: "var(--cb-blue)" }}
+        >
+          {spec.volumeLabel}
         </span>
       </div>
 
-      {/* Badges */}
+      {/* Stat grid 4 colonne */}
+      <div className="grid grid-cols-4 gap-2 mb-3">
+        <div className="stat-box">
+          <div className="stat-value">{spec.volumeAnnuo.toLocaleString("it-IT")}</div>
+          <div className="stat-label">Dimessi/anno</div>
+        </div>
+        <div className="stat-box">
+          <div className="stat-value">{spec.degenzaMedia}<span style={{ fontSize: 11, fontWeight: 400 }}> gg</span></div>
+          <div className="stat-label">Degenza media</div>
+        </div>
+        <div className="stat-box">
+          <div className="stat-value">{spec.pazientiDaFuoriRegione}%</div>
+          <div className="stat-label">Fuori regione</div>
+        </div>
+        <div className="stat-box" style={{ background: mc.bg }}>
+          <div className="stat-value" style={{ color: mc.text, fontSize: 13 }}>
+            {spec.mortalita30gg.toFixed(1)}%
+          </div>
+          <div className="stat-label" style={{ color: mc.text }}>{mc.label}</div>
+        </div>
+      </div>
+
+      {/* Badges eccellenza */}
       {spec.badges.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mb-3">
           {spec.badges.map((badge) => (
             <span
               key={badge}
-              className="text-xs px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-full"
+              className="text-xs px-2 py-0.5 rounded-full"
+              style={{
+                background: "var(--cb-violet-light)",
+                color: "var(--cb-violet)",
+              }}
             >
               {badge}
             </span>
@@ -124,15 +107,15 @@ export default function HospitalCard({
       )}
 
       {/* Spiegazione */}
-      <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
+      <p className="text-sm leading-relaxed" style={{ color: "var(--cb-text2)" }}>
         {spec.spiegazione}
       </p>
 
-      {/* Disclaimer mortalità */}
+      {/* Disclaimer mortalità stimata */}
       {spec.mortalitaStimata && (
-        <p className="mt-2 text-[11px] text-gray-400">
+        <p className="mt-2 text-xs" style={{ color: "var(--cb-text3)" }}>
           ⚠️ Mortalità stimata su benchmark PNE 2024 · dati reali su{" "}
-          <span className="underline">pne.agenas.it</span>
+          <span style={{ textDecoration: "underline" }}>pne.agenas.it</span>
         </p>
       )}
     </button>

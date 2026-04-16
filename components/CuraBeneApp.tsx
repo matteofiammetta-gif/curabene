@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AppState, Specialita, Ospedale } from "@/lib/types";
 import ProgressBar from "@/components/ProgressBar";
 import Step1Diagnosi from "@/components/steps/Step1Diagnosi";
@@ -26,8 +26,98 @@ const INITIAL_STATE: AppState = {
   stepCorrente: 1,
 };
 
+// Colori header per ogni step
+const STEP_CONFIG = {
+  1: {
+    label: "Specialità & Diagnosi",
+    accent: "var(--cb-green)",
+    light:  "var(--cb-green-light)",
+    border: "rgba(26,107,60,0.18)",
+  },
+  2: {
+    label: "Centri di eccellenza",
+    accent: "var(--cb-blue)",
+    light:  "var(--cb-blue-light)",
+    border: "rgba(27,79,114,0.18)",
+  },
+  3: {
+    label: "Il tuo medico",
+    accent: "var(--cb-violet)",
+    light:  "var(--cb-violet-light)",
+    border: "rgba(74,37,128,0.18)",
+  },
+  4: {
+    label: "Stima dei costi",
+    accent: "var(--cb-amber)",
+    light:  "var(--cb-amber-light)",
+    border: "rgba(139,90,0,0.18)",
+  },
+  5: {
+    label: "Piano d'azione",
+    accent: "var(--cb-teal)",
+    light:  "var(--cb-teal-light)",
+    border: "rgba(13,110,110,0.18)",
+  },
+} as const;
+
+type StepNum = 1 | 2 | 3 | 4 | 5;
+
+function StepBlock({
+  n,
+  currentStep,
+  children,
+}: {
+  n: StepNum;
+  currentStep: StepNum;
+  children: React.ReactNode;
+}) {
+  const cfg = STEP_CONFIG[n];
+  const state =
+    n === currentStep ? "active" : n < currentStep ? "done" : "locked";
+
+  return (
+    <div className={`step-block ${state}`}>
+      {/* Header colorato */}
+      <div
+        className="flex items-center gap-3 px-5 py-3"
+        style={{
+          background: cfg.light,
+          borderBottom: `1px solid ${cfg.border}`,
+        }}
+      >
+        {/* Numero */}
+        <div
+          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+          style={{ background: cfg.accent }}
+        >
+          {state === "done" ? (
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#fff" strokeWidth="1.6"
+                    strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ) : (
+            <span style={{ fontSize: 11, color: "#fff", fontWeight: 500, lineHeight: 1 }}>{n}</span>
+          )}
+        </div>
+        <span
+          className="text-sm font-medium"
+          style={{ color: cfg.accent }}
+        >
+          {cfg.label}
+        </span>
+      </div>
+
+      {/* Body — solo se attivo o completato */}
+      {state !== "locked" && children}
+    </div>
+  );
+}
+
 export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) {
   const [appState, setAppState] = useState<AppState>(INITIAL_STATE);
+
+  // Ref per ogni step block — per l'auto-scroll
+  const stepRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   function patch(update: Partial<AppState>) {
     setAppState((prev) => ({ ...prev, ...update }));
@@ -42,187 +132,169 @@ export default function CuraBeneApp({ specialita, ospedali }: CuraBeneAppProps) 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  const STEP_LABELS: Record<AppState["stepCorrente"], string> = {
-    1: "Diagnosi e specialità",
-    2: "Centri di eccellenza",
-    3: "Il tuo medico",
-    4: "Stima costi",
-    5: "Piano d'azione",
-  };
+  // Auto-scroll verso lo step appena attivato
+  useEffect(() => {
+    const el = stepRefs.current[appState.stepCorrente];
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({ top, behavior: "smooth" });
+  }, [appState.stepCorrente]);
+
+  const step = appState.stepCorrente;
 
   return (
-    <div className="min-h-screen bg-[#F7F5F2]">
-      {/* ── Header sticky ─────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-          <div>
-            <h1 className="font-fraunces text-2xl font-bold text-gray-900 leading-none">
+    <div className="min-h-screen" style={{ background: "var(--cb-bg)" }}>
+
+      {/* ── Header sticky 60px ──────────────────────────────────────────── */}
+      <header
+        className="sticky top-0 z-40"
+        style={{
+          height: 60,
+          background: "rgba(255,255,255,0.96)",
+          backdropFilter: "blur(8px)",
+          borderBottom: "1px solid var(--cb-border)",
+          boxShadow: "0 1px 0 rgba(0,0,0,0.04)",
+        }}
+      >
+        <div
+          className="mx-auto flex items-center justify-between gap-4 h-full px-4 sm:px-6"
+          style={{ maxWidth: 900 }}
+        >
+          {/* Logo */}
+          <div className="flex items-center gap-2.5">
+            <span
+              className="font-fraunces text-xl font-normal"
+              style={{ color: "var(--cb-blue)", letterSpacing: "-0.5px" }}
+            >
               CuraBene
-            </h1>
-            <p className="text-xs text-gray-500 mt-0.5">Navigatore Sanitario</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="hidden sm:inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 font-medium">
-              📊 Dati PNE · AGENAS
             </span>
+            <span
+              className="hidden sm:inline-flex items-center text-xs px-2 py-0.5 rounded-full font-medium"
+              style={{
+                background: "var(--cb-blue-light)",
+                color: "var(--cb-blue)",
+                border: "1px solid rgba(27,79,114,0.18)",
+              }}
+            >
+              Dati PNE · AGENAS
+            </span>
+          </div>
+
+          {/* ProgressBar + ricomincia */}
+          <div className="flex items-center gap-4 flex-1 justify-end">
+            <div className="flex-1 max-w-xs hidden sm:block">
+              <ProgressBar stepCorrente={step} />
+            </div>
             <button
               onClick={ricomincia}
-              className="text-xs text-gray-500 hover:text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-lg transition-colors"
+              style={{ color: "var(--cb-text3)", background: "var(--cb-surface2)" }}
             >
               🔄 Ricomincia
             </button>
           </div>
         </div>
-
-        {/* ProgressBar sticky sotto l'header */}
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-3 pt-1">
-          <ProgressBar stepCorrente={appState.stepCorrente} />
-        </div>
       </header>
 
-      {/* ── Main content ──────────────────────────────────────────────── */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-8 pb-20 space-y-10">
+      {/* ProgressBar mobile — sotto header */}
+      <div
+        className="sm:hidden px-4 py-2"
+        style={{ background: "var(--cb-surface)", borderBottom: "1px solid var(--cb-border)" }}
+      >
+        <ProgressBar stepCorrente={step} />
+      </div>
 
-        {/* Step 1 */}
-        <section
-          className={[
-            "transition-opacity duration-300",
-            appState.stepCorrente === 1
-              ? "opacity-100"
-              : appState.stepCorrente > 1
-              ? "opacity-75 pointer-events-none"
-              : "opacity-35 pointer-events-none",
-          ].join(" ")}
-        >
-          <div className="mb-3">
-            <span className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-              Step 1
-            </span>
-            <h2 className="font-fraunces text-xl font-bold text-gray-900">
-              {STEP_LABELS[1]}
-            </h2>
+      {/* ── Contenuto principale ─────────────────────────────────────────── */}
+      <main
+        className="mx-auto px-4 sm:px-6 py-6 pb-24"
+        style={{ maxWidth: 900 }}
+      >
+        <div className="space-y-4">
+
+          {/* Step 1 — sempre visibile */}
+          <div ref={(el) => { stepRefs.current[1] = el; }}>
+            <StepBlock n={1} currentStep={step}>
+              <Step1Diagnosi
+                specialita={specialita}
+                state={appState}
+                onChange={patch}
+                onNext={() => goTo(2)}
+              />
+            </StepBlock>
           </div>
-          <Step1Diagnosi
-            specialita={specialita}
-            state={appState}
-            onChange={patch}
-            onNext={() => goTo(2)}
-          />
-        </section>
 
-        {/* Step 2 */}
-        {appState.stepCorrente >= 2 && (
-          <section
-            className={[
-              "transition-opacity duration-300",
-              appState.stepCorrente === 2
-                ? "opacity-100"
-                : appState.stepCorrente > 2
-                ? "opacity-75 pointer-events-none"
-                : "opacity-35 pointer-events-none",
-            ].join(" ")}
-          >
-            <div className="mb-3">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                Step 2
-              </span>
-              <h2 className="font-fraunces text-xl font-bold text-gray-900">
-                {STEP_LABELS[2]}
-              </h2>
+          {/* Step 2 */}
+          {step >= 2 && (
+            <div ref={(el) => { stepRefs.current[2] = el; }}>
+              <StepBlock n={2} currentStep={step}>
+                <Step2Centri
+                  ospedali={ospedali}
+                  specialita={specialita}
+                  state={appState}
+                  onChange={patch}
+                  onNext={() => goTo(3)}
+                  onBack={() => goTo(1)}
+                />
+              </StepBlock>
             </div>
-            <Step2Centri
-              ospedali={ospedali}
-              specialita={specialita}
-              state={appState}
-              onChange={patch}
-              onNext={() => goTo(3)}
-              onBack={() => goTo(1)}
-            />
-          </section>
-        )}
+          )}
 
-        {/* Step 3 */}
-        {appState.stepCorrente >= 3 && (
-          <section
-            className={[
-              "transition-opacity duration-300",
-              appState.stepCorrente === 3
-                ? "opacity-100"
-                : appState.stepCorrente > 3
-                ? "opacity-75 pointer-events-none"
-                : "opacity-35 pointer-events-none",
-            ].join(" ")}
-          >
-            <div className="mb-3">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                Step 3
-              </span>
-              <h2 className="font-fraunces text-xl font-bold text-gray-900">
-                {STEP_LABELS[3]}
-              </h2>
+          {/* Step 3 */}
+          {step >= 3 && (
+            <div ref={(el) => { stepRefs.current[3] = el; }}>
+              <StepBlock n={3} currentStep={step}>
+                <Step3Medico
+                  state={appState}
+                  onNext={() => goTo(4)}
+                  onBack={() => goTo(2)}
+                />
+              </StepBlock>
             </div>
-            <Step3Medico
-              state={appState}
-              onNext={() => goTo(4)}
-              onBack={() => goTo(2)}
-            />
-          </section>
-        )}
+          )}
 
-        {/* Step 4 */}
-        {appState.stepCorrente >= 4 && (
-          <section
-            className={[
-              "transition-opacity duration-300",
-              appState.stepCorrente === 4
-                ? "opacity-100"
-                : appState.stepCorrente > 4
-                ? "opacity-75 pointer-events-none"
-                : "opacity-35 pointer-events-none",
-            ].join(" ")}
-          >
-            <div className="mb-3">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                Step 4
-              </span>
-              <h2 className="font-fraunces text-xl font-bold text-gray-900">
-                {STEP_LABELS[4]}
-              </h2>
+          {/* Step 4 */}
+          {step >= 4 && (
+            <div ref={(el) => { stepRefs.current[4] = el; }}>
+              <StepBlock n={4} currentStep={step}>
+                <Step4Costi
+                  state={appState}
+                  onNext={() => goTo(5)}
+                  onBack={() => goTo(3)}
+                />
+              </StepBlock>
             </div>
-            <Step4Costi
-              state={appState}
-              onNext={() => goTo(5)}
-              onBack={() => goTo(3)}
-            />
-          </section>
-        )}
+          )}
 
-        {/* Step 5 */}
-        {appState.stepCorrente >= 5 && (
-          <section className="opacity-100 transition-opacity duration-300">
-            <div className="mb-3">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                Step 5
-              </span>
-              <h2 className="font-fraunces text-xl font-bold text-gray-900">
-                {STEP_LABELS[5]}
-              </h2>
+          {/* Step 5 */}
+          {step >= 5 && (
+            <div ref={(el) => { stepRefs.current[5] = el; }}>
+              <StepBlock n={5} currentStep={step}>
+                <Step5Azioni
+                  state={appState}
+                  onRicomincia={ricomincia}
+                  onBack={() => goTo(4)}
+                />
+              </StepBlock>
             </div>
-            <Step5Azioni
-              state={appState}
-              onRicomincia={ricomincia}
-              onBack={() => goTo(4)}
-            />
-          </section>
-        )}
+          )}
+
+        </div>
       </main>
 
-      {/* ── Footer ────────────────────────────────────────────────────── */}
-      <footer className="max-w-3xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between text-xs text-gray-400 border-t border-gray-200">
+      {/* ── Footer ──────────────────────────────────────────────────────── */}
+      <footer
+        className="mx-auto px-4 sm:px-6 py-5 flex items-center justify-between text-xs"
+        style={{
+          maxWidth: 900,
+          color: "var(--cb-text3)",
+          borderTop: "1px solid var(--cb-border)",
+        }}
+      >
         <p>© 2024 CuraBene · Navigatore Sanitario Italiano</p>
         <Link
           href="/admin"
-          className="hover:text-gray-600 transition-colors"
+          className="transition-colors hover:underline"
+          style={{ color: "var(--cb-text3)" }}
         >
           Admin
         </Link>

@@ -13,69 +13,66 @@ const STEPS = [
 export default function ProgressBar({ stepCorrente }: ProgressBarProps) {
   return (
     <nav aria-label="Avanzamento" className="w-full">
-      <ol className="flex items-center justify-between">
+      <ol className="flex items-center">
         {STEPS.map((step, idx) => {
           const isCompleted = step.n < stepCorrente;
-          const isCurrent = step.n === stepCorrente;
-          const isPending = step.n > stepCorrente;
+          const isCurrent   = step.n === stepCorrente;
 
           return (
-            <li key={step.n} className="flex items-center flex-1">
-              {/* Cerchio step */}
+            <li key={step.n} className="flex items-center flex-1 last:flex-none">
+              {/* Cerchio */}
               <div className="flex flex-col items-center">
                 <div
-                  className={[
-                    "w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold transition-colors",
-                    isCompleted
-                      ? "bg-brand-600 text-white"
-                      : isCurrent
-                      ? "bg-brand-100 text-brand-700 ring-2 ring-brand-500"
-                      : "bg-gray-100 text-gray-400",
-                  ].join(" ")}
                   aria-current={isCurrent ? "step" : undefined}
+                  style={
+                    isCompleted
+                      ? { background: "var(--cb-green)",   border: "none" }
+                      : isCurrent
+                      ? { background: "var(--cb-blue)",    border: "none" }
+                      : { background: "transparent", border: "1.5px solid var(--cb-text3)" }
+                  }
+                  className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0"
                 >
                   {isCompleted ? (
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M2 6l3 3 5-5" stroke="#fff" strokeWidth="1.8"
+                            strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   ) : (
-                    step.n
+                    <span
+                      style={{
+                        fontSize: 11,
+                        fontWeight: 500,
+                        color: isCurrent ? "#fff" : "var(--cb-text3)",
+                        lineHeight: 1,
+                      }}
+                    >
+                      {step.n}
+                    </span>
                   )}
                 </div>
-                <span
-                  className={[
-                    "mt-1 text-xs font-medium hidden sm:block",
-                    isCurrent
-                      ? "text-brand-700"
-                      : isCompleted
-                      ? "text-brand-600"
-                      : "text-gray-400",
-                  ].join(" ")}
-                >
-                  {step.label}
-                </span>
+                {/* Label: solo per lo step attivo */}
+                {isCurrent && (
+                  <span
+                    style={{
+                      fontSize: 10,
+                      color: "var(--cb-blue)",
+                      fontWeight: 500,
+                      marginTop: 3,
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {step.label}
+                  </span>
+                )}
               </div>
 
-              {/* Connettore */}
+              {/* Linea connettore */}
               {idx < STEPS.length - 1 && (
-                <div className="flex-1 h-0.5 mx-2 mt-[-16px] sm:mt-[-18px]">
-                  <div
-                    className={[
-                      "h-full transition-colors",
-                      isCompleted ? "bg-brand-500" : "bg-gray-200",
-                    ].join(" ")}
-                  />
-                </div>
+                <div
+                  className={`progress-line mx-1 ${isCompleted ? "done" : ""}`}
+                  style={{ marginBottom: isCurrent ? 14 : 0 }}
+                />
               )}
             </li>
           );

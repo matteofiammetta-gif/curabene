@@ -9,132 +9,173 @@ interface Step5Props {
 }
 
 const CHECKLIST = [
-  { id: 1, text: "Chiama il CUP e prenota la prima visita specialistica" },
-  { id: 2, text: "Raccogli tutti gli esami precedenti (referti, imaging, analisi)" },
-  { id: 3, text: "Scrivi la tua storia clinica e i farmaci che assumi" },
-  { id: 4, text: "Prepara le domande da fare al medico (vedi step 3)" },
-  { id: 5, text: "Verifica la copertura SSN e i possibili rimborsi di viaggio" },
-  { id: 6, text: "Considera una seconda opinione se hai dubbi sulla diagnosi" },
+  "Chiama il CUP e prenota la prima visita specialistica",
+  "Raccogli tutti gli esami precedenti (referti, imaging, analisi)",
+  "Scrivi la tua storia clinica e i farmaci che assumi",
+  "Prepara le domande da fare al medico (vedi step 3)",
+  "Verifica la copertura SSN e i possibili rimborsi di viaggio",
+  "Considera una seconda opinione se hai dubbi sulla diagnosi",
 ];
+
+function ContactBlock({
+  icon,
+  label,
+  value,
+  href,
+  accent,
+}: {
+  icon: string;
+  label: string;
+  value: string;
+  href?: string;
+  accent: string; // CSS color var
+}) {
+  const content = (
+    <div
+      className="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors"
+      style={{ background: `${accent}18` }}
+    >
+      <span className="text-lg flex-shrink-0">{icon}</span>
+      <div className="min-w-0">
+        <span className="eyebrow" style={{ color: accent, fontSize: 10 }}>{label}</span>
+        <p className="text-sm font-medium mt-0.5 truncate" style={{ color: "var(--cb-text1)" }}>
+          {value}
+        </p>
+      </div>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <a href={href} className="block" style={{ textDecoration: "none" }}>
+        {content}
+      </a>
+    );
+  }
+  return <div>{content}</div>;
+}
 
 export default function Step5Azioni({ state, onRicomincia, onBack }: Step5Props) {
   const ospedale = state.ospedaleSelezionato;
-  const spec = ospedale?.specialita.find(
-    (s) => s.specialitaId === state.specialitaSelezionata?.id
-  ) ?? null;
+  const spec     = ospedale?.specialita.find((s) => s.specialitaId === state.specialitaSelezionata?.id) ?? null;
   const contatti = spec?.contatti ?? null;
-  const medico = spec?.medico ?? null;
+  const medico   = spec?.medico   ?? null;
 
   return (
-    <div className="space-y-7">
-      <div>
-        <h2 className="font-fraunces text-2xl font-semibold text-gray-900 mb-1">
-          Il tuo piano d&apos;azione
-        </h2>
-        <p className="text-gray-500 text-sm">
-          Ecco i passi concreti per iniziare il tuo percorso di cura
-        </p>
-      </div>
+    <div className="px-5 pb-6 space-y-6">
+      <p className="text-xs" style={{ color: "var(--cb-text3)" }}>
+        Ecco i passi concreti per iniziare il tuo percorso di cura
+      </p>
 
-      {/* Card contatti diretti */}
+      {/* Contatti diretti */}
       {contatti && ospedale && (
-        <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-4">
-          <h3 className="font-fraunces text-lg font-semibold text-gray-900">
-            📞 Contatti diretti — {ospedale.nome}
-          </h3>
-
-          <div className="grid sm:grid-cols-2 gap-3">
-            {contatti.cup && (
-              <a
-                href={`tel:${contatti.cup.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-brand-50 hover:bg-brand-100 transition-colors"
-              >
-                <span className="text-xl">📞</span>
-                <div>
-                  <p className="text-xs text-brand-600 font-semibold uppercase tracking-wide">CUP</p>
-                  <p className="text-sm font-bold text-brand-900">{contatti.cup}</p>
-                </div>
-              </a>
-            )}
-
-            {contatti.email && (
-              <a
-                href={`mailto:${contatti.email}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 transition-colors"
-              >
-                <span className="text-xl">✉️</span>
-                <div>
-                  <p className="text-xs text-indigo-600 font-semibold uppercase tracking-wide">Email</p>
-                  <p className="text-sm font-bold text-indigo-900 break-all">{contatti.email}</p>
-                </div>
-              </a>
-            )}
-
-            {contatti.sito && (
-              <a
-                href={contatti.sito}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
-              >
-                <span className="text-xl">🌐</span>
-                <div>
-                  <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Sito web</p>
-                  <p className="text-sm font-bold text-gray-900 truncate">{contatti.sito.replace("https://", "")}</p>
-                </div>
-              </a>
-            )}
-
-            {contatti.orari && (
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50">
-                <span className="text-xl">🕐</span>
-                <div>
-                  <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Orari</p>
-                  <p className="text-sm text-gray-900">{contatti.orari}</p>
-                </div>
-              </div>
-            )}
+        <div
+          className="rounded-xl overflow-hidden"
+          style={{ border: "1px solid var(--cb-border)" }}
+        >
+          {/* Header blocco contatti */}
+          <div
+            className="px-4 py-3 flex items-center justify-between"
+            style={{ background: "var(--cb-surface2)", borderBottom: "1px solid var(--cb-border)" }}
+          >
+            <span className="text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
+              📞 Contatti — {ospedale.nome}
+            </span>
+            <div className="flex gap-1.5">
+              {contatti.fasttrack && (
+                <span
+                  className="text-xs px-2 py-0.5 rounded-full font-medium"
+                  style={{ background: "var(--cb-green-light)", color: "var(--cb-green)" }}
+                >
+                  ⚡ Fast-track
+                </span>
+              )}
+              {contatti.secondaOpinione && (
+                <span
+                  className="text-xs px-2 py-0.5 rounded-full font-medium"
+                  style={{ background: "var(--cb-blue-light)", color: "var(--cb-blue)" }}
+                >
+                  🔍 2ª opinione
+                </span>
+              )}
+            </div>
           </div>
 
-          {/* Fast-track e seconda opinione */}
-          <div className="flex flex-wrap gap-2 pt-1">
-            {contatti.fasttrack && (
-              <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold">
-                ⚡ Fast-track disponibile
-              </span>
+          {/* Righe contatti */}
+          <div className="p-3 grid sm:grid-cols-2 gap-2">
+            {contatti.cup && (
+              <ContactBlock
+                icon="📞" label="CUP Prenotazioni"
+                value={contatti.cup}
+                href={`tel:${contatti.cup.replace(/\s/g, "")}`}
+                accent="var(--cb-green)"
+              />
             )}
-            {contatti.secondaOpinione && (
-              <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 font-semibold">
-                🔍 Seconda opinione disponibile
-              </span>
+            {contatti.email && (
+              <ContactBlock
+                icon="✉️" label="Email"
+                value={contatti.email}
+                href={`mailto:${contatti.email}`}
+                accent="var(--cb-blue)"
+              />
+            )}
+            {contatti.sito && (
+              <ContactBlock
+                icon="🌐" label="Sito web"
+                value={contatti.sito.replace("https://", "")}
+                href={contatti.sito}
+                accent="var(--cb-violet)"
+              />
+            )}
+            {contatti.orari && (
+              <ContactBlock
+                icon="🕐" label="Orari"
+                value={contatti.orari}
+                accent="var(--cb-teal)"
+              />
             )}
           </div>
         </div>
       )}
 
-      {/* Card seconda opinione */}
+      {/* Seconda opinione */}
       {contatti?.secondaOpinione && (
-        <div className="bg-blue-50 rounded-2xl p-5 space-y-2">
-          <h3 className="font-semibold text-blue-900">🔍 Come richiedere una seconda opinione</h3>
-          <ol className="space-y-1.5 text-sm text-blue-800">
-            <li className="flex gap-2"><span className="font-bold flex-shrink-0">1.</span>Contatta il centro via email o CUP specificando che vuoi una seconda opinione</li>
-            <li className="flex gap-2"><span className="font-bold flex-shrink-0">2.</span>Prepara una cartella clinica completa con tutti gli esami e la diagnosi attuale</li>
-            <li className="flex gap-2"><span className="font-bold flex-shrink-0">3.</span>Molti centri offrono la valutazione anche in telemedicina (chiedere esplicitamente)</li>
-            <li className="flex gap-2"><span className="font-bold flex-shrink-0">4.</span>Il costo varia: alcuni centri IRCCS la offrono in regime SSN, altri in libera professione (€ 150–300)</li>
+        <div
+          className="rounded-xl px-4 py-4 space-y-2 text-sm"
+          style={{ background: "var(--cb-blue-light)", border: "1px solid rgba(27,79,114,0.12)" }}
+        >
+          <p className="font-medium" style={{ color: "var(--cb-blue)" }}>
+            🔍 Come richiedere una seconda opinione
+          </p>
+          <ol className="space-y-1.5" style={{ color: "var(--cb-text1)" }}>
+            {[
+              "Contatta il centro via email o CUP specificando che vuoi una seconda opinione",
+              "Prepara una cartella clinica completa con tutti gli esami e la diagnosi attuale",
+              "Molti centri offrono la valutazione anche in telemedicina (chiedere esplicitamente)",
+              "Il costo varia: alcuni centri IRCCS in SSN, altri in libera professione (€ 150–300)",
+            ].map((s, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="font-medium flex-shrink-0" style={{ color: "var(--cb-blue)" }}>{i + 1}.</span>
+                {s}
+              </li>
+            ))}
           </ol>
         </div>
       )}
 
       {/* Domande da portare */}
       {medico && medico.domande.length > 0 && (
-        <div className="bg-amber-50 rounded-2xl p-5 space-y-3">
-          <h3 className="font-semibold text-amber-900">
+        <div
+          className="rounded-xl px-4 py-4 space-y-2"
+          style={{ background: "var(--cb-amber-light)" }}
+        >
+          <p className="text-sm font-medium" style={{ color: "var(--cb-amber)" }}>
             💬 Domande da portare dal {medico.nome}
-          </h3>
+          </p>
           <ol className="space-y-1.5">
             {medico.domande.map((d, i) => (
-              <li key={i} className="flex gap-2 text-sm text-amber-900">
-                <span className="text-amber-400 font-bold flex-shrink-0">{i + 1}.</span>
+              <li key={i} className="flex gap-2 text-sm" style={{ color: "var(--cb-text1)" }}>
+                <span className="font-medium flex-shrink-0" style={{ color: "var(--cb-amber)" }}>{i + 1}.</span>
                 {d}
               </li>
             ))}
@@ -142,36 +183,41 @@ export default function Step5Azioni({ state, onRicomincia, onBack }: Step5Props)
         </div>
       )}
 
-      {/* Checklist 6 punti */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-3">
-        <h3 className="font-fraunces text-lg font-semibold text-gray-900">
-          ✅ Checklist prima della visita
-        </h3>
-        <ul className="space-y-2.5">
-          {CHECKLIST.map((item) => (
-            <li key={item.id} className="flex items-start gap-3">
-              <span className="mt-0.5 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      {/* Checklist */}
+      <div
+        className="rounded-xl overflow-hidden"
+        style={{ border: "1px solid var(--cb-border)" }}
+      >
+        <div
+          className="px-4 py-3"
+          style={{ background: "var(--cb-surface2)", borderBottom: "1px solid var(--cb-border)" }}
+        >
+          <span className="text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
+            ✅ Checklist prima della visita
+          </span>
+        </div>
+        <ul className="divide-y" style={{ borderColor: "var(--cb-border)" }}>
+          {CHECKLIST.map((item, i) => (
+            <li
+              key={i}
+              className="flex items-start gap-3 px-4 py-3"
+              style={{ borderTop: i > 0 ? "1px solid var(--cb-border)" : undefined }}
+            >
+              <div className="check-circle mt-0.5">
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
+                  <path d="M1.5 4.5l2 2 4-4" stroke="var(--cb-green)" strokeWidth="1.5"
+                        strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </span>
-              <span className="text-sm text-gray-700">{item.text}</span>
+              </div>
+              <span className="text-sm" style={{ color: "var(--cb-text2)" }}>{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="flex justify-between pt-2">
-        <button
-          onClick={onBack}
-          className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-        >
-          ← Indietro
-        </button>
-        <button
-          onClick={onRicomincia}
-          className="px-6 py-2.5 rounded-xl border-2 border-brand-500 text-brand-700 font-semibold text-sm hover:bg-brand-50 transition-colors"
-        >
+      <div className="flex justify-between pt-1">
+        <button onClick={onBack} className="btn-secondary">← Indietro</button>
+        <button onClick={onRicomincia} className="btn-secondary">
           🔄 Ricomincia
         </button>
       </div>

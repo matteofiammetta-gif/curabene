@@ -19,36 +19,25 @@ const REGIONI: RegioneItaliana[] = [
 
 const RAGGIO_OPTIONS = [
   { value: "regione" as const, label: "Nella mia regione" },
-  { value: "fuori" as const, label: "Anche fuori regione" },
-  { value: "italia" as const, label: "Tutta Italia" },
+  { value: "fuori"   as const, label: "Anche fuori regione" },
+  { value: "italia"  as const, label: "Tutta Italia" },
 ];
 
 function LoadingDots() {
   return (
     <span className="inline-flex items-center gap-1">
-      {[0, 1, 2].map((i) => (
-        <span
-          key={i}
-          className="w-2 h-2 rounded-full bg-brand-400 animate-bounce"
-          style={{ animationDelay: `${i * 0.15}s` }}
-        />
-      ))}
+      <span className="loading-dot" />
+      <span className="loading-dot" />
+      <span className="loading-dot" />
     </span>
   );
 }
 
-export default function Step1Diagnosi({
-  specialita,
-  state,
-  onChange,
-  onNext,
-}: Step1Props) {
+export default function Step1Diagnosi({ specialita, state, onChange, onNext }: Step1Props) {
   const [loading, setLoading] = useState(false);
-  const [errore, setErrore] = useState<string | null>(null);
+  const [errore, setErrore]   = useState<string | null>(null);
 
-  const canAnalyze =
-    state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
-
+  const canAnalyze  = state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
   const canContinue = canAnalyze && state.analisiAI !== null;
 
   async function handleAnalyze() {
@@ -59,10 +48,7 @@ export default function Step1Diagnosi({
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          diagnosi: state.diagnosi,
-          specialitaId: state.specialitaSelezionata.id,
-        }),
+        body: JSON.stringify({ diagnosi: state.diagnosi, specialitaId: state.specialitaSelezionata.id }),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({ errore: "Errore sconosciuto" }));
@@ -79,48 +65,54 @@ export default function Step1Diagnosi({
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 px-5 pb-6">
+
       {/* 1. Selezione specialità */}
-      <section>
-        <h2 className="font-fraunces text-2xl font-semibold text-gray-900 mb-1">
-          Di cosa hai bisogno?
-        </h2>
-        <p className="text-gray-500 text-sm mb-4">
-          Seleziona l&apos;area clinica più vicina alla tua situazione
+      <div>
+        <label className="block mb-1 text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
+          Area clinica
+        </label>
+        <p className="text-xs mb-3" style={{ color: "var(--cb-text3)" }}>
+          Seleziona la specialità più vicina alla tua condizione
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {specialita.map((s) => {
             const isSelected = state.specialitaSelezionata?.id === s.id;
             return (
               <button
                 key={s.id}
-                onClick={() =>
-                  onChange({ specialitaSelezionata: isSelected ? null : s, analisiAI: null })
-                }
-                className={[
-                  "rounded-2xl border-2 p-4 text-left transition-all duration-150 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
-                  isSelected
-                    ? "border-brand-500 bg-brand-50"
-                    : "border-gray-200 bg-white hover:border-brand-200",
-                ].join(" ")}
+                onClick={() => onChange({ specialitaSelezionata: isSelected ? null : s, analisiAI: null })}
+                className={`spec-card text-left${isSelected ? " selected" : ""}`}
                 aria-pressed={isSelected}
               >
-                <span className="text-2xl block mb-2">{s.icona}</span>
-                <span className="font-semibold text-sm text-gray-900 block">
+                {/* Icona quadrata */}
+                <div
+                  className="flex items-center justify-center rounded-lg mb-2"
+                  style={{
+                    width: 26,
+                    height: 26,
+                    background: isSelected ? "var(--cb-blue)" : "var(--cb-surface2)",
+                    fontSize: 14,
+                    transition: "background 0.15s",
+                  }}
+                >
+                  {s.icona}
+                </div>
+                <span
+                  className="block text-xs font-medium leading-tight"
+                  style={{ color: "var(--cb-text1)" }}
+                >
                   {s.nome}
-                </span>
-                <span className="text-xs text-gray-500 mt-0.5 block">
-                  {s.descrizione}
                 </span>
               </button>
             );
           })}
         </div>
-      </section>
+      </div>
 
       {/* 2. Diagnosi libera */}
-      <section>
-        <label htmlFor="diagnosi" className="block font-medium text-gray-900 mb-2">
+      <div>
+        <label htmlFor="diagnosi" className="block mb-1 text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
           Descrivi la tua condizione
         </label>
         <textarea
@@ -129,114 +121,99 @@ export default function Step1Diagnosi({
           placeholder="Es. tumore al colon stadio II, fibrillazione atriale persistente, ernia del disco L4-L5…"
           value={state.diagnosi}
           onChange={(e) => onChange({ diagnosi: e.target.value, analisiAI: null })}
-          className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
+          className="cb-input"
+          style={{ resize: "none" }}
         />
-      </section>
+      </div>
 
       {/* 3. Raggio */}
-      <section>
-        <p className="font-medium text-gray-900 mb-2">Quanto sei disposto/a a spostarti?</p>
+      <div>
+        <p className="text-sm font-medium mb-2" style={{ color: "var(--cb-text1)" }}>
+          Quanto sei disposto/a a spostarti?
+        </p>
         <div className="flex flex-wrap gap-2">
           {RAGGIO_OPTIONS.map((opt) => (
             <button
               key={opt.value}
               onClick={() => onChange({ raggio: opt.value })}
-              className={[
-                "px-4 py-2 rounded-full text-sm font-medium border-2 transition-colors",
-                state.raggio === opt.value
-                  ? "border-brand-500 bg-brand-500 text-white"
-                  : "border-gray-200 bg-white text-gray-700 hover:border-brand-300",
-              ].join(" ")}
+              className={`toggle-pill${state.raggio === opt.value ? " active" : ""}`}
             >
               {opt.label}
             </button>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* 4. Regione */}
-      <section>
-        <label htmlFor="regione" className="block font-medium text-gray-900 mb-2">
+      <div>
+        <label htmlFor="regione" className="block mb-1 text-sm font-medium" style={{ color: "var(--cb-text1)" }}>
           La tua regione
         </label>
         <select
           id="regione"
           value={state.regione ?? ""}
-          onChange={(e) =>
-            onChange({ regione: (e.target.value as RegioneItaliana) || null })
-          }
-          className="w-full sm:w-64 rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-400"
+          onChange={(e) => onChange({ regione: (e.target.value as RegioneItaliana) || null })}
+          className="cb-select w-full sm:w-64"
         >
           <option value="">Seleziona regione…</option>
           {REGIONI.map((r) => (
-            <option key={r} value={r}>
-              {r}
-            </option>
+            <option key={r} value={r}>{r}</option>
           ))}
         </select>
-      </section>
+      </div>
 
-      {/* 5. Bottone AI */}
-      <section>
+      {/* 5. Bottone analisi AI */}
+      <div>
         <button
           onClick={handleAnalyze}
           disabled={!canAnalyze || loading}
-          className="flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="btn-primary"
         >
           {loading ? (
-            <>
-              <LoadingDots /> Analisi in corso…
-            </>
+            <><LoadingDots /><span className="ml-2">Analisi in corso…</span></>
           ) : (
             <>✨ Analizza con AI</>
           )}
         </button>
         {errore && (
-          <p className="mt-2 text-sm text-red-600">{errore}</p>
+          <p className="mt-2 text-sm" style={{ color: "#B91C1C" }}>{errore}</p>
         )}
-      </section>
+      </div>
 
-      {/* 6. Box risultato AI */}
+      {/* 6. Box AI result */}
       {state.analisiAI && (
-        <section className="rounded-2xl bg-white border border-brand-200 p-5 space-y-4">
-          <div className="flex items-center gap-2">
-            <span className="text-lg">✨</span>
-            <h3 className="font-fraunces text-lg font-semibold text-gray-900">
-              Analisi AI
-            </h3>
-          </div>
-
-          {/* Sommario HTML */}
+        <div className="ai-box">
+          <span className="ai-box-label">✨ Analisi AI</span>
           <div
-            className="text-sm text-gray-700 leading-relaxed prose prose-sm max-w-none"
+            className="ai-box-text"
             dangerouslySetInnerHTML={{ __html: state.analisiAI.sommario }}
           />
-
           {state.analisiAI.domandeDaPorre.length > 0 && (
-            <div className="bg-amber-50 rounded-xl p-4">
-              <p className="text-xs font-semibold text-amber-800 uppercase tracking-wide mb-2">
+            <div
+              className="mt-4 rounded-xl p-4"
+              style={{ background: "var(--cb-amber-light)" }}
+            >
+              <span className="eyebrow mb-2" style={{ color: "var(--cb-amber)", fontSize: 11 }}>
                 Domande utili da fare al medico
-              </p>
-              <ul className="space-y-1">
+              </span>
+              <ol className="space-y-1 mt-2">
                 {state.analisiAI.domandeDaPorre.map((d, i) => (
-                  <li key={i} className="text-sm text-amber-900 flex gap-2">
-                    <span className="text-amber-400 font-bold">{i + 1}.</span>
+                  <li key={i} className="flex gap-2 text-sm" style={{ color: "var(--cb-text1)" }}>
+                    <span className="font-medium flex-shrink-0" style={{ color: "var(--cb-amber)" }}>
+                      {i + 1}.
+                    </span>
                     {d}
                   </li>
                 ))}
-              </ul>
+              </ol>
             </div>
           )}
-        </section>
+        </div>
       )}
 
       {/* Avanti */}
-      <div className="flex justify-end">
-        <button
-          onClick={onNext}
-          disabled={!canContinue}
-          className="px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-        >
+      <div className="flex justify-end pt-2">
+        <button onClick={onNext} disabled={!canContinue} className="btn-primary">
           Avanti → Trova centri
         </button>
       </div>
