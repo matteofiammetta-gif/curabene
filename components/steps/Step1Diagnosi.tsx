@@ -56,9 +56,11 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
 
   const isPSSelected = state.specialitaSelezionata?.id === "pronto_soccorso";
   const canAnalyze  = !isPSSelected && state.specialitaSelezionata !== null && state.diagnosi.trim().length > 3;
+
+  // "Avanti" si sblocca solo su specialità + regione — NON richiede analisiAI
   const canContinue = isPSSelected
     ? state.specialitaSelezionata !== null
-    : canAnalyze && state.analisiAI !== null;
+    : state.specialitaSelezionata !== null && state.regione !== null;
 
   // True while we have streaming content but haven't committed to appState yet
   const isStreaming = streamingText !== "" && state.analisiAI === null;
@@ -70,6 +72,13 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
     setStreaming("");
     onChange({ analisiAI: null });
 
+    const coseDaSapere = [
+      "Chiedere una seconda opinione è un tuo diritto e può essere prezioso",
+      "Portare tutti gli esami precedenti alla prima visita",
+      "Il SSN copre la maggior parte dei percorsi diagnostici e terapeutici",
+      "I centri ad alto volume hanno spesso risultati migliori per condizioni complesse",
+    ];
+
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
@@ -80,44 +89,28 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
         }),
       });
 
-      if (!res.ok) {
-        const errBody = await res.json().catch(() => ({ errore: "Errore sconosciuto" }));
-        throw new Error(errBody.errore ?? "Errore del server");
-      }
+      const data = await res.json();
+      const testo: string = data.analisi || data.errore || "Analisi non disponibile al momento.";
 
-      if (!res.body) throw new Error("Risposta vuota dal server");
+      onChange({
+        analisiAI: {
+          sommario: testo,
+          domandeDaPorre: DOMANDE_STANDARD,
+          coseDaSapere,
+          livelloUrgenza: "media",
+        },
+      });
 
-      // Switch from spinner to inline streaming display
-      setLoading(false);
-
-      const reader  = res.body.getReader();
-      const decoder = new TextDecoder();
-      let fullText  = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        fullText += decoder.decode(value, { stream: true });
-        setStreaming(fullText);
-      }
-
-      if (!fullText.trim()) throw new Error("Risposta AI vuota");
-
-      const analisi: AnalisiAI = {
-        sommario: fullText,
-        domandeDaPorre: DOMANDE_STANDARD,
-        coseDaSapere: [
-          "Chiedere una seconda opinione è un tuo diritto e può essere prezioso",
-          "Portare tutti gli esami precedenti alla prima visita",
-          "Il SSN copre la maggior parte dei percorsi diagnostici e terapeutici",
-          "I centri ad alto volume hanno spesso risultati migliori per condizioni complesse",
-        ],
-        livelloUrgenza: "media",
-      };
-      onChange({ analisiAI: analisi });
-
-    } catch (e: unknown) {
-      setErrore(e instanceof Error ? e.message : "Errore di rete");
+    } catch {
+      // Fetch completamente fallito — mostra fallback, non bloccare
+      onChange({
+        analisiAI: {
+          sommario: "Analisi temporaneamente non disponibile. Puoi comunque procedere a trovare i centri di eccellenza.",
+          domandeDaPorre: DOMANDE_STANDARD,
+          coseDaSapere,
+          livelloUrgenza: "media",
+        },
+      });
     } finally {
       setLoading(false);
       setStreaming("");
@@ -213,16 +206,21 @@ export default function Step1Diagnosi({ specialita, state, onChange, onNext }: S
         </select>
       </div>
 
-      {/* Bottone AI — hide for PS */}
+      {/* Bottoni AI + Avanti — hide for PS */}
       {!isPSSelected && (
-        <div style={{ marginBottom: "1rem" }}>
-          <button onClick={handleAnalyze} disabled={!canAnalyze || loading || isStreaming} className="btn-primary">
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "1rem", alignItems: "center" }}>
+          <button onClick={handleAnalyze} disabled={!canAnalyze || loading} className="btn-primary">
             {loading
               ? <><LoadingDots /><span style={{ marginLeft: 6 }}>Analisi in corso…</span></>
               : "✨ Analizza con AI"}
           </button>
+          {canContinue && (
+            <button onClick={onNext} className="btn-secondary">
+              Avanti → Trova centri
+            </button>
+          )}
           {errore && (
-            <p style={{ fontSize: 13, color: "#B91C1C", marginTop: 8 }}>{errore}</p>
+            <p style={{ fontSize: 13, color: "#B91C1C", marginTop: 8, width: "100%" }}>{errore}</p>
           )}
         </div>
       )}
